@@ -1,0 +1,71 @@
+@import  '../../../../assets/sass/_tools.sass'
+
+.image-input
+  display: none
+
+.profile-picture
+  width: 100%
+  position: relative
+
+  .can-click
+    cursor: pointer
+
+    &:hover
+      opacity: 0.6
+      box-shadow: 1px 1px 10px $darkgray
+
+  .picture-title
+    text-align: center
+    color: $darkgray
+    font-family: Lato-bold
+    line-height: rem(19)
+    font-size: rem(16)
+    margin-bottom: 16px
+
+  .delete-button
+    left: calc(50% - 44px - 65px)
+    background-image: url('/assets/images/ic_delete.png')
+    background-position: center
+
+  .edit-button
+    right: calc(50% - 44px - 65px)
+    background-image: url('/assets/images/ic_edit.png')
+    background-position: center
+
+  .delete-button, .edit-button
+    width: 44px
+    top: 58px
+    height: 44px
+    position: absolute
+    background-color: white
+    border-radius: 40px
+    box-shadow: 2px 1px 8px $gray2
+
+  .picture-area
+    border: 2px solid $green
+    width: 90px
+    height: 90px
+    margin-left: calc(50% - 45px)
+    border-radius: 50px
+    overflow: hidden
+    
+    .pic-preview
+      min-width: 100%
+      height: 100%   
+
+    .upload-button
+      color: $green
+      font-family: Lato-bold
+      font-size: 12px
+      text-align: center
+      padding-top: 55%
+      position: relative
+
+      &::before
+        content: ''
+        width: 20px
+        height: 18px
+        background-image: url('/assets/images/camera.png')
+        position: absolute
+        top: 24px
+        left: calc(50% - 11px)

@@ -1,0 +1,13 @@
+<mat-list fxLayout.lt-md="column" class='menu'>
+  <mat-list-item class="menu-item" *ngFor="let menuItem of menuItems;">
+    <a [routerLink]="'/' + menuItem.path"
+       mat-dialog-close
+       fxHide
+       fxHide.lt-md="false">{{ menuItem.label }}</a>
+    <a [ngClass]="whiteColorClass" [routerLink]="'/' + menuItem.path" fxHide.lt-md>
+      {{ menuItem.label }}</a>
+  </mat-list-item>
+  <mat-list-item>
+    <button mat-dialog-close routerLink="/incluir-local">Incluir local</button>
+  </mat-list-item>
+</mat-list>

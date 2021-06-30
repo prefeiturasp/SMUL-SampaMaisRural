@@ -1,0 +1,104 @@
+@import ../../../assets/sass/_tools.sass
+
+:host 
+  z-index: 1
+  margin-bottom: 25px
+
+  .usage-terms-banner
+    height: 336px
+    width: 100%
+    background-image: url("/assets/images/banner-terms.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    color: $white
+    text-align: center
+    margin-bottom: 25px
+
+    .banner-title
+      font-family: Lato-light
+      line-height: 56px
+      font-size: 36px
+      padding-top: 104px
+
+    .banner-subtitle
+      font-size: 16px
+      line-height: 24px
+      width: 400px
+      font-family: Lato-light
+      margin-left: calc(50% - 200px)
+      margin-top: 22px
+
+  .content
+    display: flex
+    flex-wrap: nowrap
+
+    .nav
+      width: calc(30vw - 120px)
+      padding: 25px
+      margin-right: 120px
+      position: sticky
+      top: 25px
+      height: 500px
+
+      li
+        margin-bottom: 24px
+
+        .link
+          font-weight: 700
+          line-height: rem(20)
+
+    .info
+      width: calc(70% - 115px)
+
+      .text-box
+        padding: 25px
+        background-color: $white
+
+        .text-box-title
+          color: $darkgray
+          font-family: Lato-bold
+          font-size: rem(24)
+          line-height: rem(56)
+          margin-bottom: 25px
+
+        .text
+          color: $black
+          font-family: Lato-light
+          font-weight: bold
+          line-height: rem(28)
+          text-align: left
+
+@media only screen and (max-width: 768px)
+  :host
+    .usage-terms-banner
+      background-image: url("/assets/images/bg-terms-mobile.jpg")
+      background-size: 101% 336px
+      background-position: center
+      margin-bottom: 0
+
+      .banner-subtitle
+        width: 70%
+        margin-left: 15%
+
+    .content
+      display: block
+
+      .nav
+        position: relative
+        width: calc(100% - 32px)
+        padding: 16px
+        padding-top: 10px
+        padding-bottom: 30px
+        margin: 0
+        height: unset
+
+      .info
+        width: 100%
+
+        .text-box
+          padding: 25px 16px
+            
+          .text-box-title
+            line-height: rem(38)
+            margin-bottom: 28px  

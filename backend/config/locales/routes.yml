@@ -1,0 +1,22 @@
+pt-BR:
+  routes:
+    upas: agricultor-integracoes
+    agricultures: agricultura
+    markets: mercados
+    integrated_markets: mercado-integracoes
+    rural_experiences: vivencia-rural
+    tourisms: turismo
+    initiatives: iniciativas
+
+    filter_groups: filtros
+    messages: mensagens
+    users: usuarios
+    paper_trail_versions: historico-acoes
+    suggestions: sugestoes
+    partner_comments: comentarios
+    post_themes: temas
+
+    subcategories: subcategorias
+
+    new: novo
+    edit: editar

@@ -1,0 +1,2 @@
+class IntegratedMarket < Market
+end

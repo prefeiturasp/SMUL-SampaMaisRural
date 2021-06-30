@@ -1,0 +1,338 @@
+@import '../../../assets/sass/_tools.sass'
+  
+:host
+  width: 100%
+
+.accordion-item *
+  font-family: Lato-light
+
+.accordion-item
+  width: 100%
+  background-color: $white
+  box-shadow: 4px 5px 10px 2px rgba(0, 0, 0, 0.1)
+  margin-bottom: 20px
+  position: relative
+  -moz-user-select: none
+  -khtml-user-select: none
+  -webkit-user-select: none
+  -ms-user-select: none
+  user-select: none
+  overflow: hidden
+
+.header
+  display: flex
+  align-items: center
+  position: relative
+
+.title
+  color: $gray4
+  font-size: rem(16)
+  text-align: left
+  left: 98px
+  float: right
+  width: 40%
+  position: relative
+  font-weight: bold
+  padding-bottom: 15px
+  padding-top: 16px
+
+.right-menu
+  display: flex
+  flex-wrap: wrap
+  color: $green
+  font-size: 16px
+  position: absolute
+  right: 30px
+
+  & a
+    color:$green
+
+  & a:visited
+    color:$green
+
+  & a:active
+    color:$green
+
+  & a:hover
+    color:$green
+    text-decoration: underline
+
+.menu-details
+  position: relative
+  margin-left: 68px
+  width: 80px
+  text-align: center
+  font-weight: bold
+
+  &:hover
+    text-decoration: underline
+
+.menu-details::before
+  content: ''
+  position: absolute
+  height: 24px
+  width: 1px
+  background-color: $gray8
+  left: -21px
+  top: calc(50% - 12px)
+  opacity: 0.6
+
+.csv-download
+  margin-right: 52px
+  font-weight: bold
+
+.menu-download
+  position: relative
+  font-weight: bold
+
+.menu-download::after
+  content: ''
+  width: 22.5px
+  height: 16.5px
+  background-image: url("/assets/svgs/download.svg")
+  background-position: center
+  background-repeat: no-repeat
+  position: absolute
+  top: calc(50% - 8.5px)
+  right: -30px
+
+.hover-change:hover
+  color: $green
+  cursor: pointer
+
+.icon-data
+  width: 40px
+  height: 43px
+  background-repeat: no-repeat
+  background-size: 125%
+  background-position: center
+  position: absolute
+  float: left
+  margin-top: -20px
+
+.img-icon .icon-data
+  left: 25px
+
+.imgs-icon-farmer
+  background-image: url("/assets/svgs/dados-agricultor.svg")
+  background-size: 115%
+
+.imgs-icon-market
+  background-image: url("/assets/images/dados-feira.png")
+
+.imgs-icon-people
+  background-image: url("/assets/images/dados-pessoas.png")
+
+.imgs-icon-initiative
+  background-image: url("/assets/svgs/initiative-pin.svg")
+  background-size: 110%
+
+.imgs-icon .imgs-icon-farmer
+  left: 10px 
+
+.imgs-icon .imgs-icon-market
+  left: calc(7px + 16px)
+
+.imgs-icon .imgs-icon-people
+  left: calc(7px + 32px)
+
+.accordion-content
+  transition: 0s
+  width: 80%
+  margin-left: 10%
+  position: relative
+  padding-top: 5px
+  clear: both
+
+.accordion-content::before
+  content: ''
+  position: absolute
+  width: calc(100% + 25%)
+  height: 1px
+  opacity: 0.2
+  background-color: $gray5 
+  top: 0px
+  left: -12.5%
+
+.close-accordion
+  animation: closeAccordion 0.3s
+  height: 0
+  overflow: hidden
+  padding-top: 0
+
+.open-accordion
+  animation: openAccordion 0.5s
+
+.closed-accordion
+  height: 0px
+  overflow: hidden
+  padding-top: 0
+
+@keyframes openAccordion
+  0%
+    height: 0px
+    overflow: hidden
+    opacity: 0
+  100%
+    height: 610px
+
+@keyframes closeAccordion
+  0%
+    height: 610px
+    padding-top: 18.5px
+    overflow: hidden
+    opacity: 0
+    
+  100%
+    height: 0px
+    padding-top: 18.5px
+    opacity: 0
+
+.accordion-header
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 50px
+  margin-top: 50px
+
+.accordion-header-img
+  width: 100px
+
+.accordion-header-img img
+  width: 100%
+
+.accordion-header-text
+  width: calc(100% - 100px - 22px)
+  margin-left: 22px
+  padding-top: 6px
+  color: $gray2
+  line-height: 24px
+  font-weight: bold
+
+.desc-grid
+  font-weight: bold
+  color: $black
+
+.accordion-grid
+  width: 100%
+  margin-top: 30px
+  margin-bottom: 15px
+
+.accordion-table
+  width: 100%
+
+.table-header
+  width: calc(100% - 15px)
+  display: flex
+  flex-wrap: wrap
+
+.table-body
+  max-height: 300px
+  overflow: auto
+  overflow-y: auto
+  width: 100%
+
+.table-body .table-body-items
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  color: $gray4
+
+.table-body-items:nth-child(odd)
+  background-color: $gray3
+
+.table-header-title
+  font-family: Lato-regular !important
+
+.accordion-table .table-body-item, .accordion-table .table-header-title
+  text-align: left
+  font-size: rem(16)
+  line-height: rem(18)
+  padding: 8px 0px 8px 15px
+  font-weight: bold
+
+  &.table-title
+    width: calc(30% - 30px)
+
+  &.table-desc
+    width: calc(40% - 30px)
+  
+  &.table-type
+    width: calc(30% - 30px)
+
+.accordion-table .table-header
+  color: $black
+  font-weight: bold
+  padding-bottom: 14px
+
+.accordion-table .table-body-item 
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+
+.cell-info
+  cursor: help
+
+.download-mobile
+  display: none
+
+@media only screen and (max-width: 1200px)
+  .right-menu .menu-download
+    display: none
+
+  .menu-details::before
+    display: none
+
+  .right-menu
+    margin-right: 10px
+
+  .icon-data
+    left: 8px
+  
+  .imgs-icon .imgs-icon-market
+    left: calc(7px + 14px)
+
+  .imgs-icon .imgs-icon-people
+    left: calc(7px + 28px)
+
+  .img-icon .icon-data
+    left: 15px
+
+  .menu-details
+    position: absolute
+    right: 10px
+    top: -8px
+    font-size: 15px
+    z-index: 99
+
+  .accordion-content
+    width: 100%
+    margin-left: 0
+
+  .accordion-header
+    width: 90%
+    margin-left: 5%
+    margin-bottom: 30px
+    margin-top: 20px
+
+  .accordion-table .table-body-item, .accordion-table .table-header-title
+    padding: 8px 0px 8px 18px
+
+  .desc-grid
+    padding-left: 18px
+
+  .accordion-content::before 
+    width: 100%
+    left: 0
+
+  .table-body
+    max-height: 225px
+
+  .download-mobile
+    color: $green
+    display: flex
+    flex-wrap: wrap
+    padding-left: calc(5% + 78px + 22px)
+    margin-bottom: 30px
+
+  .menu-download::after
+    top: calc(50% - 8.25px)

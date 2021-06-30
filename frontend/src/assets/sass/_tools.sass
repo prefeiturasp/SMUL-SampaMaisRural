@@ -1,0 +1,29 @@
+@import './_variables.sass'
+
+@function rem($px)
+  @return #{$px / 16}rem
+
+@mixin rounded-icon-button
+  border-radius: 50%
+  background-color: $white
+  border: none
+  box-shadow: 0 8px 18px 0 rgba(0,0,0,0.21)
+  z-index: 1000
+  height: 36px
+  width: 36px
+
+  mat-icon
+    height: 14px !important
+    width: 14px !important
+    margin: 0 auto
+
+
+@mixin rounded-rectangle-button
+  height: 44px
+  width: 130px
+  border-radius: 33px
+  background-color: $white
+  box-shadow: 2px 4px 8px 0 rgba(99, 99, 99, 0.16)
+  font-weight: bold
+  color: #54595E
+  line-height: 34px

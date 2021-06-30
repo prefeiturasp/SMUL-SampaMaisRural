@@ -1,0 +1,10 @@
+api_id: cd_registro
+subcategory_list: tx_classe_equipamento
+coords: ge_ponto
+district: nm_distrito
+name: nm_equipamento
+full_address: tx_endereco_equipamento
+neighborhood: nm_bairro_equipamento
+schedule: tx_horario_funcionamento
+workers: qt_feirantes
+category_name: cd_categoria

@@ -1,0 +1,5 @@
+<% f.inputs 'Fotos' do %>
+  <% f.has_many :attachments, new_record: true, allow_destroy: true do |a| %>
+    <%- a.input :file, as: :file, hint: image_tag(a.object.site_version_url || "") %>
+  <% end %>
+<%  end %>

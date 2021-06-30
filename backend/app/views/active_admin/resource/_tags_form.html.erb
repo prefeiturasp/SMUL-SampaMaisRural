@@ -1,0 +1,36 @@
+<% Subcategory.tag_list.each do |tag_list| %>
+  <% options = Subcategory.tag_list_for(f.object.category.subcategories, tag_list) %>
+
+  <% if options.any? %>
+    <% f.input "#{tag_list.to_s.singularize}_list",
+      as: :check_boxes,
+      disabled: (f.object.update_via_integration? ? options : []),
+      collection: options %>
+  <% end %>
+
+  <% if f.object.persisted? %>
+    <fieldset class="choices">
+      <% f.object.send(tag_list).where.not(name: options).each do |option| %>
+        <% f.input "custom_#{tag_list.to_s.pluralize}[][name]",
+          label: (options.empty? ? f.object.class.human_attribute_name(tag_list) : false),
+          multiple: true,
+          wrapper_html: { class: (options.any? ? 'tag_field' : nil)  },
+          input_html: { value: option.name, disabled: f.object.update_via_integration? } %>
+        <% f.input "custom_#{tag_list.to_s.pluralize}[][id]",
+          as: :hidden,
+          wrapper_html: { class: (options.any? ? 'tag_field' : nil)  },
+          input_html: { value: option.id } %>
+      <% end %>
+      <% if options.any? %>
+        <% f.object.send(tag_list).where.not(name: options).build do |option| %>
+          <% f.input "custom_#{tag_list.to_s.pluralize}[][name]",
+            label: false,
+            multiple: true,
+            wrapper_html: { class: (options.any? ? 'tag_field' : nil)  },
+            input_html: { value: option.name, disabled: f.object.update_via_integration? } %>
+        <% end %>
+      <% end %>
+    </fieldset>
+  <% end %>
+
+<% end %>

@@ -1,0 +1,10 @@
+<%= simple_format @message %>
+
+<% if @status.to_sym == :approved %>
+  <p>Acesse o perfil e confira <%= link_to @partner.name, "#{ENV['APP_HOST']}/lugar/#{@partner.slug}", class: 'button' %></p>
+<% end %>
+
+<p>
+<%= I18n.t('notifications.resources')[@resource.class.name.downcase.to_sym] %>: <%= @resource.detail %>
+</p>
+

@@ -1,0 +1,75 @@
+@import '../../../assets/sass/_tools.sass'
+
+:host
+  z-index: 1
+  background-color: $white
+  font-family: Lato-light
+  min-height: calc(100vh - 48px)
+
+.banner-data
+  height: 326px
+  background-image: url("/assets/images/background-dados.jpg")
+  background-repeat: no-repeat
+  color: $white
+  text-align: center
+  margin-bottom: 66px
+  background-size: cover
+
+.banner-title
+  font-size: rem(36)
+  padding-top: 130px
+  font-weight: 100
+  font-family: Lato-light
+
+.banner-desc
+  font-size: 16px
+  width: 540px
+  margin-left: calc(50% - 270px)
+  padding-top: 30px
+  line-height: 24px
+  font-family: Lato-regular
+  white-space: pre
+
+.available-bases
+  width: 70%
+  margin-left: 15%
+  margin-bottom: calc(66px + 50px)
+
+.available-bases-title
+  font-size: rem(24)
+  text-align: center
+  color: $darkgray
+  margin-bottom: 10px
+  height: 56px
+  font-family: Lato-regular
+  font-weight: bold
+
+.available-bases-desc
+  width: 100%
+  text-align: center
+  font-size: rem(16)
+  color: $black
+  line-height: rem(24)
+  margin-bottom: 54px
+  font-family: Lato-light
+  font-weight: bold
+
+@media only screen and (max-width: 1200px)
+  .available-bases
+    width: 90%
+    margin-left: 5%
+    margin-bottom: 50px
+  
+  .banner-desc
+    width: 90%
+    margin-left: 5%
+    
+  .banner-title
+    padding-top: 140px
+
+  .banner-data
+    height: 352px
+    background-size: cover
+    background-position: center
+    margin-bottom: 50px
+    background-image: url("/assets/images/bg-dados-mobile.jpg")

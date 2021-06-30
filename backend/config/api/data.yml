@@ -1,0 +1,135 @@
+filters:
+  filter_groups:
+    agricultores-com-contato:
+      - Produção Agricultores com contato
+      - Área produzida Agricultores com contato
+      - Qualificações Agricultores com contato
+      - subcategory_list
+      - zone
+
+    agricultores-sem-contato:
+      - Produção Agricultores sem contato
+
+    aldeias-guarani:
+      - Produção Aldeias Guarani
+      - Qualificações
+
+    hortas-urbanas:
+      - Atividades Hortas
+      - Qualificações Hortas
+
+    hortas-em-equipamentos-publicos:
+      - Atividades Hortas em equipamentos públicos
+      - Qualificações Hortas em equipamentos públicos
+
+
+        #  - Pólo de Ecoturismo
+        # - Qualificações
+
+    vivencia-rural:
+      - Vivência Rural
+    natureza:
+      - Natureza
+    cultura:
+      - Cultura
+    alimentacao:
+      - Alimentação
+    hospedagem:
+      - Hospedagem
+    comercio-e-servicos:
+      - Comércio e Serviços
+    parceiros-da-producao-local:
+      - Parceiros da produção local
+
+    feiras-organicas:
+      - Feiras Orgânicas
+    comercio-parceiro-de-organicos:
+      - Comércio Parceiro de Orgânicos
+    grupo-de-consumo-responsavel:
+      - Grupo de Consumo Responsável
+
+    restaurantes-organicos:
+      - Restaurantes orgânicos
+    feiras-livres-municipais:
+      - Feiras livres municipais
+    servicos-para-agricultura:
+    - Serviços para agricultura
+
+     # Initiatives
+     # - Qualificações
+    politicas-publicas:
+      - Políticas públicas
+    iniciativas-da-sociedade-civil:
+      - Iniciativas de Sociedade Civil
+    associacoes-e-cooperativas:
+      - Associações e Cooperativas
+    pesquisa-e-extensao:
+      - Pesquisa e Extensão
+
+  upa:
+    cultivated_area_range:
+      - Menos de 0, 5 ha
+      - 0,5 a 5 ha
+      - Mais de 5ha
+
+    subcategory_list:
+      - Agricultores com contato
+      - Hortas urbanas
+      - Aldeias Guarani
+      - Hortas em equipamentos públicos
+      - Agricultores sem contato
+
+  tourism:
+    subcategory_list:
+      - Comércio e Serviços
+      - Natureza
+      - Cultura
+      - Hospedagem
+      - Alimentação
+      - Vivência
+
+  initiative:
+    subcategory_list:
+      - Políticas Públicas
+      - Associações e Cooperativas
+      - Iniciativas da Sociedade Civil
+      - Pesquisa e Extensão
+      - Sp Cidade Solidária
+
+
+  market:
+    subcategory_list:
+      - Parceiro da produção de Sampa
+      - Entrega e retirada de alimentos e produtos frescos
+      - Comércio Parceiro de Orgânicos
+      - Feiras Livres Municipais
+      - Feiras Orgânicas
+      - Grupo de Consumo Responsável
+      - Restaurantes com Ingredientes Orgânicos
+
+default_values:
+  tourism:
+    source_info: Sampa+Rural
+
+  initiative:
+    source_info: Sampa+Rural
+
+  upa:
+    name: Produtor Agrícola
+    subcategory: Agricultor/a
+    source_info: Sampa+Rural
+
+    qualifications:
+      organic: Orgânico Certificado
+      participatory_system: Orgânico Participativo
+      audit: Orgânico por Auditoria
+      organization: Organismo de Controle Social
+      in_organic_transition: Transição Agroecológica
+
+  market:
+    geosampa:
+      prefix: Feira
+      source_info: "Secretaria de Abastecimento - SMSUB, GeoSampa - SMDU"
+    idec:
+      source_info: "Mapa de Feiras Orgânicas - IDEC"
+      source_link: "https://feirasorganicas.org.br"

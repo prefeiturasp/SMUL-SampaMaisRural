@@ -1,0 +1,233 @@
+@import '../../../assets/sass/_tools.sass'
+
+:host
+  background-image: url("/assets/images/home-fundo.jpg")
+  background-color: $gray11
+  background-size: 1920px 1080px
+  position: relative
+  width: 100%
+  min-height: 520px
+  background-repeat: no-repeat
+  border-bottom: solid 3px $green
+  margin-bottom: 64px
+  z-index: 92
+
+:host, section
+  overflow: hidden
+  height: calc(100vh - 112px)
+
+.explore
+  background-color: $white
+
+h2
+  margin-top: 25vh
+  font-size: rem(36)
+  line-height: rem(44)
+  font-family: Lato-light
+  font-weight: bold
+  letter-spacing: 1px
+
+p
+  font-family: Lato-light
+  letter-spacing: 0.5px
+
+i
+  font-size: rem(16)
+  line-height: rem(19)
+  font-family: Lato-light
+
+button
+  height: 30px
+
+h2, p, a
+  color: $white
+
+p
+  font-weight: 300
+
+span
+  font-family: Lato-bold
+
+
+p, a
+  font-size: rem(16)
+  line-height: rem(23)
+
+.home-links
+  display: block !important
+  margin-top: 14vh
+
+.explore-anchor
+  height: rem(96)
+  display: flex
+
+.container
+  height: calc(100vh - 110px)
+  position: fixed
+  width: 100%
+  overflow: hidden
+  z-index: 2000
+  left: 0
+  top: 0
+
+.upside-down
+  transform: rotateX(180deg) translate(0px, 2px)
+
+mat-icon
+  transition-duration: 0.3s
+
+mat-divider
+  height: 100%
+  width: 2px
+  background-color: $green
+  margin: -2px 0 0 1px
+  z-index: 1
+
+.circle
+  height: 6px
+  width: 6px
+  border-radius: 3px
+  background: $green
+  z-index: 2
+  position: relative
+
+  &::after
+    width: 2px
+    height: 200px
+    position: absolute
+    background: $green
+    content: ''
+    top: 0
+    left: calc(50% - 1px)
+
+
+.map
+  top: 50px
+  left: 0
+  position: absolute
+  z-index: 1000
+  width: 100%
+  height: 100vh
+
+app-places
+  top: 50px
+  width: 100vw
+  position: fixed
+
+
+.extra-button
+  background-color: $green
+  height: 54px
+  padding-left: 54px
+  border-radius: 40px
+  width: calc(305px - 20px)
+  margin-top: 30px
+  background-image: url('/assets/images/selo-white.png')
+  background-repeat: no-repeat
+  background-size: 36px
+  background-position: 12px 10px
+
+  .button-title
+    color: $white
+    font-family: Lato-bold
+    padding-top: 9px
+    margin-bottom: 4px
+    font-size: rem(14)
+    line-height: rem(16)
+
+  .button-desc
+    color: $white
+    font-family: Lato-regular
+    font-size: rem(14)
+
+  &:hover
+    opacity: 0.8
+    cursor: pointer
+
+@media only screen and (max-width: 768px)
+  
+ :host
+   background-size: cover
+   background-image: url("/assets/images/home-fundo-mobile.jpg")
+   min-height: 660px
+   max-height: 660px
+
+ ::ng-deep
+    body
+     overflow-y: auto
+
+ .home-mobile-cards
+    flex-wrap: wrap
+    flex: unset !important
+
+ .home-content
+   display: block !important
+
+ .explore-anchor
+   margin-bottom: 15px
+
+ :host
+   padding-top: 50px
+   height: calc(100vh - 76px)
+   z-index: 2
+   margin-bottom: 0px
+   transition: 0.3s
+
+ section
+  height: calc(100vh - 76px)
+
+ .discover
+   padding: 0 rem(16)
+   margin-top: 12px
+   margin-bottom: 27px !important
+
+ h2
+  font-size: rem(34)
+  line-height: rem(42)
+  margin: 0
+  margin-bottom: 20px !important
+
+ p
+   font-size: rem(14)
+   line-height: rem(22)
+
+
+ .circle
+  margin-left: 14px
+
+ .explore-anchor
+  margin-top: 44px
+
+ .explore-line
+  padding-top: 10px
+
+ i
+  font-weight: normal
+
+@media only screen and (max-width: 500px)
+  :host
+    height: unset
+    min-height: 640px
+    max-height: 640px
+
+    h2
+     font-size: rem(24)
+     font-family: Lato-regular
+     font-weight: normal
+     line-height: rem(30)
+
+@media only screen and (max-width: 375px)
+  :host
+    height: unset
+    min-height: 650px
+    max-height: 650px
+
+@media only screen and (max-height: 1000px) and (max-width: 768px)
+  .explore-anchor
+    position: absolute
+    bottom: 20px
+    height: unset
+
+  .circle
+    &::after
+      height: 56px

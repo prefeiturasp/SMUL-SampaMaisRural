@@ -1,0 +1,290 @@
+@import '../../../assets/sass/_tools.sass'
+
+:host
+  z-index: 2000
+
+.divider
+  clear: both
+
+.category-title
+  padding-top: 16px
+  color: $black
+  font-size: rem(16)
+  font-family: Lato-regular
+  line-height: rem(20)
+  padding-left: 19px
+  position: relative
+  width: calc(100% - 108px)
+  margin-bottom: 10px
+
+  &::before
+    content: ''
+    width: 32px
+    height: 32px
+    position: absolute
+    background-repeat: no-repeat
+    background-position: center
+    left: 16px
+
+  .data-link
+    color: $green
+    font-size: rem(12)
+    font-family: Lato-regular
+    font-weight: bold
+    line-height: rem(16)
+    margin-left: 14px
+    cursor: pointer
+
+.close-categories
+  position: absolute
+  display: none
+  right: 20px
+  top: 24px
+  width: 24px
+  height: 24px
+  background-image: url('/assets/svgs/close-icon.svg')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.category-filters
+    width: 100%
+    top: 0px
+    background-color: $white
+
+
+
+    .categories
+
+      &.all-filters
+        padding: 0
+        background: transparent
+
+      .categories-list
+        display: block
+        padding: 0 13px
+
+        &.no-padding
+          padding: 0
+
+        .categories-select
+          display: block
+
+        .category-filter
+          padding: 7px 17px
+          padding-bottom: 4px
+          color: $white
+          text-align: center
+          margin: 3px
+          border-radius: 20px
+          font-size: rem(13)
+          height: calc(32px - 12px)
+          float: left
+          cursor: pointer
+          color: $black
+
+          &.active
+            color: $white
+
+          &.initiative
+            border: 1px solid $blue
+
+            &.active
+              background-color: $blue
+
+          &.tourism
+            border: 1px solid $orange
+
+            &.active
+              background-color: $orange
+
+          &.market
+            border: 1px solid $red
+
+            &.active
+              background-color: $red
+
+          &.upa
+            border: 1px solid $green
+
+            &.active
+              background-color: $green
+
+          &:hover
+            opacity:0.6
+
+.no-padding
+  background-color: unset
+  margin: 10px 0
+
+  .categories
+    margin-left: -4px
+
+    .categories-list
+      padding: 0
+
+@media only screen and (max-width: 768px)
+  section
+    display: none
+
+    .category-title
+      font-size: rem(24)
+      font-family: Lato-regular
+      font-weight: normal
+      padding-left: 60px
+      padding-top: 40px
+      margin-bottom: 25px
+      width: calc(100vw - 140px)
+
+      &.Tourism
+        font-size: rem(20)
+
+      &::before
+        width: 32px
+        height: 32px
+        background-position: center
+        background-size: cover
+        position: absolute
+        left: 16px
+        top: 35px
+
+      &.Upa::before
+        background-image: url('/assets/svgs/upa-green.svg')
+
+      &.Market::before
+        background-image: url('/assets/svgs/market-pink.svg')
+
+      &.Tourism::before
+        background-image: url('/assets/svgs/tourism-orange.svg')
+
+      &.Initiative::before
+        background-image: url('/assets/svgs/initiatives-blue.svg')
+
+      &.covid
+        padding-left: 16px
+        font-size: rem(20)
+        width: calc(100vw - 80px)
+
+  .category-filters
+    width: 100%
+    top: 0px
+    background-color: $white
+
+    .categories
+      .categories-list
+        .category-filter:hover
+          opacity: 1
+
+  .all-filters
+    display: block
+
+    .category-filters
+      width: unset
+      position: relative
+      background: transparent
+
+      .close-categories
+          display: none
+
+      .categories
+        overflow-x: unset
+        overflow-y: unset
+        height: unset
+        padding: 0
+
+        .categories-list
+          max-height: unset
+          height: unset
+          padding: 1px
+          width: 100% !important
+
+  .on-map //, .on-list
+    position: relative
+    top: 0px
+    height: 135px
+    width:100vw
+    display: block
+    background-color: $white
+    z-index: 2009
+    margin-top: -150px
+    padding-bottom: 0px
+    padding-top: 0px
+    overflow-x: auto
+
+    &.hide
+      z-index: 0
+
+    .close-icon
+      background-image: url('/assets/svgs/close-icon.svg')
+      position: absolute
+      right: 30px
+      width: 20px
+      height: 20px
+      top: 40px
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 100%
+
+    .no-padding
+      margin: 0
+
+    .close-categories
+      display: block
+
+    .category-filters
+      width: 100vw
+      position: relative
+      overflow: hidden
+      overflow-x: auto
+      display: inline-block
+      left: 0
+      height: 36px
+
+      .categories
+        overflow-x: auto
+        overflow-y: hidden
+        height: 60px
+
+        .categories-list
+          display: flex
+          flex-wrap: wrap
+          padding: 0 16px
+          overflow-y: hidden
+
+          .categories-repeater
+            width: 100%
+            overflow-x: scroll
+            overflow-y: hidden
+            white-space: nowrap
+
+            .inline-block
+              display: inline-block
+
+          .categories-select
+            display: flex
+            flex-wrap: wrap
+            width: 100%
+
+  .on-list
+    height: 45px
+    margin-top: 2px
+
+  .on-map
+    position: absolute
+    top: 140px
+
+@media only screen and (max-width: 500px)
+  section
+    .category-filters
+      .categories
+        width: 100%
+        overflow-x: scroll
+        overflow-y: hidden
+        white-space: nowrap
+        padding: 0 16px
+
+        .category-repeater
+          display: inline-block
+
+        .categories-list
+          padding: 0 !important

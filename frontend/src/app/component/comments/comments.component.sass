@@ -1,0 +1,122 @@
+@import '../../../assets/sass/_tools.sass'
+  
+.comments-title
+  font-family: Lato-regular
+  font-weight: bold
+  line-height: rem(24)
+  color: $darkgray
+  margin-bottom: 14px
+
+.send-comment
+  background-color: $green
+  color: $white
+  font-family: Lato-light
+  font-weight: bold
+  line-height: rem(34)
+  text-align: center
+  width: 100%
+  padding: 10px 0px
+  font-size: rem(16)
+  border-radius: 30px
+  cursor: pointer
+  margin: 20px 0px
+  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2)
+
+  &:hover, &:focus
+    opacity: 0.8
+
+  &:disabled
+    opacity: 0.7
+    cursor: not-allowed
+
+.warning
+  color: $red
+
+.popup
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  position: fixed
+  z-index: 2001
+  background-color: rgba(0,0,0,0.8)
+
+  .popup-content
+    background-color: $white
+    position: absolute
+    width: 40%
+    z-index: 3001
+    margin-left: 30%
+    height: 440px
+    top: calc(50% - 200px)
+
+    .message-sent
+      width: 90%
+      margin-left: 5%
+
+    .back-profile
+      background-color: $green
+      color: $white
+      text-align: center
+      font-family: Lato-bold
+      line-height: rem(34)
+      padding: 5px 0
+      width: 200px
+      margin-left: calc(50% - 100px)
+      border-radius: 30px
+      margin-top: 36px
+      cursor: pointer
+      
+      &:hover
+        opacity: 0.7 
+
+.recaptcha-area
+  width: 304px
+  margin-left: calc(50% - 154px)
+  margin-top: 10px
+
+form
+  .recaptcha-warn
+    position: relative
+    margin-top: 4px
+
+.posted-comments
+  max-height: 300px
+  overflow: auto
+
+  .name
+    font-family: Lato-bold
+    color: $darkgray
+    line-height: rem(24)
+    margin-bottom: 2px
+
+  .message
+    color: $darkgray
+    line-height: rem(24)
+    margin-bottom: 16px
+    font-family: Lato-light
+    font-weight: bold
+    white-space: pre-line
+    width: 80%
+
+  .date
+    color: $gray14
+    font-size: rem(14)
+    margin-left: 8px
+
+@media only screen and (max-width: 768px)
+  .popup
+    .popup-content
+      width: calc(100% - 20px)
+      margin-left: 10px
+      top: 10px
+      height: calc(100vh - 20px)
+
+  .send-comment
+    margin-top: 20px
+
+  .recaptcha-area
+    transform: scale(0.8)
+    margin-left: 0
+    position: relative
+    left: calc(50% - 171.5px + 20px)

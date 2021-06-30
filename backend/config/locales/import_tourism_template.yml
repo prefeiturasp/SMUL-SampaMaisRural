@@ -1,0 +1,51 @@
+pt-BR:
+  templates:
+    tourism:
+      api_id: ID
+      status: Status
+      category: Categoria
+      subcategory_list: Subcategorias
+      name: Nome no Perfil
+      qualification_list: Qualificações
+      product_list: Atividade de Conexão
+      full_address: Endereço
+      neighborhood: Bairro
+      zip_code: CEP
+      district: Distrito
+      city: Cidade
+      zone: Zona
+      phone_0: Telefone Comercial 1
+      phone_kind_0: Telefone Comercial 1 Tipo
+      phone_1: Telefone Comercial 2
+      phone_kind_1: Telefone Comercial 2 Tipo
+      phone_2: Telefone Comercial 3
+      phone_kind_2: Telefone Comercial 3 Tipo
+      schedule: Dias e Horário de Funcionamento
+      email: Email
+      web_pages: Site/Blogs/Redes Sociais
+      contact: Contato
+      other_contact: Outra forma de contato
+      description: Descrição
+      market_ids: Feiras conectadas
+      upa_ids: Agricultores conectados
+      tourism_ids: Pontos Turismo e Vivência Rural conectados
+      initiative_ids: Iniciativas conectadas
+      associativism: Associativismo
+      disabled_friendly_amenities: Possui facilidades para pessoas com necessidades especiais
+      neighborhood_region_list: Polo de ecoturismo
+      gender: Gênero da responsável
+      begined_at: Ano de início da Atividade
+      source: Nome da base de dados
+      source_date: Data da coleta
+      source_info2: Fonte 2
+      source_update: Data da última atualização
+      responsable_name: Nome produtor/a
+      cpf: CPF
+      home_phone: Telefone Residencial
+      cellphone: Telefone celular
+      cnpj: Cnpj
+      cnae: Cnae
+      company_activity: Atividade Econômica
+      registered_by: Responsável pela acoleta
+      lat: Latitudade
+      lon: Longitude

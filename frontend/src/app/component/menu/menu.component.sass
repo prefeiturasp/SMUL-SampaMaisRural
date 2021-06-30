@@ -1,0 +1,85 @@
+@import '../../../assets/sass/_tools.sass'
+
+.mat-list
+  padding: 0
+  display: inline-flex
+  align-items: center
+
+  .mat-list-item
+    color: $gray4
+    font-size: rem(12)
+    font-weight: 500
+    letter-spacing: 1px
+    line-height: rem(15)
+    text-align: center
+a
+ color: $gray4
+ font-family: Lato-regular
+ font-weight: bold
+
+ &:hover
+   color: $green
+
+a.white-color
+  color: $gray11
+  font-family: Lato-light
+  transition: 0.3s
+
+  &:hover
+   color: $green
+
+button
+  box-sizing: border-box
+  height: 34px
+  width: 134px
+  border-radius: 26.4px
+  background-color: $green
+  color: $white
+  font-size: 12px
+  font-family: Lato-bold
+  letter-spacing: -0.56px
+  line-height: 16px
+  text-align: center
+  transition: 0.3s
+
+  &:hover
+    background-color: $darkgreen
+
+.menu-item
+  position: relative
+  display: flex
+  flex-wrap: wrap
+        
+/* MOBILE */
+@media only screen and (max-width: 980px)
+
+  button
+    border: none !important
+
+  mat-list
+    margin: 0 auto
+    width: 215px
+    padding: 0
+    display: block
+
+    mat-list-item
+      height: 24px
+      margin: 30px 0 !important
+
+      a
+        color: $white
+        font-size: 20px
+        letter-spacing: -0.7px
+        line-height: 24px
+        margin: 0 auto !important
+
+      button
+        margin: 60px auto 0 auto
+        font-size: 16px
+        height: 45px
+        width: 185px
+
+@media only screen and (max-width: 325px)
+  mat-list
+    mat-list-item
+      margin: 15px 0 !important

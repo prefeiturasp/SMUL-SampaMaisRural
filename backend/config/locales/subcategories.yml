@@ -1,0 +1,59 @@
+pt-BR:
+  categories_names:
+    upa: Agricultura
+    market: Mercado
+    initiative: Iniciativas e políticas públicas
+    tourism: Turismo e vivência rural
+  categories:
+    upa:
+      farmers_with_contact: Agricultores com contato
+      farmers_without_contact: Agricultores sem contato
+      guarani: Aldeias Guarani
+      urban_gardens: Hortas urbanas
+      gardens_with_public_equipaments: Hortas em equipamentos públicos
+    tourism:
+      rural_experience: Vivência Rural
+      nature: Natureza
+      culture: Cultura
+      food: Alimentação
+      accommodation: Hospedagem
+      service: Comércio e Serviços
+    market:
+      local_production_partner: Parceiro da produção de Sampa
+      organic_markets: Feiras Orgânicas
+      with_organic_partners: Comércio Parceiro de Orgânicos
+      sustainable_consumption: Grupo de Consumo Responsável
+      restaurants_with_organic_ingredients: Restaurantes com Ingredientes Orgânicos
+      free_markets: Feiras Livres Municipais
+      agriculture_services: Serviços para Agricultura
+    initiative:
+      public_policies: Políticas Públicas
+      civil_society: Iniciativas da Sociedade Civil
+      associations_cooperatives: Associações e Cooperativas
+      research: Pesquisa e Extensão
+      solidary_city: SP Cidade Solidária
+  subcategories:
+    farmers_with_contact: Agricultores com contato
+    farmers_without_contact: Agricultores sem contato
+    guarani: Aldeias Guarani
+    urban_gardens: Hortas urbanas
+    gardens_with_public_equipaments: Hortas em equipamentos públicos
+    rural_experience: Vivência Rural
+    nature: Natureza
+    culture: Cultura
+    food: Alimentação
+    accommodation: Hospedagem
+    service: Comércio e Serviços
+    local_production_partner: Parceiro da produção de Sampa
+    organic_markets: Feiras Orgânicas
+    with_organic_partners: Comércio Parceiro de Orgânicos
+    sustainable_consumption: Grupo de Consumo Responsável
+    free_markets: Feiras Livres Municipais
+    agriculture_services: Serviços para Agricultura
+    public_policies: Políticas Públicas
+    civil_society: Iniciativas da Sociedade Civil
+    associations_cooperatives: Associações e Cooperativas
+    research: Pesquisa e Extensão
+    garden: Hortas
+    restaurants_with_organic_ingredients: Restaurantes com Ingredientes Orgânicos
+    organic_restaurants: Restaurantes orgânicos

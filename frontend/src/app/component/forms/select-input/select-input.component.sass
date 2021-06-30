@@ -1,0 +1,40 @@
+@import '../../../../assets/sass/_tools.sass'
+
+.form-field
+  position: relative
+
+  input 
+    padding-right: 45px
+    width: calc(100% - 45px)
+
+  &::after 
+    content: ''
+    width: 12px
+    height: 8px
+    background-image: url("/assets/svgs/arrow-down.svg")
+    position: absolute 
+    top: 25px
+    right: 10px
+    z-index: 99
+    background-size: cover
+    background-position: center
+    opacity: 0.5
+
+  .options
+    position: absolute
+    top: 50px
+    background-color: $lightgray
+    width: 100%
+    left: 0
+    max-height: 160px
+    overflow: auto 
+    box-shadow: 8px 12px 14px $gray2
+    z-index: 999
+
+    .option-value
+      padding: 10px
+      cursor: pointer
+
+      &:hover, &:focus
+        background-color: $gray2
+      

@@ -1,0 +1,108 @@
+<section clas="selo">
+    <div class="banner">
+        <div class="categories-title">Selos Sampa+Rural</div>
+    </div>
+
+    <div class="desc-bg">
+        <div class="desc">
+            <div class="desc-info">
+                <div class="desc-icon-folha"></div>
+                <div class="desc-info-text">
+                    <counter class="desc-count cat-color" *ngIf="count" [fontStyle]="'bold'" [counter]="count">
+                    </counter>
+                    <div class="desc-info-title">Lugares na Sampa+Rural</div>
+                </div>
+            </div>
+            <div class="desc-paragraph">
+                Para visibilizar, valorizar e reconhecer cada um que promove uma cidade mais sustentável, mais saudável
+                e mais solidária, fortalecer redes e facilitar que mais conexões aconteçam, a Sampa+Rural possui dois
+                tipos de selos físicos: um para ser instalado
+                nos locais mapeados pela plataforma; outro específico para quem comercializa produtos de agricultoras e
+                agricultores da cidade.<br /><br /> Os selos são fixados em lugar de fácil acesso aos frequentadores do
+                local para
+                que se possa, por meio do QRcode, acessar o perfil correspondente na Sampa+Rural. <br /><br /> Confira
+                abaixo como funciona cada selo e solicite o seu caso ainda não o tenha!<br />
+
+                <a class="link">+ ver regulamento dos selos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="desc-bg gray-area">
+        <div class="title">Selo da Produção de Sampa</div>
+        <div class="desc">
+            <div class="desc-info">
+                <div class="desc-seal"></div>
+            </div>
+            <div class="desc-paragraph">
+                De onde vem o que você consome? O <b>Selo da Produção de Sampa</b> identifica os mercados, feiras,
+                restaurantes, cafés, empórios e iniciativas que compram de produtores rurais da cidade. O objetivo dessa
+                iniciativa é valorizar a produção
+                da cidade e os estabelecimentos que exercem um comércio justo e local. O selo reunirá o nome da
+                agricultora, agricultor, sítio ou cooperativa da cidade de São Paulo que fornece produtos e alimentos
+                agrícolas para aquele local. E para saber
+                mais sobre a produção, o selo dispõe de um QRCode para que interessados possam escaneá-lo e, assim,
+                acessar o perfil na Sampa+Rural. <br /><br /> Este selo é distribuído de duas maneiras: para
+                agricultores e cooperativas que o entrega
+                a seus fornecedores; bem como diretamente para os estabelecimentos que apoiam a produção local. Para
+                esse último caso, a equipe de moderação da Sampa+Rural irá confirmar com as produtoras e produtores se,
+                de fato, aquele lugar compra seus
+                produtos. O selo tem validade de um ano. <br /><br />
+                <a class="desc-info-link button-link" (click)="openMap()" title="Ver no mapa">Ver no mapa</a>
+                <a routerLink="/contato" class="link">+ solicite o seu</a>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="counter counter-one">
+                <div class="desc-info desc-paragraph sub-desc-info">
+                    <div class="farmer sub-icon"></div>
+                    <div class="sub-paragraph">
+                        <p class="count">{{ this.farmersCount }}</p>
+                        <b>Agricultores com contato</b>
+                        <p class="text">
+                            Conheça agricultores da cidade de São Paulo, suas histórias e onde comprar seus produtos.
+                        </p>
+                        <a (click)="openFarmers()" class="map-link">Ver no mapa</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="counter">
+                <div class="desc-indo desc-paragraph sub-desc-info">
+                    <div class="partner-sp sub-icon"></div>
+                    <div class="sub-paragraph">
+                        <p class="count">{{ this.marketsCount }}</p>
+                        <b>Parceiro da produção de Sampa</b>
+                        <p class="text">
+                            Descubra estabelecimentos que vendem produtos das zonas rurais da cidade de São Paulo e
+                            fortaleça a produção local! </p>
+                        <a (click)="openMarkets()" class="map-link">Ver no mapa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="desc-bg">
+        <div class="title">Selo nós fazemos a Sampa+Rural</div>
+        <div class="desc">
+            <div class="desc-info">
+                <div class="desc-icon full-width"></div>
+            </div>
+            <div class="desc-paragraph">
+                O Selo de Presença pode ser obtido por qualquer estabelecimento que está na Sampa+Rural. Seu objetivo é
+                dar visibilidade a essa ampla rede de locais e criar pontes entre os estabelecimentos físicos (e também
+                virtuais) e a plataforma. É um reconhecimento
+                de que esses locais e iniciativas prestam um importante papel para a nossa cidade!<br /><br /> Neste
+                selo também há um QRCode, com a função de levar diretamente interessados para o perfil do local na
+                Sampa+Rural. A partir
+                daí será possível ter acesso às informações  do estabelecimento e suas conexões com outros pontos
+                presentes na Plataforma.  Para obter o selo, basta estar cadastrado na Plataforma. Se o selo ainda não
+                chegou até aí, entre em contato conosco.<br />
+                <a routerLink="/contato" class="link">+ solicite o seu</a>
+            </div>
+        </div>
+    </div>
+
+    <app-bottom-links></app-bottom-links>
+</section>

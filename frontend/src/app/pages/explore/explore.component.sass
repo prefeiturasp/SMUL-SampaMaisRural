@@ -1,0 +1,67 @@
+@import '../../../assets/sass/_tools.sass'
+
+:host
+ width: 37%
+ display: flex
+ max-height: calc(100vh - 50px)
+ .filters
+   position: relative
+
+.mat-divider
+  z-index: 1
+
+#category-filters
+  position: absolute
+  top: 0
+  left: 0
+
+button
+ @include rounded-icon-button
+ font-size: rem(16)
+ bottom: 64px
+ left: 40px
+ position: fixed
+ z-index: 2000
+
+ &.closed-list
+   .mat-icon
+      transform: rotateY(180deg)
+
+ &::after
+   text-transform: uppercase
+   text-align: center
+   position: absolute
+   top: 45px
+   left: -10px
+   color: $darkgray
+   font-family: Lato-black
+   font-size: rem(10)
+   width: 53px
+
+ &.open-list::after
+   content: 'Ocultar lista'
+
+ &.closed-list::after
+   content: 'Exibir lista'
+
+
+@media only screen and (max-width: 768px)
+ :host
+   width: 100%
+   max-height: calc(100vh - 50px)
+   background-color: $mapgray
+   overflow: hidden
+   flex-direction: column
+
+ button
+  @include rounded-rectangle-button
+  top: unset
+  left: unset
+  right: 14px
+  bottom: 36px
+  display: none
+
+ .open-map
+    border: 1px solid $gray9
+    height: 42px
+    box-shadow: 2px -1px 8px 0 rgba(99, 99, 99, 0.2)

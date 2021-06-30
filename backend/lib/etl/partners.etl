@@ -1,0 +1,67 @@
+require_relative '../../config/environment'
+require './lib/etl/destinations/database.rb'
+require './lib/etl/market_transform.rb'
+require './lib/etl/partner_transform.rb'
+require './lib/etl/xlsx_source.rb'
+require './lib/source_download/file_downloader.rb'
+require './lib/etl/common.rb'
+require './lib/etl/sources/csv_source.rb'
+
+module ETL
+  module SyncPartners
+    module_function
+
+    def setup(source_file, origin, logger)
+      Kiba.parse do
+        pre_process do
+          logger.info "Starting processing for file #{source_file}"
+        end
+
+        template = YAML.load_file("config/etl/templates/#{ origin }.yml")
+
+        if source_file.split('.').include?('csv')
+          opts = Hash.new
+          if %w[geosampa].include?(origin)
+            opts.merge!(:encoding => 'ISO-8859-1')
+          end
+          source CsvSource, source_file,
+            { headers: true, header_converters: :symbol }.merge(opts)
+        else
+          source XlsxSource, source_file, origin, template
+        end
+
+        if %w[idec geosampa].include?(origin)
+          transform MarketTransform, origin
+        else
+          transform PartnerTransform, origin
+        end
+
+        transform TransformList, :product_list
+        transform TransformList, :where_find_list
+        transform TransformList, :certificate_list
+
+        transform TransformDefaultValues, field: :certificate_list, values: CERTIFICATE_LIST
+
+        transform TransformDefaultValues, field: :where_find_list,
+          values: WHERE_FIND
+        transform TransformDefaultValues, field: :product_list,
+          values: PRODUCT_LIST
+
+        destination Etl::Destinations::Database, logger
+
+        post_process do
+          logger.info "Finished processing for file #{source_file}"
+        end
+      end
+    end
+  end
+end
+
+csv_file = ENV['CSV_FILE'] || SourceDownload::FileDownloader.new(ENV['ORIGIN']).file
+
+logger = Logger.new("log/import-#{ENV['ORIGIN']}-#{Date.today}.log")
+job = ETL::SyncPartners.setup(csv_file,
+    ENV['ORIGIN'],
+    logger)
+
+Kiba.run(job)

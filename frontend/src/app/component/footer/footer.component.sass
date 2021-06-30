@@ -1,0 +1,54 @@
+@import '../../../assets/sass/_tools.sass'
+
+:host
+  width: 100%
+  z-index: 3
+
+:host(.home)
+  position: absolute
+  bottom: 0
+
+p, a
+  text-align: center
+
+p
+  color: $gray2
+  font-size: 8px
+  line-height: 10px
+
+a
+  color: $white
+  font-family: Lato-light
+  font-size: rem(12)
+  line-height: rem(15)
+  font-weight: bold
+
+footer
+  bottom: 0
+  height: 48px
+  width: 100%
+  background-color: $darkgray
+
+  mat-list
+    padding: 0
+    mat-list-item
+      justify-content: center
+      display: flex
+
+@media only screen and (max-width: 768px)
+  :host(.home)
+    top: 100vh
+
+  .footer-text
+    padding-bottom: 20px
+
+  footer
+    background-color: $gray4
+    height: 156px
+
+    .partners
+      background-color: $darkgray
+
+@media only screen and (max-width: 360px)
+  :host(.home)
+    top: calc(100vh + 64px)

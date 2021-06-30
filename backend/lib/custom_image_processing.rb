@@ -1,0 +1,1 @@
+require 'custom_image_processing/adjust_text_width_methods'

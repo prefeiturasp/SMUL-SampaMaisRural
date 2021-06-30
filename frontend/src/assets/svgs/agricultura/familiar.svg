@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>2. assets/icone/pag-int/agricultura/familiar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="43" cy="43" r="43"></circle>
+        <path d="M53,0 L53.000098,27.4682042 C45.6194094,33.4299747 36.2266167,37 26,37 C16.2296181,37 7.22032195,33.7414049 -0.000375919671,28.2517272 L3.50430806e-12,7.92448495 L53,0 Z" id="path-3"></path>
+    </defs>
+    <g id="2.-assets/icone/pag-int/agricultura/familiar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" opacity="0.6">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Oval"></g>
+            <g id="1.-colors/agricultores" mask="url(#mask-2)" fill="#3F993F">
+                <rect id="Rectangle-Copy-2" x="0" y="0" width="86" height="86"></rect>
+            </g>
+        </g>
+        <g id="1.-colors/agricultores" opacity="0.8" transform="translate(17.000000, 49.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g mask="url(#mask-4)" fill="#3F993F" id="Rectangle-Copy-2">
+                <g transform="translate(-17.000000, -49.000000)">
+                    <rect x="0" y="0" width="86" height="86"></rect>
+                </g>
+            </g>
+        </g>
+        <g id="family" transform="translate(17.000000, 23.000000)" fill-rule="nonzero">
+            <path d="M26,25.9429173 C28.4221933,23.1416553 24.0599589,14.3528909 18.7873927,14.3528909 C16.6983631,14.3528909 11.799866,16.0161401 9.62917305,14.3528909 C8.92962896,13.8168795 5.66421944,15.3405952 4.50159885,16.4784482 C1.76041441,18.6918478 0,22.1120334 0,25.9429173 L0,36.3720329 C0,37.324577 0.75930583,38.0976562 1.69487909,38.0976562 L18.7873927,38.0976562 C18.7873927,37.5466196 25.3368503,27.9964091 26,25.9429173 Z" id="Path" fill="#292F36"></path>
+            <path d="M53,26.5491863 C53,20 53,14.2421445 47.7484658,14.3528909 C45.693487,14.396227 41.0176891,14.3528909 38.0933193,14.3528909 C37.1943892,14.3528909 34.1283657,15.3405952 32.9657451,16.4784482 C30.2245607,18.6918478 28.4641462,22.1120334 28.4641462,25.9429173 L28.4641462,36.3720329 C28.4641462,37.324577 29.2234521,38.0976562 30.1590253,38.0976562 L46.4120351,38.0976562 C46.4120351,37.5466196 52.3368503,28.6026781 53,26.5491863 Z" id="Path-Copy" fill="#292F36" transform="translate(40.732073, 26.224488) scale(-1, 1) translate(-40.732073, -26.224488) "></path>
+            <path d="M26,25.0284653 C22.4751111,25.0284653 19.5028274,25.3283256 17.3185556,26.8744481 C15.8763333,28.4067628 15,30.4221148 15,32.6281395 L15,41.2950776 C15,42.2519076 15.8213333,43.0284653 16.8333333,43.0284653 L35.1666667,43.0284653 C36.1786667,43.0284653 37,42.2519076 37,41.2950776 L37,32.6281395 C37,30.4221148 36.1236667,28.4067628 34.6814444,26.8744481 C32.383368,25.3283256 29.5248889,25.0284653 26,25.0284653 Z" id="Path" fill="#292F36"></path>
+            <ellipse id="Oval" fill="#F4F4F4" cx="14" cy="8.59765625" rx="8" ry="8.5"></ellipse>
+            <ellipse id="Oval-Copy" fill="#F4F4F4" transform="translate(38.000000, 8.597656) scale(-1, 1) translate(-38.000000, -8.597656) " cx="38" cy="8.59765625" rx="8" ry="8.5"></ellipse>
+            <circle id="Oval" fill="#F4F4F4" cx="26" cy="20" r="6"></circle>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<div class='slide' fxFlex="100%">
+  <div *ngIf="images && images.length">
+    <mat-carousel
+      timings="250ms ease-in"
+      [autoplay]="true"
+      interval="5000"
+      color="#FFF"
+      maxWidth="auto"
+      maintainAspectRatio=true
+      slides="images.length"
+      proportion='54'
+      [loop]="true"
+      [hideArrows]="true"
+      [hideIndicators]="false"
+      [useKeyboard]="true"
+      [useMouseWheel]="false"
+      orientation="ltr">
+      <mat-carousel-slide
+	#matCarouselSlide
+	*ngFor="let image of images; let i = index"
+	[image]="image"
+	overlayColor="rgba(0,0,0,0.2)"
+	[hideOverlay]="false">
+      </mat-carousel-slide>
+    </mat-carousel>
+  </div>
+</div>
+

@@ -1,0 +1,6 @@
+<div class="search" [ngClass]="isOpenOnMobile? 'open-mobile' : 'close-mobile'">
+  <input  [(ngModel)]="searchValue" (keydown)="pressEnter($event)" (focusout)="clearField()" [ngClass]="isGray? 'gray' : 'white'" class="input-search" placeholder="Buscar por local ou atividade" type="text" />
+  <div class="clear-field" *ngIf="isMobile"  (click)="mobileClear()"></div>
+  <div class="close-pop" *ngIf="isMobile"  (click)="closeSearchField()">Cancelar</div>
+</div>
+<div class="mobile-icon" (click)="openSearchField()" [ngClass]="isGray? 'gray' : 'white'"></div>

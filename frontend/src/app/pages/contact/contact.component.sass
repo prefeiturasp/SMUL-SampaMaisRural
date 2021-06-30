@@ -1,0 +1,147 @@
+@import '../../../assets/fonts/fonts.sass'
+@import '../../../assets/sass/_tools.sass'
+  
+:host
+  z-index: 1
+  background-color: $lightgray
+
+.contact-banner
+  height: 326px
+  width: 100%
+  background-image: url("/assets/images/contato-banner.jpg")
+  background-repeat: no-repeat
+  background-size: 100%
+
+.banner-title
+  text-align: center
+  font-size: 36px
+  font-family: Lato-light
+  line-height: 56px
+  padding-top: calc(52px + 62px)
+  color: $white
+
+.contact-area
+  height: calc(100vh - 48px - 326px)
+  width: 100%
+  position: relative
+  min-height: 520px
+
+.contact-form
+  width: calc(46% - 13%)
+  left: 27%
+  background-color: $white
+  min-height: calc(500px - 80px)
+  position: absolute
+  top: -100px
+  padding: 40px 6.5% 40px 6.5%
+
+  .contact-send-button
+    width: 210px
+    height: 54px
+    background-color: $green
+    font-family: Lato-light
+    font-weight: bold
+    color: $white
+    font-size: rem(16)
+    border-radius: 33px
+    margin-left: calc(50% - 105px)
+    margin-top: 20px
+    box-shadow: 2px 5px 13px 0px rgba(0,0,0, 0.3)
+    
+    &:hover, &:focus
+      background-color: $darkgreen
+
+    &:disabled
+      opacity: 0.8
+      cursor: not-allowed
+
+.message-sent
+  width: 100%
+  height: 210px
+  padding-top: 80px
+  margin-left: 0
+  text-align: center
+
+  .message-sent-icon
+    width: 84px
+    height: 85px
+    margin-left: calc(50% - 42px)
+    margin-bottom: 47px
+    background-image: url("/assets/svgs/done.svg")
+    background-repeat: no-repeat
+    background-size: 100%
+
+  .message-sent-title
+    font-size: 24px
+    color: $darkgray
+    font-family: Lato-bold
+    line-height: 38px
+    margin-bottom: 5px
+  
+  .message-sent-subtitle
+    font-size: 16px
+    color: $black
+    font-family: Lato-light
+    font-weight: bold
+    line-height: 38px
+  
+.loading-text
+  font-size: 24px
+  margin-top: 30px
+  text-align: center
+  color: $gray2
+
+.error-message
+  position: absolute
+  bottom: 8px
+  padding: 4px 0px
+  width: 71%
+  color: $red
+  text-align: center
+
+.valid
+  .error-message-field
+    display: none
+
+.form-field
+  margin-bottom: 20px
+
+  .form-input
+    &::placeholder
+      color: $gray2
+      opacity: 1
+
+    &:-ms-input-placeholder
+      color: $gray2
+
+    &::-ms-input-placeholder
+      color: $gray2
+
+.invalid
+  position: relative
+  .error-message-field
+    position: absolute
+    bottom: 0
+    color: $lightred
+    font-size: rem(11)
+    font-family: Lato-bold
+
+  .form-label
+    color: $lightred
+
+  .form-input
+    border-bottom: 2px solid $lightred
+
+@media only screen and (max-width: 768px)
+  .contact-banner
+    background-image: url("/assets/images/bg-contact-mobile.jpg")
+    background-size: 100% 336px
+    background-position: center
+    
+  .contact-area
+    height: 420px
+
+  .contact-form
+    width: calc(90% - 30%)
+    left: 5%
+    padding: 40px 15% 40px 15%

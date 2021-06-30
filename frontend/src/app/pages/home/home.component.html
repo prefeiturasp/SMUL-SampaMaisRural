@@ -1,0 +1,77 @@
+<section fxFlex
+         fxLayoutAlign="space-around"
+         fxFlex.lt-md="100%">
+  <div fxLayout="column"
+       fxFlex="500px"
+       class="home-content"
+       fxFlex.lt-md="100%"
+       fxLayoutGap.lt-md="2vh"
+       fxLayoutAlign="space-between">
+    <div class='discover'
+         fxLayout="column"
+         fxLayoutGap="20px">
+      <h2>Descubra as <span>zonas rurais</span> da cidade de São Paulo</h2>
+      <p>Sampa+rural, plataforma que reúne iniciativas de agricultura, turismo e alimentação saudável em um só lugar</p>
+      <div [routerLink]="'/seloSampa'" class="extra-button">
+        <div class="button-title">Selo "Produzido em Sampa"</div>
+        <div class="button-desc">Encontre produtos locais perto de você!</div>
+      </div>
+    </div>
+
+    <div fxLayout="column"
+         fxHide
+         [style.height]="'272px'"
+         fxHide.lt-md="false">
+      <div class="home-mobile-cards" fxLayout.lt-md="row"
+        fxFlex.lt-md="100%">
+        <a *ngFor="let link of homeLinks; let i = index"
+          fxFlex="50%"
+          routerLink="/categoria/{{ link.path }}">
+          <app-home-card
+            [mobileHalf]="true"
+            [label]="link.label"
+            [type]="link.type"
+            [icon]="link.icon">
+          </app-home-card>
+        </a>
+      </div>
+    </div>
+
+    <div class='explore-anchor'
+         (mouseenter)="mapChanged($event)"
+         (mouseleave)="mapChanged($event)"
+         fxLayoutGap="16px">
+      <div class="explore-line" fxLayout="column">
+        <div class='circle'></div>
+      </div>
+      <a (click)="mapChanged($event)">
+        <i>Explorar zonas rurais</i>
+      </a>
+
+      <button [class.upside-down]="arrowClassStatus" (click)="mapChanged($event)">
+        <mat-icon
+          mat-icon-button
+          svgIcon="bottom-arrow">
+        </mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section fxFlex
+         fxLayoutAlign="space-around"
+         fxHide.lt-md>
+  <div fxLayout="column"
+    class="home-links"
+    fxLayoutAlign="center center">
+    <div *ngFor="let link of homeLinks">
+      <a routerLink="/categoria/{{ link.path }}">
+        <app-home-card
+          [label]="link.label"
+          [type]="link.type"
+          [icon]="link.icon">
+        </app-home-card>
+      </a>
+    </div>
+  </div>
+</section>

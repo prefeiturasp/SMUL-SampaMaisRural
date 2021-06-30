@@ -1,0 +1,74 @@
+@import '../../../../assets/sass/_tools.sass'
+
+.input-title
+  font-size: rem(16)
+  color: $darkgray
+  font-family: Lato-bold
+  margin-bottom: 24px
+  white-space: pre-line
+
+  &.invalid
+    color: $red
+
+.input-margin
+  margin-bottom: 50px
+
+.can-open:hover
+  cursor: pointer
+  text-decoration: underline
+
+.text-area
+  white-space: pre-line
+
+.hide-input
+  display: none
+
+.input-subtitle
+  color: $gray7
+  font-size: rem(12)
+  line-height: rem(15)
+  font-family: Lato-bold
+  margin-top: -10px
+  margin-bottom: 24px
+
+.input-legend
+  color: $darkgray
+  font-size: rem(12)
+  font-family: Lato-bold
+  padding: 0px 100px 20px 100px
+
+.input-padding
+  padding: 0px 100px 0px 100px
+
+:host(.comments)
+  .input-form
+    margin-top: 0px
+
+  .form-input
+    margin-bottom: 0px
+
+@media only screen and (max-width: 1300px)
+
+  .form-input
+    &::placeholder
+      font-size: rem(13)
+
+    &:-ms-input-placeholder
+      font-size: rem(13)
+
+    &::-ms-input-placeholder
+      font-size: rem(13)
+
+@media only screen and (max-width: 768px)
+  .input-padding
+    padding: 0px 20px 0px 20px
+
+  .form-input
+    &::placeholder
+      font-size: rem(12)
+
+    &:-ms-input-placeholder
+      font-size: rem(12)
+
+    &::-ms-input-placeholder
+      font-size: rem(12)

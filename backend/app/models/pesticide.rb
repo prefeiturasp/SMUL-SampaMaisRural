@@ -1,0 +1,2 @@
+class Pesticide < ApplicationRecord
+end

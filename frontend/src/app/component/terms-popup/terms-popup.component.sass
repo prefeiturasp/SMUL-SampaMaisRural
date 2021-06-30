@@ -1,0 +1,44 @@
+@import '../../../assets/sass/_tools.sass'
+
+.popup
+  position: fixed
+  bottom: 0
+  width: 100vw
+  z-index: 999
+  background-color: white
+  display: flex
+  flex-wrap: nowrap
+  padding: 20px
+
+  .text
+    font-family: Lato-regular
+    font-size: rem(14)
+    line-height: rem(24)
+    color: $darkgray
+    margin-right: 20px
+    width: calc(100% - 320px - 20px)
+
+  button
+    width: 278px
+    height: 36px
+    background-color: $green
+    font-family: Lato-bold
+    color: white
+    border-radius: 20px
+    font-size: rem(16)
+    margin-top: 8px
+    cursor: pointer
+
+    &:hover
+      opacity: 0.6
+
+@media only screen and (max-width: 1200px)
+  .popup
+    display: block
+
+    .text
+      width: calc(100% - 40px)
+      margin-right: 0
+
+    button
+      margin-top: 18px

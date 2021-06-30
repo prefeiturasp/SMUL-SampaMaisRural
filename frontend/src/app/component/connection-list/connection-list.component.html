@@ -1,0 +1,16 @@
+<section class="connections">
+  <div class="title">Conexões ({{connections.length}})</div>
+  <div class="desc">Conheça a cadeia de valor ligada diretamente a este perfil.</div>
+  <div class="connection-card-list">
+    <div *ngFor="let connection of connections">
+      <div class="connection-card" class="connection-border">
+        <connection-card *ngIf="connections.indexOf(connection) < 5 || showAll" [connection]="connection" ></connection-card>
+      </div>
+    </div>
+  </div>
+  <div class="show-more" (click)="showMore()" *ngIf="connections.length > 5">{{"Ver " + (showAll ? "Menos" : "Mais")}}</div>
+  <div class="show-all"
+    (click)="showMapConnections()">
+    {{ placeConnections ? "Ver todas as conexões no mapa" : "Ver conexões deste local no mapa" }}
+  </div>
+</section>

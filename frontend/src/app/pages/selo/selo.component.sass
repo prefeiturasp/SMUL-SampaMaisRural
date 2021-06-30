@@ -1,0 +1,247 @@
+@import '../../../assets/fonts/fonts.sass'
+@import '../../../assets/sass/_tools.sass'
+
+.gray-area
+  background-color: $lightgray2 !important
+
+.farmer
+  background-image: url('/assets/svgs/agricultura/hortalicas-e-raizes.svg')
+
+.partner-sp
+  background-image: url('/assets/svgs/comercio/comercio-parceiro-de-organicos.svg')
+
+.counter
+  display: flex
+  width: 50%
+  justify-content: center
+
+  counter-img
+    height: 86px
+    width: 86px
+
+.banner
+  height: 240px
+  width: 100%
+  color: $white
+  background-size: cover
+  background-position-y: 0px
+  background-position-x: center
+  background-repeat: no-repeat
+  background-image: url('/assets/images/banner-selo.jpg')
+
+  .categories-title
+    line-height: rem(56)
+    font-family: Lato-light
+    font-size: rem(36)
+    padding-top: 104px
+    width: 100%
+    text-align: center
+
+.desc-bg
+  width: 100%
+  background-color: $white
+
+  &.gray
+    background-color: $lightgray2
+
+  .cat-color
+    font-size: 42px
+    line-height: 50px
+    font-family: Lato-bold
+    color: $darkgray
+
+  .title
+    width: calc(40% - 50px)
+    text-align: center
+    font-size: rem(24)
+    line-height: rem(30)
+    margin-left: 5%
+    padding-top: 60px
+    font-family: Lato-bold
+
+  .desc
+    display: flex
+    flex-wrap: wrap
+    width: 90%
+    margin-left: 5%
+    padding: 65px 0px
+
+    .desc-info
+      width: 25%
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+
+      .desc-info-text
+        width: 155px
+
+        .desc-info-title
+          margin-top: 6px
+          color: $darkgray
+          font-size: 16px
+          font-family: Lato-bold
+          line-height: 19px
+          margin-bottom: 10px
+          padding-bottom: 10px
+
+        .desc-info-link
+          color: $green
+          line-height: 24px
+          position: relative
+
+          &.button-link
+            background-color: $green
+            color: $white
+            font-family: Lato-light
+            font-weight: bold
+            padding: 10px 25px
+            border-radius: 20px
+
+      .desc-icon-folha
+        width: 99px !important
+        height: 99px
+        background-position: center
+        margin: 0 22px 0 0
+        background-image: url("/assets/svgs/sampa-inter.svg")
+        background-repeat: no-repeat
+
+        &.full-width
+          width: 100%
+          background-size: 100%
+          background-image: url('/assets/images/Piramide.png')
+
+      .desc-icon
+        width: 350px !important
+        height: 280px
+        background-position: center
+        margin: -25px 22px 0 0
+        background-image: url("/assets/svgs/sampa-inter.svg")
+        background-repeat: no-repeat
+
+        &.full-width
+          width: 100%
+          background-size: 100%
+          background-image: url('/assets/images/Piramide.png')
+
+      .desc-seal
+        width: 350px
+        height: 350px
+        background-size: 100%
+        background-position: center
+        margin: -15px 22px 0 0
+        background-image: url("/assets/images/seal.png")
+        background-repeat: no-repeat
+
+    .desc-paragraph
+      width: calc(75% - 30px)
+      padding-left: 0px
+      color: $black
+      font-family: Lato-light
+      font-size: rem(16)
+      line-height: rem(28)
+      font-weight: 700
+
+.link
+  font-family: Lato-light
+  padding-top: 15px
+
+.button-link
+  background-color: $green
+  color: $white
+  font-family: Lato-light
+  font-weight: bold
+  padding: 10px 25px
+  border-radius: 20px
+  margin-right: 20px
+
+.map-link
+  color: $green
+  line-height: 24px
+  font-size: 14px
+  position: relative
+
+  &:hover
+    text-decoration: underline
+
+  &::after
+    content: ''
+    position: absolute
+    width: 14px
+    height: 15px
+    background-image: url('/assets/svgs/pin-green.svg')
+    background-size: 100%
+    background-position: center
+    top: 4px
+    right: -18px
+
+.sub-desc-info
+  justify-content: unset !important
+  display: contents !important
+  width: 40% !important
+  margin-top: 0 !important
+  padding: 0 !important
+
+  .sub-paragraph
+    width: calc(100% - 86px - 45px)
+
+    .text
+      margin: 10px 0
+      width: 100%
+      font-size: 14px
+      line-height: 14px
+      font-weight: normal
+
+  .count
+    font-size: 42px
+    margin-bottom: 10px
+
+  .sub-icon
+    height: 86px
+    width: 86px
+    margin-right: 20px
+
+@media only screen and (max-width: 1150px)
+  :host
+    .counter
+      width: 100%
+    
+    .counter-one
+      margin-bottom: 40px
+
+    .sub-icon
+      align-self: center
+
+    .banner
+      background-size: cover
+
+    .desc-bg
+      .desc, .title
+        width: calc(100% - 30px)
+        margin: 0px 15px
+        padding-top: 20px
+        padding-bottom: 60px
+
+        .desc-paragraph
+          width: 100%
+          margin-top: 40px
+          margin-left: 3px
+
+        .desc-info
+          width: 100%
+
+          .desc-info-text
+            width: calc(100% - 86px - 45px)
+
+      .title
+        text-align: left
+        padding-bottom: 30px
+        padding-top: 74px
+
+    .desc-counters-bg
+      .desc-counters
+        padding: 50px 10px 50px 10px
+
+        .desc-counter
+          width: 100%
+          margin-bottom: 25px
+

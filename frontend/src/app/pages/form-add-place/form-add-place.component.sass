@@ -1,0 +1,333 @@
+@import '../../../assets/fonts/fonts.sass'
+@import '../../../assets/sass/_tools.sass'
+
+.next-button
+  background-color: $green
+  width: 210px
+  padding: 6px 0px
+  border-radius: 24px
+  margin-left: calc(50% - 105px)
+  font-family: Lato-bold
+  line-height: rem(34)
+  font-size: rem(16)
+  color: $white
+  text-align: center
+  box-shadow: 0px 9px 12px $gray8
+  cursor: pointer
+
+  &:hover
+    opacity: 0.8
+
+.fields-required
+  width: 90%
+  margin-left: 5%
+  padding-bottom: 30px
+  font-size: 18px
+  color: $red
+
+  .alert-fields
+    width: 100%
+    font-family: Lato-bold
+    margin-bottom: 20px
+  
+:host
+  z-index: 1
+  background-color: $lightgray
+  position: relative
+
+  .alert-form
+    color: $red
+    text-align: center
+    position: absolute
+    width: 100%
+    top: -30px
+
+.add-place-banner
+  height: 324px
+  width: 100%
+  background-image: url("/assets/images/incluir_bg.jpg")
+  background-repeat: no-repeat
+  background-size: 100%
+
+.add-place-area
+  width: 100%
+  position: relative
+  min-height: calc(100vh - 132px) 
+
+.add-place-form
+  width: 54%
+  left: 23%
+  background-color: $white
+  position: relative
+  min-height: 528px
+  margin-top: -240px
+  margin-bottom: 110px
+
+  .back-form
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    position: absolute
+    top: 20px
+    left: 16px
+    box-shadow: 3px 3px 7px $gray5
+    background-image: url('/assets/svgs/arrow.svg')
+    background-repeat: no-repeat
+    cursor: pointer
+    background-position: center
+
+  .button-area
+    padding-bottom: 60px
+
+
+  .hide
+    display: none
+
+  .stage-zero
+    padding-bottom: 50px
+
+    .stage-zero-button
+      margin-top: 40px
+
+    .select-subcategory
+      padding: 0px 90px
+
+    .stage-title
+      color: $gray10
+      font-size: rem(24)
+      font-family: Lato-bold
+      text-align: center
+      padding-top: 40px
+      line-height: rem(40)
+
+    .category-buttons
+      display: flex
+      flex-wrap: wrap
+      padding: 40px 90px
+      cursor: pointer
+
+      .category-button
+        width: 50%
+        height: 120px
+        background-repeat: no-repeat
+        background-size: 70px
+        background-position: center 10px
+        text-align: center
+        position: relative
+
+        span
+          position: absolute
+          bottom: 10px
+          width: 84%
+          left: 8%
+          color: $darkgray
+          font-family: Lato-bold
+          font-size: rem(17)
+
+        &.active, &:hover, &:focus
+          span
+            color: $white
+
+        &:hover
+          opacity: 0.8
+
+        &.upa
+          background-image: url('/assets/svgs/upas.svg')
+
+          &.active, &:hover, &:focus
+            background-image: url('/assets/svgs/upa-green.svg')
+            background-color: $green
+
+        &.market
+          background-image: url('/assets/svgs/markets.svg')
+
+          &.active, &:hover, &:focus
+            background-image: url('/assets/svgs/market-pink.svg')
+            background-color: $red
+
+        &.initiatives
+          background-image: url('/assets/svgs/plant-white.svg')
+
+          &.active, &:hover, &:focus
+            background-image: url('/assets/svgs/plant-blue.svg')
+            background-color: $blue
+
+        &.tourism
+          background-image: url('/assets/svgs/tourism.svg')
+
+          &.active, &:hover, &:focus
+            background-image: url('/assets/svgs/tourism-orange.svg')
+            background-color: $orange
+          
+
+  .stage
+    .error-message-field
+      padding: 0 100px
+
+    .stage-title
+      color: $gray10
+      font-size: rem(24)
+      text-align: center
+      line-height: rem(40)
+      font-family: Lato-bold
+      padding-top: 16px
+      margin-bottom: 5px
+
+    .stage-options
+      font-size: rem(14)
+      line-height: rem(24)
+      color: $gray8
+      text-align: center
+      margin-bottom: 20px
+
+      span
+        font-family: Lato-bold
+        position: relative
+
+      span:not(.first-info)
+        margin-left: 20px
+
+        &::before 
+          content: '•'
+          position: absolute
+          top: -3px
+          left: -15px
+    
+    .area
+      border-top: 1px solid $lightgray3
+      padding-top: 40px
+
+      .area-title
+        font-size: rem(20)
+        font-family: Lato-bold
+        line-height: rem(40)
+        color: $gray10
+        text-align: center
+        margin-bottom: 8px
+
+      .area-subtitle
+        font-size: rem(12)
+        color: $gray7
+        line-height: rem(15)
+        font-family: Lato-bold
+        width: 60%
+        margin-left: 20%
+        text-align: center
+
+      .area-warn
+        width: 60%
+        color: $darkgray
+        font-size: rem(14)
+        font-family: Lato-bold
+        opacity: 0.5
+        text-align: center
+        margin-left: 20%
+        margin-bottom: 30px
+
+      .inputs
+        padding: 20px 0px 30px 0px
+
+.message-sent
+  width: 236px
+  height: 210px
+  padding-top: 150px
+  margin-left: calc(50% - 118px)
+  text-align: center
+
+  .back-to-form
+    color: $green
+    margin-top: 20px
+    cursor: pointer
+
+    &:hover
+      text-decoration: underline
+
+  .message-sent-icon
+    width: 84px
+    height: 85px
+    margin-left: calc(50% - 42px)
+    margin-bottom: 47px
+    background-image: url("/assets/svgs/done.svg")
+    background-repeat: no-repeat
+    background-size: 100%
+
+  .message-sent-title
+    font-size: 24px
+    color: $darkgray
+    font-family: Lato-bold
+    line-height: rem(38)
+    margin-bottom: 10px
+  
+  .message-sent-subtitle
+    font-size: rem(16)
+    color: $gray2
+    line-height: rem(24)
+    
+.lds-dual-ring
+  display: inline-block
+  width: 80px
+  height: 80px
+  margin-left: calc(50% - 44px)
+  margin-top: 200px
+
+.lds-dual-ring:after
+  content: " "
+  display: block
+  width: 64px
+  height: 64px
+  margin: 8px
+  border-radius: 50%
+  border: 6px solid $green
+  border-color: $green transparent $green transparent
+  animation: lds-dual-ring 1.2s linear infinite
+
+@keyframes lds-dual-ring
+  0%
+    transform: rotate(0deg)
+  100% 
+    transform: rotate(360deg)
+
+.loading-text
+  font-size: rem(24)
+  margin-top: 30px
+  text-align: center
+  color: $gray2
+
+.error-message
+  position: absolute
+  bottom: 15px
+  padding: 4px 0px
+  width: 71%
+  color: $red
+
+@media only screen and (max-width: 1200px)
+
+  .add-place-form
+    width: 80%
+    left: 10%
+
+@media only screen and (max-width: 768px)
+
+  .add-place-banner
+    background-image: url("/assets/images/incluir_bg_mobile.jpg")
+    background-size: 100% 336px
+    background-position: center
+
+  .add-place-form
+    width: 96%
+    left: 2%
+    padding: 40px 0px 40px 0
+
+    .stage-zero
+      .category-buttons
+        padding: 40px 12px
+
+      .select-subcategory
+        padding: 0px 12px
+
+    .stage
+      .error-message-field
+        padding: 0 20px
+      .area
+        .inputs
+          padding: 10px 10px

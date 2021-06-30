@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sampa+Rural</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="icon_sampa.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167802173-1"></script>
+  <meta name="description" content="Sampa+Rural, plataforma que reúne iniciativas de agricultura, turismo e alimentação saudável em um só lugar">
+
+  <!-- Site Name, Title, and Description to be displayed -->
+  <meta property="og:site_name" content="Sampa+Rural">
+  <meta property="og:title" content="Sampa+Rural">
+  <meta property="og:description" content="Sampa+Rural, plataforma que reúne iniciativas de agricultura, turismo e alimentação saudável em um só lugar">
+
+  <!-- Image to display -->
+  <!-- Replace   «example.com/image01.jpg» with your own -->
+  <meta property="og:image" content="icon_sampa.png">
+
+  <!-- No need to change anything here -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image:type" content="image/png">
+
+  <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp -->
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="300">
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <style type="text/css">
+    .loading{
+      align-self: center;
+      margin-left: calc(50vw - 53px);
+      margin-top: calc(50vh - 53px);
+      border: 6px solid rgba(0, 0, 0, 0.1);
+      border-top: 6px solid #3F993F;
+      border-radius: 50%;
+      background: transparent;
+      width: 100px;
+      height: 100px;
+      animation: spin 1.2s linear infinite;
+      box-shadow: 0 0 20px 4px #cecece;
+    }
+
+    @keyframes spin {
+      0%{
+    transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+
+    @media only screen and (max-width: 768px){
+      .loading{
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <app-root>
+    <div class="app-loading">
+      <svg class="loading" viewBox="25 25 50 50">
+      </svg>
+    </div>
+  </app-root>
+</body>
+</html>

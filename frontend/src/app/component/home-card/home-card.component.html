@@ -1,0 +1,21 @@
+<div class='card'
+     [ngClass]="isMobile ? 'no-hover' : 'card-hover'"
+     fxFlex="380px"
+     fxFlex.lt-md="100%"
+     [title]="label">
+  <div class='side'
+       [ngClass]="type">
+
+    <div class='side-inner'>
+      <mat-icon svgIcon="{{ icon }}"></mat-icon>
+    </div>
+  </div>
+  <div class="card-background" [ngStyle]="{ 'background-image': 'url(/assets/images/' + type + (isMobile? '-home-mobile.jpg' : '-home@2x.jpg') + ')'}"  fxFlex="380px"
+       fxFlex.lt-md="50vw"
+       fxLayoutAlign="start">
+    <div class='overlay' fxFill></div>
+    <p class="card-title" [ngClass]="type + '-title'">
+      {{ label }}
+    </p>
+  </div>
+</div>

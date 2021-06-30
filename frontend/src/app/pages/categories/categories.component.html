@@ -1,0 +1,70 @@
+<section class="categories" [ngClass]="pageClass + '-page'">
+  <div [ngClass]="pageClass + '-banner'" class="categories-banner">
+    <div class="categories-title">{{title}}</div>
+  </div>
+  <div class="category-desc-bg">
+    <div class="category-desc">
+      <div class="category-info" [ngClass]="pageClass + '-info'">
+        <div class="category-icon"></div>
+        <div class="category-info-text">
+          <counter class="category-count cat-color" *ngIf="count" [fontStyle]="'bold'" [counter]="count"></counter>
+          <div class="category-info-title">Lugares na Sampa+Rural</div>
+          <a class="category-info-link button-link" (click)="openMap()" title="Ver no mapa">Ver no mapa</a>
+        </div>
+      </div>
+      <div class="category-paragraph" [innerHTML]="desc[pageClass]">
+        <div class="agriculture-title" *ngIf="page === farmerTitle">Tem agricultores em São Paulo?</div>
+      </div>
+    </div>
+  </div>
+  <div class="covid-donation-area" *ngIf="this.page === t.url.corona">
+    <div class="covid-donation-title">Ações de doação e voluntariado</div>
+    <div class="covid-donation-img"></div>
+    <div class="covid-donation-info">
+      <div class="covid-donation-info-text">
+        A ação de voluntariado <b>Cidade Solidária é uma iniciativa da Prefeitura e de diversas entidades da
+        sociedade civil organizada</b> para ajudar as pessoas em situação de extrema vulnerabilidade.
+        O programa será realizado durante a manutenção da situação de emergência e do estado de calamidade pública
+        decorrentes da pandemia do coronavírus. <b>A população poderá doar cestas de alimentos e cestas de higiene e limpeza
+        em pontos de coleta distribuídos na cidade ou transferir qualquer valor em dinheiro para um Fundo com destinação
+        exclusiva para aquisição de cestas às famílias carentes.</b> Para ofertar grandes quantidades de cestas, ou algum dos
+        itens solicitados, basta entrar em contato com o Portal SP156.
+      </div>
+      <div class="covid-donation-info-buttons">
+        <div class="covid-map-button" (click)="donationsOnMap()">Ver pontos de doação</div>
+        <a class="covid-know-more" href="https://www.spcidadesolidaria.org/" target="_blank">+ saiba mais</a>
+      </div>
+    </div>
+  </div>
+  <category-agriculture [upaData]="data" *ngIf="page === farmerTitle"></category-agriculture>
+  <div class="category-counters-bg" *ngIf="page !== farmerTitle">
+    <div class="category-counters" [ngClass]="counters.length < 5? 'cat-flex' : ''" *ngIf="counters.length">
+      <div [ngClass]="counters.length === 4? 'cat-half' : ''" class="category-counter" *ngFor="let counter of counters">
+        <category-counter [page]="pageClass" [data]="counter"></category-counter>
+      </div>
+    </div>
+    <div
+      [fxHide]="data"
+      fxFlex
+      [style.display]="'flex'"
+      [style.backgroundColor]="'white'"
+      [style.zIndex]="1">
+      <div [ngClass]="pageClass" class="spinner"></div>
+    </div>
+  </div>
+  <div class="category-connection" *ngIf="this.page !== t.url.corona">
+    <div class="connection-info">
+      <div class="connection-icon"></div>
+      <div class="connection-text">
+        <div class="connection-title">Conexões</div>
+        <div class="connection-desc">As conexões exibem o total de pontos interligados com a categoria de {{title.toLowerCase()}}.
+          Clique em ver no mapa para visualizar a cadeia de valor entre eles e quais pontos se conectam.</div>
+        <a (click)="openConnectionMap()" class="connection-link" title="Ver no mapa">Ver no mapa</a>
+      </div>
+    </div>
+    <div class="connection-preview">
+      <connections [connectionsData]="connectionsData"></connections>
+    </div>
+  </div>
+  <app-bottom-links></app-bottom-links>
+</section>

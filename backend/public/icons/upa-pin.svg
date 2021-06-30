@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="80px" viewBox="0 0 75 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>52F15CE0-2ED3-47D7-A763-C80741A0C0FB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M24.5,4.26325641e-14 C38.0309764,4.26325641e-14 49,10.9690236 49,24.5 C49,36.0754281 40.9724351,45.775918 30.1807309,48.338044 L24.5,54 L18.8192691,48.338044 C8.02756491,45.775918 0,36.0754281 0,24.5 C0,10.9690236 10.9690236,4.26325641e-14 24.5,4.26325641e-14 Z" id="path-1"></path>
+        <filter x="-41.8%" y="-34.3%" width="183.7%" height="177.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="UI---Perfil" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[desktop]-perfil---agricultores-simples" transform="translate(-758.000000, -191.000000)">
+            <g id="pin/agricultor-copy-5-pin/agricultor" transform="translate(771.000000, 200.000000)">
+                <g id="Group" transform="translate(0.000000, 2.000000)">
+                    <g id="Oval-2">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#FFFFFF" stroke-width="3" fill="#3F993F" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Group-11" transform="translate(15.000000, 10.000000)" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="1.7">
+                        <path d="M9.61061201,0.081729648 C6.09602093,0.081729648 5.08885978,2.05159254 4.80845465,5.056049 C5.8773725,4.94969775 6.9476417,4.87888701 8.01845144,4.84361678 C10.1508817,4.77334658 12.2847985,4.84415732 14.4127694,5.056049 C14.1308778,2.04767363 13.1056085,0.081729648 9.61061201,0.081729648 Z" id="Stroke-1"></path>
+                        <path d="M6.3975882,16.4323497 L6.12272361,16.5001874 C5.78083206,16.5903225 5.44312969,16.699917 5.111103,16.8288358 L4.71002232,16.9945113 C3.66178012,17.435727 2.76353778,18.1889695 2.13340327,19.1511307 C1.96907911,19.4099143 1.82759277,19.6812653 1.70759289,19.9641029 C1.2358366,21.0759937 1.12083672,22.2692357 1.22583661,23.3622076 L1.25340415,23.6101803 L17.9691982,23.6111263 L17.9824415,23.5093696 C18.0131171,23.240451 18.0308198,22.9524783 18.0312252,22.650857 L18.0256847,22.3447762 C17.9825766,21.1938314 17.6937931,20.1005892 17.097037,19.1636983 C16.5058213,18.2651857 15.687714,17.5549161 14.7354177,17.1080247 L14.4946071,17.0018086 L14.4137964,16.9685653 C13.9819049,16.7811331 13.5352838,16.6265387 13.0800139,16.5059982 L12.8001494,16.4369443 C11.1056916,15.87208 8.13109998,15.9030259 6.3975882,16.4323497 Z" id="Stroke-5"></path>
+                        <path d="M5.02835984,7.59795186 C2.07998441,7.34592509 0.0817431615,6.85835801 0.0817431615,6.2980883 C0.0817431615,5.4795756 4.34795511,4.81606275 9.61065255,4.81606275 C14.8732149,4.81606275 19.1394268,5.4795756 19.1394268,6.2980883 C19.1394268,6.84795261 17.2141585,7.32795213 14.3549721,7.58376269" id="Stroke-7"></path>
+                        <path d="M14.1579588,7.54510056 C14.1579588,10.9477999 12.12215,13.7063106 9.61066607,13.7063106 C7.09918209,13.7063106 5.06323818,10.9477999 5.06323818,7.54510056 C5.06323818,6.60010151 14.1579588,6.45307463 14.1579588,7.54510056 Z" id="Stroke-9"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

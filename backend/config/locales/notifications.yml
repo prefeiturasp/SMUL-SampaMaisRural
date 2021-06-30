@@ -1,0 +1,20 @@
+pt-BR:
+  notifications:
+    hello: Olá %{name}
+    comment: Seu comentário para o %{suffix}
+    suggestion: Sua sugestão para o %{suffix}
+    partner: Sua inclusão de local %{suffix}
+    upa: Sua inclusão de local %{suffix}
+    tourism: Sua inclusão de local %{suffix}
+    market: Sua inclusão de local %{suffix}
+    initiative: Sua inclusão de local %{suffix}
+    approved: "foi realizada com sucesso na Sampa+Rural. Confira como ficou:"
+    refused: não foi realizada. Isso aconteceu por não termos conseguido esclarecer algum ponto de dúvida com você por meio do contato fornecido, ou termos identificado alguma imprecisão ou incompatibilidade que não conseguimos sanar.
+    resources:
+      comment: Seu comentário enviado
+      suggestion: Sua sugestão enviada
+      partner: Seu local enviado
+      market: Seu local enviado
+      initiative: Seu local enviado
+      upa: Seu local enviado
+      tourism: Seu local enviado

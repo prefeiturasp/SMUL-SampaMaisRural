@@ -1,0 +1,155 @@
+@import '../../../assets/fonts/fonts.sass'
+@import '../../../assets/sass/_variables.sass'
+
+:host
+  width: 100%
+
+  .counter
+    display: flex
+    flex-wrap: wrap
+    color: $green
+
+    .cat-color
+      font-size: 42px
+      line-height: 50px
+      font-family: Lato-bold
+
+    &.market-counter .cat-color
+        color: $red
+      
+    &.tourism-counter .cat-color
+      color: $orange
+    
+    &.initiative-counter .cat-color
+      color: $blue
+
+    &.covid-counter .cat-color
+      color: $darkgray
+
+    .counter-img
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      
+      img
+        height: 100%
+
+    .counter-info-text
+      margin-left: 15px
+      padding-right: 10px
+
+      .counter-data-percentage
+        font-size: 17px
+        font-family: Lato-regular
+        color:$green
+
+      .counter-info-title
+        margin-top: 6px
+        color: $darkgray
+        font-size: rem(16)
+        font-family: Lato-regular
+        font-weight: bold
+        line-height: rem(19)
+        margin-bottom: 10px
+
+      .divider
+        margin-left: 40px
+
+  .data-info-ballom
+    background-color: rgba(0,0,0,0.05)
+    display: flex
+    flex-wrap: wrap
+    width: calc(100% - 30px - 20px)
+    border-radius: 10px
+    padding: 10px 15px
+    margin-right: 20px
+    justify-content: center
+    position: relative
+    margin-top: 15px
+
+    &::before
+      content: ''
+      top: -10px
+      left: 10%
+      position: absolute
+      width: 0
+      height: 0
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+      border-bottom: 10px solid rgba(0,0,0,0.05)
+
+    .data-info-item
+      width: calc(100% / 3)
+
+      .data-info-item-number
+        color:$darkgray
+        font-family: Lato-regular
+        font-weight: bold
+        font-size: 16px
+        line-height: 24px
+
+      .data-info-item-title
+        color: $black
+        font-size: 12px
+        font-family: Lato-light
+        font-weight: bold
+
+
+.counter-info-paragraph
+  font-size: 14px
+  color:$black
+  line-height: rem(24)
+  font-family: Lato-light
+  font-weight: bold
+  margin-bottom: 8px
+
+.external-link
+  position: relative
+  width: 13px
+  height: 13px
+
+  &.divider
+    &::before
+      content: ''
+      width: 1px
+      height: 24px
+      position: absolute
+      top: 0
+      left: -12px
+      background-color: $gray8
+      opacity: 0.4
+
+  &::after
+    position: absolute
+    content: ''
+    width: 13px
+    top: 6px
+    left: 0
+    height: 13px
+    background-image: url('/assets/svgs/linkicon.svg')
+    background-repeat: no-repeat
+    background-position: center
+
+.counter-info-link
+  color: $green
+  line-height: 24px
+  font-size: 14px
+  position: relative
+
+  &:hover
+    text-decoration: underline
+
+  &::after 
+    content: ''
+    position: absolute
+    width: 14px
+    height: 15px
+    background-image: url('/assets/svgs/pin-green.svg')
+    background-size: 100%
+    background-position: center
+    top: 4px
+    right: -18px
+
+.text-bellow
+  padding-left: 25px
+  margin-bottom: 30px

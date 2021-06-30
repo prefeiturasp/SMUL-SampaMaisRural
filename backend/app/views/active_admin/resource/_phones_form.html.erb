@@ -1,0 +1,9 @@
+<% f.has_many :phones, new_record: true do |phone_form| %>
+  <%- if phone_form.object.commercial? or phone_form.object.scope.nil? %>
+    <%- phone_form.input :phone_number %>
+    <%- phone_form.input :kind %>
+    <%- phone_form.input :scope,
+      input_html: { value: :commercial },
+      as: :hidden %>
+  <%- end %>
+<%- end %>

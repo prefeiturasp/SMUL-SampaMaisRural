@@ -1,0 +1,24 @@
+<section class="open-data">
+  <div class="banner-data">
+    <div class="banner-title">Dados abertos</div>
+  </div>
+  <div class="available-bases">
+    <div class="available-bases-title">Bases disponíveis</div>
+    <div class="available-bases-desc">Aqui é possível baixar os dados apresentados na Sampa+Rural em formato aberto. Ao baixar os dados, você deve estar de acordo com a seguintes condições:<br/><br/>
+      É obrigatória a atribuição de crédito à Sampa+Rural e seus parceiros que disponibilizaram os dados, devendo ser acompanhada da data de extração das informações, tendo em vista a dinamicidade das bases.<br /><br/>
+      A Sampa+Rural é uma plataforma colaborativa. Procuramos fontes confiáveis para cada dado e recebemos contribuições dos usuários, sobre as quais são realizadas validação simples das informações, não verificando qualquer certificação da licitude ou da veracidade das informações incluídas por terceiros.
+    </div>
+    <div [fxHide]="reports.length">
+      <div class="filter-spinner spinner"></div>
+    </div>
+    <div class="accordion-items">
+      <item-accordion
+        *ngFor="let report of reports; let i = index"
+        [report]="report"
+        (closeAllAccordions)="closeAllAccordion($event)"
+        [idAccordion]="i"
+        [isOpen]="openedAccordion === i">
+      </item-accordion>
+    </div>
+  </div>
+</section>

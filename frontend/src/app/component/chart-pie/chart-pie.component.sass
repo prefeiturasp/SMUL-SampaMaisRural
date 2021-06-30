@@ -1,0 +1,122 @@
+@import '../../../assets/fonts/fonts.sass'
+@import '../../../assets/sass/_variables.sass'
+
+:host
+  width: 100%
+
+  .chart-pie
+    display: flex
+    flex-wrap: wrap
+    position: relative
+    width: calc(100% + 30px)
+
+    .pie-area
+      margin-left: -30px
+      margin-right: -30px
+
+      &.big
+        margin-right: -70px
+    
+    .chart-info
+      width: calc(100% - 172px - 20px)
+      padding-right: 20px
+
+      &.big
+        padding-top: 10px
+
+        .chart-legend
+          margin-top: 15px
+
+      .chart-title
+        color:$darkgray
+        font-family: Lato-bold
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0
+
+      .chart-desc
+        font-size: 14px
+        color: $black
+        font-family: Lato-light
+        font-weight: bold
+        line-height: 24px
+        margin-top: 5px
+
+      .chart-legend
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        margin-top: 12px
+
+        .chart-legend-item
+          width: calc(100% / 3)
+
+          .chart-legend-item-percentage
+            color:$gray4
+            font-family: Lato-bold
+            font-size: 16px
+            position: relative
+            width: 34px
+            margin-left: 20px
+
+            &::before
+              content: ''
+              position: absolute
+              width: 16px
+              height: 16px
+              border-radius: 50%
+              left: -20px
+              top: 3px
+
+            &.item-green::before
+              background-color: $green
+
+            &.item-yellow::before
+              background-color: $orange
+
+            &.item-black::before
+              background-color: $darkgray
+
+            &.item-gray::before
+              background-color: $lightgray4
+
+          .chart-legend-title
+            color: $black
+            font-family: Lato-light
+            font-weight: bold
+            font-size: 12px
+            margin-top: 10px
+
+        &.four-divide
+          margin-top: -5px
+          
+          .chart-legend-item
+            width: calc(100% / 2)
+            margin-top: 15px
+
+@media only screen and (max-width: 1150px)
+  :host
+    .chart-pie
+      width: 100%
+
+      .pie-area
+        margin-left: 0
+        width: 100px
+        height: 100px
+        overflow: hidden
+        position: relative
+        margin-right: 0
+
+        &.big
+          margin-right: 0
+
+        .pie-area-canvas
+          position: absolute
+          top: 0
+          left: -45px
+
+    .chart-info
+      width: calc(100% - 20px - 100px) !important
+
+      &.big
+        padding-top: 0

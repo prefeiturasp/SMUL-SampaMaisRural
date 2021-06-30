@@ -1,0 +1,27 @@
+<div class="connection" *ngIf="connectionsData">
+  <div class="main" [ngClass]="connectionsData.main"></div>
+
+  <div class="left-line line"  [ngClass]="leftNumberClass">
+    <div class="top-line" [ngClass]="'line-' + connectionsData.main"></div>
+    <div class="bottom-line" [ngClass]="'line-' + connectionsData.data[0].name"></div>
+  </div>
+  
+  <div class="connection-count left" [ngClass]="leftNumberClass">{{connectionsData.data[0].value}}</div>
+  <div class="left icon" [ngClass]="connectionsData.data[0].name  + ' ' + leftNumberClass" [attr.icon-name]="t[connectionsData.data[0].name]"></div>
+
+  <div class="middle-line line"  [ngClass]="middleNumberClass">
+    <div class="top-line" [ngClass]="'line-' + connectionsData.main"></div>
+    <div class="bottom-line" [ngClass]="'line-' + connectionsData.data[1].name"></div>
+  </div>
+  
+  <div class="connection-count middle" [ngClass]="middleNumberClass">{{connectionsData.data[1].value}}</div>
+  <div class="middle icon" [ngClass]="connectionsData.data[1].name + ' ' + middleNumberClass" [attr.icon-name]="t[connectionsData.data[1].name]"></div>
+
+  <div class="right-line line" [ngClass]="rightNumberClass">
+    <div class="top-line" [ngClass]="'line-' + connectionsData.main"></div>
+    <div class="bottom-line" [ngClass]="'line-' + connectionsData.data[2].name"></div>
+  </div>
+
+  <div class="connection-count right" [ngClass]="rightNumberClass">{{connectionsData.data[2].value}}</div>
+  <div class="right icon" [ngClass]="connectionsData.data[2].name + ' ' + rightNumberClass" [attr.icon-name]="t[connectionsData.data[2].name]"></div>
+</div>

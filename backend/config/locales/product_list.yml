@@ -1,0 +1,14 @@
+pt-BR:
+  product_list:
+    1: Horticultura
+    2: Horticultura
+    3: Horticultura
+    4: Fruticultura
+    5: Plantas Ornamentais
+    15: Produção animal
+  product_list_names:
+    horticulture: Horticultura
+    fruit_growing: Fruticultura
+    ornamental: Plantas Ornamentais
+    animal: Produção animal
+    no_information: Sem Informações

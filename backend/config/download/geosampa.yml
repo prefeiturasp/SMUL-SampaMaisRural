@@ -1,0 +1,21 @@
+attributes:
+  - name
+  - email
+  - source
+  - references
+  - park
+  - zone
+  - category_name
+  - description
+  - subcategory_list
+  - source_info
+  - web_pages
+  - where_find_list
+  - visible_product_list
+  - schedule
+  - connections_resume
+  - resume_address
+  - neighborhood
+  - district
+  - lat
+  - lon

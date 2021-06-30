@@ -1,0 +1,17 @@
+<mat-toolbar [ngClass]="isHide? 'hide-item' : ''" *ngIf="!isHide || !isMobile">
+  <mat-toolbar-row>
+    <a routerLink="/" class='logo'>
+      <div class="logo-img" [ngClass]="'logo-' + contentColor"></div>
+    </a>
+    <search [isGray]="isGray"></search>
+    <span class="spacer"></span>
+    <app-menu [colorMenu]="contentColor" fxHide.lt-md></app-menu>
+    <button fxHide fxHide.lt-md="false" *ngIf="contentColor">
+      <mat-icon aria-hidden="false"
+                (click)="openDialog()"
+                [ngClass]="contentColor + '-sandwich'"
+                aria-label="Abrir Menu"></mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-divider fxHide.lt-md></mat-divider>

@@ -1,0 +1,111 @@
+@import '../../../assets/sass/_tools.sass'
+
+.library
+  min-height: calc(100vh - 48px) 
+
+.library-banner
+  width: 100%
+  height: 240px
+  background-position: center
+  background-size: cover
+  background-image: url('/assets/images/biblioteca-banner.jpg')
+
+  .library-banner-title
+    font-family: Lato-light
+    line-height: rem(56)
+    font-size: rem(36)
+    color: white
+    text-align: center
+    padding-top: 94px
+
+.bold-title
+  font-size: rem(24)
+  line-height: rem(38)
+  font-family: Roboto-bold
+  text-align: center
+  padding: 20px 0
+  color: $darkgray
+
+.themes-filter-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-bottom: 20px
+
+  .themes-filter
+    padding: 7px 14px
+    color: $black
+    text-align: center
+    margin: 3px
+    border-radius: 20px
+    font-size: rem(13)
+    height: calc(32px - 14px)
+    background: transparent
+    border: 1px solid $green
+    cursor: pointer
+
+    &:hover
+      opacity: 0.7
+
+    &.active
+      background-color: $green
+      color: $white
+      border: 1px solid $green
+
+.themes-content
+  background-color: $lightgray2
+
+  .themes-repeater
+    padding-top: 20px
+
+  .theme-area
+    padding: 0px 20px
+    padding-bottom: 20px
+
+    .see-more
+      color: $green
+      margin-left: 12px
+      line-height: rem(34)
+      font-family: Lato-regular
+      font-weight: bold
+      cursor: pointer
+
+      &:hover
+        opacity: 0.8
+        text-decoration: underline
+
+    .library-item-area
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+
+    .theme-title
+      font-family: Lato-bold
+      font-size: rem(24)
+      line-height: rem(29)
+      color: $darkgray
+      margin-top: 10px
+      margin-bottom: 5px
+      margin-left: 12px
+
+.error
+  font-size: rem(28)
+  color: $darkgray
+  text-align: center
+  padding: 132px 0
+
+.loading
+  margin-top: 100px
+  transform: scale(1.5)
+
+@media only screen and (max-width: 768px)
+  .themes-filter-list
+    padding: 0px 10px
+    
+  .themes-content
+    .theme-area
+      .theme-title
+        margin-left: 0
+
+      .see-more
+        margin-left: 0

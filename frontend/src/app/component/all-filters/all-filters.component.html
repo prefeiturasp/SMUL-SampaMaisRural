@@ -1,0 +1,28 @@
+<div class="all-filters" *ngIf="isOpen">
+  <div class="filter-session-title">Tipo de {{ category.label }}</div>
+  <category-filters
+    (onChange)="onChangeUrl($event)"
+    [filterQuery]="filterQuery"
+    [onList]="false"
+    [categories]="[category]">
+  </category-filters>
+  <div class="filters-repeat" *ngFor="let filter of filtersFor(category.filters)">
+    <div class="filter-session-title">{{ filter.label }}</div>
+    <div *ngFor="let option of filter.values">
+      <div class="filter-options" *ngIf="showOption(option, filter)">
+        <label class="checkbox path filter-options-label">
+          <input tabindex="0" type="checkbox"
+          class="checkbox-filter"
+          [checked]="checkIfSelected(filter.field, option)"
+          (change)="onChangeField(filter.field, option)">
+          <svg viewBox="0 0 21 21">
+              <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+          </svg>
+          <span class="checkbox-label">{{option}}</span>
+        </label>
+      </div>
+    </div>
+    <div tabindex="0" class="toggle-show-options" (click)="toggleShow(filter)"
+      *ngIf="filter.values.length > 4 && filter.field !== 'region'">{{showMore[filter.label]? 'Ver Menos' : 'Ver Mais'}}</div>
+  </div>
+</div>

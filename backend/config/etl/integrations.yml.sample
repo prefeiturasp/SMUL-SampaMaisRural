@@ -1,0 +1,18 @@
+config:
+  url: <%= ENV['SISRURAL_API_ADDRESS'] %>
+  sisrural:
+    name: Integração SisRural
+    source_name: HttpSource
+    template_path: config/etl/templates/sisrural.yml
+    default_values:
+      category_name: 'Agricultura'
+      subcategory_list: 'Agricultores sem contato'
+      source_info: "Sistema de Assistência Técnica e Extensão Rural e Ambiental"
+      source: upa
+    options:
+      url: <url>
+      http_method: post
+      headers:
+        Content-Type: application/json
+        X-Requested-With: XMLHttpRequest
+        Authorization: <token>

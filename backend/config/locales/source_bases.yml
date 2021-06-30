@@ -1,0 +1,49 @@
+pt-BR:
+  source_bases:
+    partner:
+      name: Nome do Perfil
+      email: Email
+      source: Nome da base de dados
+      disabled_friendly_amenities: Possui facilidades para pessoas com necessidades especiais
+      associativism: Associativismo
+      references: Referências
+      park: Estacionamento
+      zone: Zona
+      description: Descrição
+      subcategory_list: Subcategorias
+      region_list: Região
+      source_info: Fonte
+      neighborhood_region_list: Polo de ecoturismo
+      web_pages: Site/Blogs/Redes Sociais
+      where_find_list: Onde Comprar
+      qualification_list: Qualificações
+      visible_product_list: Atividades de Conexão
+      farms_count: Número de Roças
+      category_name: Categoria
+      schedule: Período de funcionamento
+      gender: Gênero da responsável
+      lat: Latitudade
+      lon: Longitude
+      begined_at: Ano de início da Atividade
+      connections_resume: Conexões
+      phone_0: Telefone 1
+      phone_kind_0: Tel 1 - Tipo
+      phone_1: Telefone 2
+      family_work: Agricultura Familiar
+      cultivated_area_range: Area cultivada (Ha)
+      area_range: Área (Ha)
+      certificate_list: Certificados
+      phone_kind_1: Tel 2 - Tipo
+      resume_address: Endereço comercial
+      neighborhood: Bairro
+      registration_neighborhood: Bairro de cadastro
+      district: Distrito
+      zip_code: CEP
+      dap: DAP
+
+    sources:
+      idec: Mapa de Feiras Orgânicas - IDEC
+      geosampa: Feiras Livres Municipais - GeoSampa
+      sprural: Sampa+Rural
+      farmer_with_contact: Base de agricultores visíveis - Sampa+Rural
+      farmer_without_contact: Base anonimizada de agricultores - SisRural

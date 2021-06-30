@@ -1,0 +1,10 @@
+<section class="popup" *ngIf="!hide">
+  <div class="text">
+    Os Termos de uso da Sampa+Rural informam sobre a segurança,
+    disponibilização e coleta de dados e informações, assim como
+    as responsabilidades de usuário e usos não permitidos. Ao utilizar
+    a plataforma você estará manifestando concordância e se compromete a respeitá-los.
+    <a class="link" routerLink="/termos">Acesse os Termos de Uso</a>
+  </div>
+  <button (click)="onAccept()">Eu aceito os Termos de uso</button>
+</section>

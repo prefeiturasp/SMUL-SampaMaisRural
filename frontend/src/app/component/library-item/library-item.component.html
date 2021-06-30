@@ -1,0 +1,11 @@
+<div class="library-item" (click)="goToUrl($event, data.file_url || data.link)" [ngClass]="data.file_url || data.link? 'library-item-click' : ''">
+  <div class="library-item-image">
+    <img *ngIf="data.photo_url" [src]="data.photo_url" />
+  </div>
+  <div class="library-item-title" [title]="data.title">{{data.title}}</div>
+  <div class="library-item-desc" [title]="data.description">{{data.description}}</div>
+  <div class="item-link">
+    <a class="pdf-link" target="_blank" title="Baixar PDF"  (click)="goToUrl($event, data.file_url)" *ngIf="data.file_url">Baixar Arquivo</a>
+    <a class="external-link" target="_blank" title="Acessar link"  (click)="goToUrl($event, data.link)"*ngIf="data.link">Acessar link</a>
+  </div>
+</div>

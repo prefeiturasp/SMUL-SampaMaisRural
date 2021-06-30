@@ -1,0 +1,64 @@
+require_relative '../../config/environment'
+require './lib/etl/common.rb'
+
+module ETL
+  module SyncPartners
+    module_function
+
+    def setup(configuration)
+      Kiba.parse do
+        integration = Integration.create(name: configuration.name)
+        logger = Logger.new("#{Rails.root}/log/integration-#{integration.name}.log")
+
+        pre_process do
+          logger.info "Starting new processing"
+        end
+
+        source configuration.source_name.constantize, configuration.options, integration
+
+        template = YAML.load_file configuration.template_path
+        template.each do |to, from|
+          transform RenameField, from: from, to: to
+        end
+
+        transform RemoveExtraKeys, template
+
+        transform AddDefaultValues, configuration.default_values.symbolize_keys
+        transform ZoneFinder
+        transform ZoneParser
+        transform ParseEmpty
+        transform StatusDefiner
+        transform TransformList, :product_list
+        transform TransformList, :where_find_list
+        transform TransformList, :certificate_list
+        transform TransformBoolean,
+          fields: %i[public
+          family_work
+          disabled_friendly_amenities
+          has_internet_access dap]
+        transform TranslateType
+        transform TransformDefaultValue, field: :gender, values: GENDERS
+        transform TransformDefaultValues, field: :certificate_list, values: CERTIFICATE_LIST
+        transform TransformDefaultValues, field: :where_find_list,
+          values: WHERE_FIND
+        transform TransformDefaultValues, field: :product_list,
+          values: PRODUCT_LIST
+
+        destination Etl::Destinations::Database, logger
+
+        post_process do
+          integration.done! unless integration.error?
+          logger.info "Finished processing"
+        end
+      end
+    end
+  end
+end
+
+config_options = YAML.load_file('config/etl/integrations.yml')["config"]["sisrural"]
+
+configuration = OpenStruct.new(config_options)
+
+job = ETL::SyncPartners.setup(configuration)
+
+Kiba.run(job)

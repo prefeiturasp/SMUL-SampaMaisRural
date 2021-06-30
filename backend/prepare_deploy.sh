@@ -1,0 +1,9 @@
+bundle install
+rake subcategories:update_sampa_partners_name
+rake subcategories:setup_address_publication
+rake subcategories:setup_publication
+rake categories:generate_seals
+rake seals:setup
+rake subcategories:setup_farmers_tags
+rake subcategories:with_contact_should_not_update_via_integration
+rake certificates:setup

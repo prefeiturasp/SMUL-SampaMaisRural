@@ -1,0 +1,112 @@
+@import '../../../assets/sass/_tools.sass'
+  
+.category-links-bg
+  width: 100%
+  background-color: $white
+
+  .category-links
+    width: 90%
+    margin-left: 5%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding: 30px 0px
+
+    .category-link
+      width: 40%
+      margin: 30px
+      display: flex
+      flex-wrap: wrap
+
+      & .icon-links
+        background-size: 100%
+        background-position: center
+
+      &.data-origin .icon-links
+        background-image: url('/assets/svgs/dados-origem.svg')
+        width: 70px
+        height: 51px
+
+      &.participate .icon-links
+        background-image: url('/assets/svgs/faca-parte.svg')
+        width: 48px
+        height: 51px
+
+      .links-text
+        width: calc(100% - 110px)
+        padding-left: 40px
+
+      .links-title
+        font-size: rem(24)
+        line-height: rem(56)
+        color: $darkgray
+        font-family: Lato-bold
+
+      .links-desc
+        color: $black
+        line-height: rem(28)
+        margin-top: 4px
+        font-weight: bold
+        font-family: Lato-light
+
+      .link-buttons
+        display: flex
+        flex-wrap: wrap
+        margin-top: 15px
+
+        .link-button
+          color: $green
+          font-size: 16px
+          line-height: 24px
+          font-weight: bold
+          font-family: Lato-light
+
+          &:hover
+            text-decoration: underline
+
+        .download-link
+          margin-right: 80px
+          position: relative
+
+          &::after
+            position: absolute
+            content: ''
+            width: 2px
+            height: 24px
+            background-color: $gray8
+            opacity: 0.4
+            top: 0
+            right: -60px
+
+          &::before
+            content: ''
+            width: 22.5px
+            height: 16.5px
+            background-image: url('/assets/svgs/download.svg')
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            top: 3px
+            right: -35px
+
+@media only screen and (max-width: 900px)
+  .category-links-bg
+    .category-links
+      width: 100%
+      margin-left: 0
+      
+      .category-link
+        width: calc(100% - 55px)
+        margin: 20px
+        display: flex
+        flex-wrap: wrap
+        padding-left: 15px
+
+        &.participate 
+          .links-text
+            padding-left: 40px
+            width: calc(100% - 40px - 48px)
+
+        .links-text
+          padding-left: 20px
+          width: calc(100% - 20px - 70px)

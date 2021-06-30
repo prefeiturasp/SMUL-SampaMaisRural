@@ -1,0 +1,57 @@
+pt-BR:
+  active_admin:
+    management: Gestão
+    agriculture: Agricultura - Outros
+    market: Mercados
+    integrated_market: Mercado - Integrações
+    partner_tourism: Mercado - Integrações
+    upa: Agricultor - Integrações
+    rural_experience: Vivência Rural
+    tourism: Turismo
+    initiative: Iniciativas e Políticas
+    filter_management: Gestão de filtros
+    source_management: Gestão das bases
+    seal: Selo
+    about: Sobre
+    library: Biblioteca
+    disable: Arquivar
+    enable: Ativar
+    enabled: Ativado
+    disabled: Arquivado
+    approved: Publicado
+    pending: Pendente
+    refused: Não Publicado
+    incorporated: Incorporado a ponto existente
+    all: Todos
+    download_csv: Baixar CSV
+    download_seal: Baixar Selo
+    attachments: Fotos
+    file_size_warning: O arquivo deve ter no máximo 20MB
+    batch_actions:
+      action_label: "%{title} Selecionados"
+      labels:
+        seals: Exportar Selo do ponto
+        seals_as_zip: Exportar Selos
+    labels:
+      history: Histórico de ações
+      form:
+        basic_info: Informações Básicas
+        general_info: Informações Gerais - não publicadas
+        upa_info: Informações cadastrais produtores e UPA - não publicadas
+        self_register: Informações de contato automapeamento
+        address: Localização / Contato - publicadas
+        commercial_phones: Telefones Comerciais
+        complementary_info: Informações complementares - publicadas
+        registration_info: Informações cadastrais - não publicadas
+        registration_phones: Telefones de cadastro
+        management_information: Gestão da Informação - não publicadas
+        pics_and_map: Fotos e Mapa
+
+    pages:
+      seal_collection:
+        partner_id: Parceiro Sampa+Rural
+        status: Status
+        expires_at: Data de expiração
+        additional_seals: Selos adicionais
+        submit: Gerar gelos
+        connected_partners: Conexões

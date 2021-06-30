@@ -1,0 +1,656 @@
+pt-BR:
+  "true": Sim
+  "false": Não
+  events:
+    update: Atualizado
+    create: Criado
+  types:
+    chars_sequence: Sequência de caracteres
+    name: Nome do local
+    email: Email de Contato
+    associativism: Se pertence a alguma associação
+    source: Fonte
+    commercial_phone_list: Lista de telefones Comerciais
+    region_list: Região
+    where_find: Onde encontrar os produtos produzidos para consumo
+
+  datetime:
+    distance_in_words:
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de %{count} minutos'
+      about_x_hours:
+        one: 'há uma hora'
+        other: 'há %{count} horas'
+      x_minutes:
+        one: 'há um minuto'
+        other: 'há %{count} minutos'
+      x_days:
+        one: 'há um dia'
+        other: 'há %{count} dias'
+      x_months:
+        one: 'há um mês'
+        other: 'há %{count} meses'
+      about_x_months:
+        one: 'há um mês'
+        other: 'há %{count} meses'
+      about_x_years:
+        one: 'há um ano'
+        other: 'há %{count} anos'
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M:%S"
+      long: "%d/%m/%Y %H:%M:%S"
+
+  subcategory_list:
+    -  experience: Vivência Rural
+    -  food: Alimentação
+    -  nature: Natureza
+    -  farmers_with_contact: Agricultores com contato
+    -  culture: Cultura
+    -  civil_society: Iniciativas da Sociedade Civil
+    -  service: Comércio e Serviços
+    -  accommodation: Hospedagem
+    -  solidary_city: SP Cidade Solidária
+    -  urban_gardens: Hortas urbanas
+    -  public_policies: Políticas Públicas
+    -  associations: Associações e Cooperativas
+    -  research: Universidades e Instituto de Pesquisa
+    -  natives: Aldeias indígenas
+    -  urban_garden_or_farmer: Hortas urbanas ou Agricultor
+    -  gardens_with_equipments: Hortas em equipamentos públicos
+    -  guarani_natives: Aldeias Guarani
+    -  service_with_local_partner: Comércio parceiro do local
+    -  delivery_fresh_products: Entrega de produtos frescos
+  default_values:
+    tag:
+      kinds:
+        upa:
+          activities:
+            - Horta comunitária
+            - Horta institucional
+            - Horta escolar
+            - Horticultura
+            - Pomar
+            - PANCs - Plantas alimentícias não convencionais
+            - Plantas medicinais
+            - Produção de mel
+            - Viveiro de mudas
+            - Jardim
+            - Autoconsumo
+            - Comercializa
+            - Atividades recreativas
+            - Oficinas educativas
+            - Educação ambiental
+            - Compostagem
+            - Agrofloresta
+            - Aquaponia
+            - Permacultura
+            - Proteção de nascentes
+            - Proteção ambiental
+          tags:
+            - Aberta à participação
+            - Tem mutirão
+            - Em busca de volúntarios
+            - Acesso livre
+            - Acesso controlado
+            - Aberta à visitção
+            - Comercializa
+
+          qualification:
+            - Orgânico Certificado
+          certificate:
+            - Orgânico por Auditoria
+            - IBD
+            - Organismo de Controle Social
+            - Orgânico Participativo
+            - ABD
+            - Transição Agroecológica
+        tourism:
+          schedule:
+            - Necessita Agendamento
+            - Não necessita agendamento
+          visit:
+            - Recebe grupos
+            - Sem número mínimo de visitantes
+            - Apenas grupos
+          experience:
+            - Permacultura
+            - Cozinha Saudável
+            - Quadra
+            - Campo de golfe
+            - Campo de paintball
+            - Pesqueiro
+            - Chácara de laz
+            - Ninhal das Garças
+            - Visitação da área produtiva
+            - Horta orgânica
+            - Café Colonial
+            - Agrofloresta
+            - Estufa
+            - Produção de cogumelos
+            - Criação de galinhas
+            - Criação de abelhas
+            - Turismo escolar
+            - Colhe e pague
+            - Saneamento ecológico
+            - Ponto de apoio ao ciclista
+            - Trilhas na Mata
+            - Rio
+            - Lago
+            - Reflorestamento
+            - Serve refeições caseiras
+            - Serve lanche
+            - Camping
+            - Hospedagem em quarto
+            - Hospedagem em chalé
+          accommodation:
+            - Alojamento coletivo
+            - Hospedagem
+            - Hospedagem familiar
+            - Hotel
+            - Pousada
+            - Camping
+            - Hospodeagem em quarto
+          nature:
+            - Hidrografia
+            - Reserva particular do patrimônio natural
+            - Cachoeira
+            - Área de proteção ambiental
+            - Pesqueiro
+            - Agricultores
+            - Vivência Rural
+            - Natureza
+            - Borboletário
+            - Barragem/represa
+            - Represa
+            - Pier
+            - Trilhas na Mata
+            - Orquidário
+            - Parque
+            - Agroecologia
+            - Rio
+            - Lago
+            - Pesque e pague
+          culture:
+            - Aldeias Indígenas
+            - Antiquário
+            - Loja de Artesanatos
+            - Souvenir
+            - Evento
+            - Cultura
+            - Clube social
+            - Cemitério
+            - Ferroviário
+            - Templo Religioso
+            - Centro Ecocultural
+            - Biblioteca
+            - Galeria de Artes
+
+          food:
+            - Restaurantes
+            - Bar
+            - Lanchonete
+            - Confeitaria/padaria
+
+          service:
+            - Transportadora turística e similares
+            - Ferroviário
+            - Entidades
+            - Ponto de apoio ao ciclista
+            - Espacos de Eventos
+            - Sítios/chácaras de lazer
+            - Espaços de Eventos
+            - Ateliê
+            - Comércio e Serviços
+            - Espaço de Eventos
+            - Alimentação
+            - Restaurante
+            - Lanchonete
+            - Bar
+            - Artesanatos
+            - Informação Turística
+            - Antiquário
+            - Bodega/alambique
+            - Alambique
+            - Confeitaria/padaria
+            - Operadora de turismo
+            - Agência de receptivo
+            - Cachaçaria
+        initiative:
+          solidary_city:
+            - Centro de distribuição e gracionamento de material de limpeza e higiene
+            - SP Cidade Solidária
+            - Drive Thru de doação de alimentos e materiais de higiene
+            - Centro de distribuição e gracionamento de material de limpeza e higiene
+          activities:
+            - Agroecologia
+            - cultura
+          public_policies:
+            - Assistencia Técnica e Extensão Rural
+
+        market:
+          activities:
+            - Logística
+            - Insumos agrícolas
+            - Mudas
+            - Sementes
+            - Assistência técnica
+            - Máquinas e implementos
+  time:
+   formats:
+     long: "%Y-%m-%d %H:%M:%S"
+  sources:
+    idec: IDEC
+    upa: Secretária de Desenvolvimento Urbano
+    tourism: Secretária de Turismo
+    geosampa: GeoSampa
+    sprural:  Sampa+Rural
+  activerecord:
+    models:
+      subcategory: Subcategoria
+      integration: Integrações
+      partner_upa: Agricultura
+      certificate: Certificado
+      integrated_market: Mercado Integrações
+      agriculture: Agricultura - Outros
+      comment: Comentário
+      rural_experience: Vivência Rural
+      market: Mercados
+      upa: Agricultura
+      phone: Telefone
+      initiative: Iniciativas
+      attachment: Foto
+      tourism: Turismo
+      message: Mensagem
+      suggestion: Sugestão
+      post: Posts
+      post_theme: Temas
+      partner_comment: Comentários
+      user: Usuários
+      paper_trail/version: Histórico de ações
+      filter_group: Filtros
+      connection: Conexão
+      seal: Selo
+      regular_seal: Selo Sampa+Rural
+      seals_group: Selos em Lote
+    attributes:
+      seal:
+        shareable: Nome Perfil
+        shareable_id: Id Perfil
+        connected_partner: Nome conectado
+        connected_partner_id: Id Conectado
+        created_at: Criado em
+        updated_at: Atualizado em
+        expires_at: Válido até
+        active: Ativo
+        without_connection: Não vinculado
+        expired: Vencido
+        arquived: Arquivado
+        description: Acompanhamento
+        detail: Qualificações
+        last_download_at: Último download
+        statuses:
+          active: Ativo
+          without_connection: Não vinculado
+          expired: Vencido
+          arquived: Arquivado
+      seals_group:
+        partner_id: Ponto Sampa+Rural
+        additional_seals: Selos Adicionais
+        expires_at: Válido até
+        connected_partner_ids: Conexões
+        detail: Qualificações
+      subcategory:
+        name: Nome
+        is_public: Publica?
+      certificate:
+        name: Nome
+        attachment: Logo
+      partner/import:
+        file: Arquivo
+        category: Categoria
+      filter_group:
+        name: Nome Da Subcategoria
+        filter_ids: Filtros
+      filter:
+        label: Nome do filtro
+        tag_list: Valores
+      paper_trail/version:
+        created_at: Realizada em
+        whodunnit: Realizada por
+        event: Alteração realizada
+        changed_fields: Campos atualizados
+      user:
+        name: Nome
+        password: Senha
+        password_confirmation: Confirmação de senha
+        current_sign_in_at: Último login
+        sign_in_count: Número de logins
+        created_at: Criado em
+        roles: Pode Gerenciar
+      post_theme:
+        name: Nome
+      post:
+        created_at: Criado em
+        title: Título
+        description: Descrição
+        photo: Foto
+        link: Link
+        file: Arquivo
+        photo_url: Foto
+        file_url: Arquivo
+        theme_ids: Temas
+        themes: Temas
+        theme_list: Temas
+      suggestion:
+        name: Nome
+        suggestable_type: Categoria do Parceiro
+        suggestable_id: ID do Parceiro
+        suggestable_name: Nome do Parceiro
+        suggestable: Parceiro
+        message: Mensagem
+        attachment: Foto
+        created_at: Enviada em
+        updated_at: Atualizada em
+        phone: Telefone
+        pending: Pendente
+        approved: Aprovado
+        refused: Não aprovado
+        statuses:
+          pending: Pendente
+          approved: Aprovado
+          refused: Não aprovado
+      integration:
+        name: nome
+        created_at: Iniciada em
+        updated_at: Finalizada em
+        started: Iniciada
+        error: Erro
+        done: Finalizada
+      comment:
+        name: Nome
+        email: Email
+        status: Status
+        data: Mensagem
+        partner_name: Nome do Parceiro
+        pending: Pendente
+        approved: Publicado
+        refused: Não aprovado
+        approved_at: Publicado em
+        refused_at: Não aprovado em
+        created_at: Enviado em
+        statuses:
+          pending: Pendente
+          approved: Publicado
+          refused: Não Aprovado
+      message:
+        name: Nome
+        email: Email Comercial
+        phone: Telefone
+        message: Mensagem
+        pending: Pendente
+        answered: Respondida
+        refused: Arquivada
+        created_at: Enviada em
+        updated_at: Atualizada em
+        statuses:
+          pending: Pendente
+          answered: Respondida
+          refused: Arquivada
+      market:
+        name: Nome
+        kind: Tipo
+        schedule: Horário
+        workers: Feirantes
+        region: Região
+        tag_list: Qualificações
+      initiative:
+        contact: Outra Forma de contato
+        registration_name: Nome do contato de cadastro
+        civil_society_list: Iniciativas da Sociedade Civil
+        solidary_city_list: Cidade Solidária
+        urban_garden_list: Hortas Urbanas
+        public_policy_list: Políticas Públicas
+        association_list: Associações e Cooperativas
+        research_list: Pesquisa e Extensão
+        tag_list: Qualificações
+        cpf: CPF
+      upa:
+        schedule_list: Horário de Funcionamento
+        area: Area da UPA (Ha)
+        area_range: Area da UPA (Ha)
+        cultivated_area: Area cultivada (Ha)
+        responsable_name: Nome produtor/a
+        cultivated_area_range: Area cultivada
+        registration_date: Data de cadastro
+        certificates: Certificação Orgânica/Transição
+        certificate_list: Certificação Orgânica/Transição
+        product_ids: Produtos que comercializa
+        source_coord: Fonte Coordenada
+        fruit_species: Espécies que comercializa
+        personal_phones: Telefone 1
+        other_phones: Outra forma de contato comercial
+        cpf: CPF
+        phone: Telefone Comercial
+        subscribe_updates: Aceita receber Atualizações
+        dap: DAP
+        associativism: Associativismo
+        age: Idade
+        marketing_channel: CANAIS DE COMERCIALIZAÇÃO
+      partner:
+        name: Nome no Perfil
+        avatar: Foto de perfil
+        birthdate: Ano de nascimento
+        tags_list: Tags
+        has_internet_access: Acessa a Internet?
+        authorize_information: Declaro que são verdadeiras as informações fornecidas acima e autorizo seu uso na Sampa+Rural
+        category: Categoria
+        connections: Conexões
+        phones_phone_number_cont: Telefone
+        qualification_list: Qualificações
+        registration_phone: Telefone de Cadastro
+        category_name: Categoria
+        fruit_specy_list: Se produz frutas para comercialização, quais especies?
+        avatar_not_null: Foto de perfil
+        attachments_id_not_null: Fotos
+        other_information: Informações complementares - cadastro
+        connections: Conexões
+        api_id: ID da base de dados
+        id: ID Sampa+Rural
+        update_via_integration: Deve atualizar via integração?
+        phone_0: Telefone Comercial 1
+        phone_kind_0: Telefone Comercial 1 Tipo
+        phone_1: Telefone Comercial 2
+        phone_kind_1: Telefone Comercial 2 Tipo
+        phone_2: Telefone Comercial 3
+        phone_kind_2: Telefone Comercial 3 Tipo
+        created_at: Criado em
+        updated_at: Atualizado em
+        attachment: Foto
+        tags: Tags
+        foods: Alimentação
+        public: Autorização de publicação das informações (Se não, algumas informações, como endereço, por exemplo, não serão publicadas no site)
+        public_attachments: Autoriza publicação de imagens
+        publish_phone: Publicar Telefone
+        subcategories: Sub Categorias
+        zone: Zona
+        registered_by: Responsável pela acoleta
+        other_contact: Outra forma de contato
+        tag_list: Tags
+        schedule_list: Agendamento
+        farms_count: Número de Roças
+        source: Nome da base de dados
+        source_date: Data da coleta
+        source_info2: Fonte 2
+        source_update: Data da última atualização
+        type: Categoria
+        category: Categoria
+        commercial_phone_list: Telefones comerciais
+        subcategory_list: Subcategorias
+        region_list: Região
+        web_pages: Site/Blogs/Redes Sociais
+        where_find_list: Onde Comprar
+        who_sells_details: "Detalhes sobre os estabelecimentos que comercializam os produtos"
+        source_info: Fonte
+        source_link: Link da Fonte
+        product_list: Atividade de Conexão
+        neighborhood_region_list: Polo de ecoturismo
+        schedule_list: Agendamento
+        certificate_list: Certificados
+        responsable_name: Nome de Contato - cadastro
+        commercial_phones: Telefones Comerciais
+        registration_name: Nome da Unidade Produtiva
+        contact: Contato
+        publish_address: Publicar Endereço
+        job_role: Cargo ocupado
+        associativism: Associativismo
+        dap: DAP
+        gender: Gênero da responsável
+        _lat: Latitudade
+        _lon: Longitude
+        age: Idade
+        family_work: Agricutura Familiar
+        qualifications: Qualificações
+        phone: Telefone
+        cellphones: Telefones 2
+        personal_phones: Telefones Pessoais
+        other_phones: Outros telefones
+        site: Site / Blog / Redes Sociais
+        email: Email
+        description: Descrição
+        kind: Tipo
+        references: Referências
+        cellphone: Telefone 2
+        schedule: Dias e Horário de Funcionamento
+        company_activity: Atividade Econômica
+        neighborhood_region: Polo
+        disabled_friendly_amenities: Possui facilidades para pessoas com necessidades especiais
+        park: Estacionamento
+        rules: Outras regras e informações
+        open_in_holidays: Funcionamento em Feriados
+        work_season: Período de Funcionamento
+        begined_at: Ano de início da Atividade
+        tag: Tag
+        sub_kind: Sub Categoria
+        full_address: Endereço
+        address: Endereço
+        city: Cidade
+        state: Estado
+        zip_code: CEP
+        lat: Latitudade
+        lon: Longitude
+        district: Distrito
+        registration_address: Endereço
+        registration_neighborhood: Bairro
+        registration_city: Cidade
+        registration_zip_code: CEP
+        registration_email: Email
+        neighborhood: Bairro
+        market_ids: Feiras conectadas
+        upa_ids: Agricultores conectados
+        tourism_ids: Pontos Turismo e Vivência Rural conectados
+        initiative_ids: Iniciativas conectadas
+        related_list: Conexões
+        status: Status
+        waiting_integration: Incluído no SisRural - Aguardando Integração
+        approved: Publicado
+        pending: Pendente
+        refused: Não Publicado
+        incorporated: Incorporado a ponto existente
+        disabled: Arquivado
+        statuses:
+          approved: Publicado
+          pending: Pendente
+          refused: Não Publicado
+          incorporated: Incorporado a ponto existente
+          disabled: Arquivado
+          waiting_integration: Incluído no SisRural - Aguardando Integração
+
+        # phones
+        commercial_phone_0: Telefone Comercial 1
+        commercial_phone_1: Telefone Comercial 2
+        commercial_phone_2: Telefone Comercial 3
+
+        registration_phone_0: Telefone 1
+        registration_phone_1: Telefone 2
+
+        cellphone_phone_0: Telefone Celular 1
+        cellphone_phone_1: Telefone Celular 2
+        cellphone_phone_2: Telefone Celular 3
+
+        other_phone_0: Outro Telefone 1
+        other_phone_2: Outro Telefone Celular 2
+        other_phone_2: Outro Telefone Celular 3
+      tourism:
+        kind: Atividades
+        activities_list: Atividades
+        experience_list: Vivência Rural
+        food_list: Alimentação
+        tag_list: Qualificações
+        nature_list: Natureza
+        culture_list: Cultura
+        service_list: Comércio e Serviços
+        accommodation_list: Hospedagem
+        references: Referências
+        phone: Telefone
+        tag: Tag
+        begined_at: Início da Atividade
+        work_season: Período de Funcionamento
+        open_in_holidays: Funcionamento em Feriados
+        rules: Outras regras e informações
+        associativism: Associativismo
+        park: Estacionamento
+        disabled_friendly_amenities: Possui facilidades para pessoas com necessidades especiais
+        neighborhood_region: Polo
+        publicar_endereo: Publicar Endereço
+        publish_phone: Publicar Telefone
+        cnpj: CNPJ
+        cnae: CNAE
+        company_activity: Atividade Econômica
+        schedule: Dias e Horário de Funcionamento
+        connections: Conexões
+
+      phone:
+        phone_number: Telefone
+        kind: Telefone - Tipo
+        scope: Tipo de telefone
+
+      connection:
+        description: Descrição
+        partner_id: Ponto Conectado
+
+    errors:
+      format: "%{attribute} %{message}"
+      models:
+        post:
+          attributes:
+            description:
+              too_long: "A descrição por ter até %{count} caracteres"
+      messages:
+        extension_whitelist_error: a extensão do arquivo não é suportada
+        accepted: deve ser aceito
+        blank: não pode ficar em branco
+        present: deve ficar em branco
+        confirmation: não é igual a %{attribute}
+        empty: não pode ficar vazio
+        equal_to: deve ser igual a %{count}
+        even: deve ser par
+        exclusion: não está disponível
+        greater_than: deve ser maior que %{count}
+        greater_than_or_equal_to: deve ser maior ou igual a %{count}
+        inclusion: não está incluído na lista
+        invalid: não é válido
+        less_than: deve ser menor que %{count}
+        less_than_or_equal_to: deve ser menor ou igual a %{count}
+        model_invalid: 'A validação falhou: %{errors}'
+        not_a_number: não é um número
+        not_an_integer: não é um número inteiro
+        odd: deve ser ímpar
+        required: é obrigatório(a)
+        taken: já está em uso

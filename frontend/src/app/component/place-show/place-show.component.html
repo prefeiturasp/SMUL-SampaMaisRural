@@ -1,0 +1,204 @@
+<div class="place-show fancy-scroll">
+  <div [fxHide]="!loading"
+    [style.margin]="'auto'"
+    class="spinner"></div>
+  <div [fxHide]="loading">
+    <section fxLayout="row">
+      <div tabindex="0" class="copy-link" [ngClass]="copied? 'done': ''" (click)="copyLink()"><div *ngIf="copied" class="copied-alert">Link copiado!</div></div>
+      <button tabindex="0" (click)="back()"
+        class='back'>
+        <mat-icon
+          mat-icon-button
+          svgIcon="arrow">
+        </mat-icon>
+      </button>
+      <app-slide [images]="place.images" fxFlex="100%"></app-slide>
+    </section>
+    <div class="place-show">
+      <app-place-card
+        [place]="place"
+        class="detail">
+      </app-place-card>
+    </div>
+
+    <mat-divider *ngIf="hasContact"></mat-divider>
+
+    <section *ngIf="hasContact" fxLayout="column" class="info-place">
+      <mat-list fxLayoutGap="16px" fxLayout="column">
+
+        <div class="item-flex" *ngIf="place.where_find_list && place.where_find_list.length">
+          <mat-icon aria-hidden="false"
+                    svgIcon="market">
+          </mat-icon>
+          <div class="info-profile">
+            <p matLine>Onde comprar</p>
+            <span matLine>{{ place.where_find_list.join(', ') }}</span>
+          </div>
+        </div>
+
+        <div class="item-flex" *ngIf="place.full_address">
+          <mat-icon aria-hidden="false"
+                    svgIcon="pin"
+                    aria-label="Como chegar">
+          </mat-icon>
+          <div class="info-profile">
+            <p class="address" matLine>{{ place.full_address }}
+              <span class="external-link" *ngIf="place.accessible" (click)="openAddress(place)">Como chegar</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="item-flex" *ngIf="place.schedule">
+          <mat-icon aria-hidden="false"
+                    svgIcon="clock"
+                    aria-label="Horário">
+          </mat-icon>
+          <div class="schedules">
+            <p [innerHTML]="place.schedule"></p>
+          </div>
+        </div>
+
+        <div class="item-flex" *ngIf="place.product_list && place.product_list.length && place.type == 'market'">
+          <mat-icon aria-hidden="false"
+                    svgIcon="bag"
+                    aria-label="Produtos">
+          </mat-icon>
+          <p>{{ place.product_list.join(' • ') }}</p>
+        </div>
+
+        <div class="item-flex" *ngIf="place.workers">
+          <mat-icon aria-hidden="false"
+                    svgIcon="person"
+                    aria-label="Feirantes">
+          </mat-icon>
+          <p>{{ place.workers }} feirantes</p>
+        </div>
+
+        <div class="item-flex" *ngIf="place.commercial_phones && place.commercial_phones.length">
+          <div class="item-flex" style="width: 100%; padding: 0">
+            <mat-icon aria-hidden="false"
+                      svgIcon="phone"
+                      aria-label="Telefone">
+            </mat-icon>
+            <div class="phone-list">
+              <p *ngFor="let phone of place.commercial_phones">
+                {{ formatPhones(phone.phone_number) }}
+                <span *ngIf="phone.kind" class="span-sites" style="margin-right: 5px">•</span>
+                {{ phone.kind }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-flex" *ngIf="place.email">
+          <mat-icon aria-hidden="false"
+                    svgIcon="envelope"
+                    aria-label="Email">
+          </mat-icon>
+          <a href="mailto:{{ place.email }}">{{ place.email }}</a>
+        </div>
+
+        <div class="item-flex" *ngIf="place.web_pages.length">
+          <mat-icon aria-hidden="false"
+                    svgIcon="link"
+                    aria-label="Acesse o site">
+          </mat-icon>
+          <div class="links">
+
+            <a target="_blank"
+               class="other-sites link"
+               [ngClass]="'link-' + i"
+               *ngFor="let site of place.web_pages; let i = index"
+               href="{{ site }}">{{ i === 0 ? ("Acesse o site") : ("Site " + (i+1)) }}</a>
+          </div>
+        </div>
+      </mat-list>
+    </section>
+
+
+    <mat-divider *ngIf="place.description"></mat-divider>
+    <section *ngIf="place.description"
+      [ngClass]="!fullDescription ? descriptionClass : 'full-description'"
+      fxLayout="column" class="description-area">
+      <p style="font-family: Lato-light" #description>{{ place.description }}</p>
+          <a tabindex="0" *ngIf="checklines(description)" (click)="fullDescription = !fullDescription">
+            {{ fullDescription ? 'Ocultar' : 'Ver mais' }}
+          </a>
+    </section>
+
+    <mat-divider *ngIf="place.related_partners && place.related_partners.length"></mat-divider>
+    <connection-list *ngIf="place.related_partners && place.related_partners.length" [connections]="place.related_partners"></connection-list>
+
+    <mat-divider
+    *ngIf="(place.certificates && place.certificates.length) || checkOtherInfos()"
+    ></mat-divider>
+    <section
+      *ngIf="(place.certificates && place.certificates.length) || checkOtherInfos()"
+      fxLayout="column"
+      class='certificates'
+      #certificates>
+      <div *ngIf="place.certificates.length">
+        <div class="certificates-title">
+          Certificações
+        </div>
+      </div>
+      <mat-list class="certificates-list" *ngIf="place.certificates && place.certificates.length" fxLayout="row" fxFlex>
+        <div class="item-flex"
+             *ngFor="let certificate of place.certificates; let i = index"
+             [title]="t.organic_audit" fxFlex="25%">
+          <p *ngIf="!(certificate.attachment && certificate.attachment.url)">{{ certificate.name }}</p>
+          <img class="certificate-img" *ngIf="certificate.attachment.url" [src]="certificate.attachment.url" />
+        </div>
+      </mat-list>
+      <div *ngIf="checkOtherInfos()">
+        <div class="data-title">
+          Outros Dados
+        </div>
+      </div>
+      <mat-list fxLayout="row" class='info' *ngIf="checkOtherInfos()">
+        <div class="info-item" *ngIf="place.cultivated_area_range" [fxFlex]="33">
+          <h5 matLine>Área produtiva</h5>
+          <p matLine>{{place.cultivated_area_range}}</p>
+        </div>
+        <div class="info-item" *ngIf="place.farms_count" [fxFlex]="33">
+          <h5 matLine>Número de Roças</h5>
+          <p matLine>{{place.farms_count}}</p>
+        </div>
+        <div class="info-item" *ngIf="place.associativism" [fxFlex]="33">
+          <h5 matLine>Associação</h5>
+          <p matLine>{{place.associativism}}</p>
+        </div>
+        <div class="info-item" *ngIf="place.family_work" [fxFlex]="33">
+          <h5 matLine>Agricultura familiar</h5>
+          <p matLine>{{place.family_work? 'Sim' : place.family_work}}</p>
+        </div>
+        <div class="info-item" *ngIf="place.park" [fxFlex]="33">
+          <h5 matLine>Estacionamento</h5>
+          <p matLine>{{place.park}}</p>
+        </div>
+        <div class="info-item" *ngIf="place.disabled_friendly_amenities" [fxFlex]="33">
+          <h5 matLine>Acessibilidade</h5>
+          <p matLine>Sim</p>
+        </div>
+      </mat-list>
+    </section>
+    <mat-divider></mat-divider>
+    <section  class="suggest-edit-profile">
+      <suggest-edit [place]="place"></suggest-edit>
+    </section>
+    <mat-divider *ngIf="place.id"></mat-divider>
+    <section *ngIf="place.id && place.commentable" class="comments-area">
+      <comments [placeId]="place.id"></comments>
+    </section>
+    <mat-divider></mat-divider>
+    <section class='footer' *ngIf="place.source_info">
+      <mat-list>
+        <div class="update-text">
+          Fonte:
+          <a [href]="place.source_link" target="_blank" *ngIf="place.source_link">{{ place.source_info }}</a>
+          <span *ngIf="!place.source_link">{{ place.source_info }}</span>
+        </div>
+      </mat-list>
+    </section>
+  </div>
+</div>

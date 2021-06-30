@@ -1,0 +1,86 @@
+@import '../../../assets/sass/_variables.sass'
+
+:host
+  z-index: 1999
+  background-color: $white
+
+:host(.home)
+  background-color: transparent
+  .mat-divider
+    display: none
+
+:host:not(.explore)
+  background: transparent
+  position: absolute
+  top: 0
+  color: $white
+  width: 100%
+  z-index: 2003
+
+  .mat-divider
+    display: none
+
+:host:not(.explore) a
+      color: $white
+
+.mat-toolbar
+  width: 100%
+  min-height: 50px
+  height: 50px
+  background-color: transparent
+
+.mat-toolbar-row
+  padding: 0
+  height: 50px
+  .spacer
+    flex: 1 1 auto
+
+.home
+  position: absolute
+  top: 0
+
+.white-sandwich, .gray-sandwich
+  background-size: 100%
+  margin-top: 10px
+
+.gray-sandwich
+  background-image: url("/assets/svgs/gray-sandwich.svg")
+
+.white-sandwich
+  background-image: url("/assets/images/white-sandwich.png")
+
+.logo-gray, .logo-white
+  width: 100%
+  height: 100%
+  background-size: 100%
+  background-repeat: no-repeat
+
+.logo-gray
+  background-image: url("/assets/svgs/logo-green.svg")
+
+.logo-white
+  background-image: url("/assets/svgs/logo-white.svg")
+
+.logo
+  color: $white
+  font-size: 24px
+  line-height: 32px
+  font-weight: bold
+  margin: 4px 0 0 16px
+  height: 38px
+  width: 123px
+  span
+    color: $green
+
+/* MOBILE */
+@media only screen and (max-width: 980px)
+  .mat-icon
+    height: 27px
+    margin-right: 16px
+
+  .desktop
+    display: none
+
+@media only screen and (max-width: 768px)
+  .hide-item
+    display: none

@@ -1,0 +1,99 @@
+@import '../../../assets/sass/_tools.sass'
+  
+:host
+  width: calc(25% - 24px)
+  margin: 12px 12px
+  
+.library-item-click:hover
+  cursor: pointer
+
+.library-item
+  width: 100%
+  background-color: white
+  max-height: 440px
+  min-height: 440px
+
+  .library-item-title
+    font-family: Lato-regular
+    font-weight: bold
+    line-height: rem(24)
+    font-size: rem(16)
+    color: $darkgray
+    padding: 4px 18px
+    margin: 4px 0
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    word-wrap: break-word
+
+  .library-item-desc
+    padding: 0 18px
+    font-family: Lato-light
+    font-weight: bold
+    font-size: rem(14)
+    color: $black
+    line-height: rem(24)
+    margin-bottom: 26px
+    display: -webkit-box
+    -webkit-line-clamp: 6
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    word-wrap: break-word
+
+  .library-item-image
+    width: 100%
+    height: 160px
+    overflow: hidden
+    margin-bottom: 8px
+
+    img
+      min-height: 100%
+      width: 100%
+
+  .item-link
+    padding-bottom: 15px
+    font-weight: bold
+
+    a
+      color: $green
+      font-size: rem(14)
+      padding: 0 18px
+      line-height: rem(24)
+      position: relative
+      font-family: Lato-light
+      margin-right: 15px
+
+      &::after
+        content: ''
+        position: absolute
+        width: 20px
+        height: 15px 
+        background-repeat: no-repeat
+        background-size: cover
+        right: -8px
+        top: 1px
+
+      &.external-link::after
+        background-image: url('/assets/svgs/linkicon.svg')
+        background-size: 70%
+
+      &.pdf-link::after
+        background-image: url('/assets/svgs/download.svg')
+
+      &.external-link, &.pdf-link
+        &:hover
+          text-decoration: underline
+          opacity: 0.8
+
+@media only screen and (max-width: 768px)
+  :host
+    width: 100%
+    margin: 12px 0px
+
+    .library-item
+
+      .library-item-title
+        margin-left: 0

@@ -1,0 +1,29 @@
+@import '../../../assets/sass/_tools.sass'
+
+.places-total
+  background-color: $white
+  padding: 14px 16px
+  width: calc(100% - 32px)
+  color: $gray5
+  font-size: rem(12)
+  border-bottom: 1px solid $gray11
+  
+@media only screen and (max-width: 768px)
+  .places-total
+    position: relative
+    top: 0
+    display: block
+    background-color: $lightgray1
+    padding: 20px 16px
+    width: calc(100% - 32px)
+    color: $gray4
+    font-size: rem(16)
+    border-bottom: 0
+
+  .on-map
+    position: absolute
+    top: 180px
+    z-index: 99
+
+  .top
+    top: 130px

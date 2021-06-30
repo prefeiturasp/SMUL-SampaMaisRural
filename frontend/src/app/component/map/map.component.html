@@ -1,0 +1,24 @@
+<div fxLayout="column"
+     (click)="mapChanged($event)"
+     (mouseenter)="mapChanged($event)"
+     (mouseleave)="mapChanged($event)"
+     class='content'
+     fxFlex="100%">
+  <div flex id="map" fxFlex></div>
+
+  <div class='card'
+       fxHide
+       #placeCard
+       fxHide.lt-md="false">
+    <a *ngIf="place" routerLink='/lugar/{{place.slug}}'>
+      <app-place-card
+        [place]="place"
+        class="list map place-card"
+        fxFlex
+        *ngIf="place">
+      </app-place-card>
+    </a>
+  </div>
+</div>
+<button (click)="flyToUserLocation()" [ngStyle]="styleButtonGeo" tabindex="0" class="geo-button"></button>
+<button (click)="flyToBounds()" [ngStyle]="styleButton" tabindex="0" class="sp-button"></button>

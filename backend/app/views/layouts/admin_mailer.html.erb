@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    p, b {
+      color: #347325 !important;
+      font-size: 12px;
+      font-family: Verdana,Geneva,sans-serif;
+    }
+
+    a {
+      color: #347325;
+    }
+
+    .button {
+      background-color: #347325;
+      padding: 10px;
+      margin: 5px 0;
+      display: inline-block;
+      border-radius: 15px;
+      color: #FFF !important;
+      font-weight: bold;
+      font-size: 14px
+    }
+
+    .header {
+      background-image: url('<%= asset_url "bg-email.jpg" %>');
+      background-position-y: -275px;
+      height: 110px;
+    }
+
+    .logo {
+      height: 100px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .content  {
+      margin: 30px 50px;
+    }
+
+    .footer {
+      margin-left: 50px
+    }
+
+    span {
+      font-size: 8px;
+      color: #000;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="header">
+        <%= image_tag('logo-email.png', class: 'logo') %>
+      </div>
+
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

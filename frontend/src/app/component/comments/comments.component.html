@@ -1,0 +1,47 @@
+<div class="comments scroll-thin">
+  <div class="comments-title">Comentários</div>
+
+  <div class="posted-comments fancy-scroll">
+    <div class="comment" *ngFor="let comment of comments">
+      <div class="name">{{comment.name}} <span class="date">{{comment.updated_at}}</span></div>
+      <div class="message">{{comment.data}}</div>
+    </div>
+    <div class="zero-comments" *ngIf="!comments.length && !commentsError">Nenhum comentário.</div>
+    <div class="zero-comments" *ngIf="commentsError">Erro ao carregar comentários.</div>
+  </div>
+
+  <div class="comment-form">
+    <input-form class='comments' [name]="'name'" [setValue]="emptyField" [validation]="fieldValid['name']" (sendValue)="getInputValue($event)" [subtype]="'text'" [type]="'text'" [label]="'Nome*'" [noPadding]="true"></input-form>
+    <div class="error-message-field" *ngIf="!fieldValid['name']">Obrigatório</div>
+    <input-form class='comments' [name]="'email'" [setValue]="emptyField" [validation]="fieldValid['email']" (sendValue)="getInputValue($event)" [subtype]="'email'" [type]="'text'" [label]="'E-mail*'" [noPadding]="true"></input-form>
+    <div class="error-message-field" *ngIf="!fieldValid['email']">Obrigatório</div>
+    <input-form class='comments' [name]="'data'" [setValue]="emptyField" [validation]="fieldValid['data']" (sendValue)="getInputValue($event)" [rows]="4" [type]="'textarea'" [label]="'Comentário*'" [noPadding]="true"></input-form>
+    <div class="error-message-field" *ngIf="!fieldValid['data']">Obrigatório</div>
+    <form [formGroup]="reactiveForm">
+      <div class="recaptcha-area">
+        <re-captcha
+          #captchaRef="reCaptcha"
+          formControlName="recaptchaReactive"></re-captcha>
+      </div>
+      <div class="error-message-field recaptcha-warn" *ngIf="!fieldValid['recaptcha']">Recaptcha obrigatório</div>
+      <button tabindex="0" class="send-comment" (click)="validateComment()">Enviar Comentário</button>
+    </form>
+    <div class="warning" *ngIf="warning">Preencha todos os campos para enviar.</div>
+    <div class="warning" *ngIf="sendError">Erro ao enviar, tente novamente.</div>
+  </div>
+
+  <div class="popup" *ngIf="messageSent || loading">
+    <div class="popup-content">
+      <div class="message-sent" *ngIf="messageSent">
+        <div class="message-sent-icon"></div>
+        <div class="message-sent-title">Enviado com sucesso!</div>
+        <div class="message-sent-subtitle">Assim que aprovado, seu comentário será publicado.</div>
+        <div class="back-profile" (click)='closePopUp()'>Voltar ao perfil</div>
+      </div>
+      <div class="loading-area" *ngIf="loading">
+        <div class="lds-dual-ring"></div>
+        <div class="loading-text">Enviando...</div>
+      </div>
+    </div>
+  </div>
+</div>

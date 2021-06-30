@@ -1,0 +1,43 @@
+export const Icons: Array<string> = [
+  'close',
+  'all-gray',
+  'hover-all',
+  'hover-upa',
+  'hover-market',
+  'hover-initiative',
+  'hover-tourism',
+  'upas',
+  'markets',
+  'initiatives',
+  'tourism',
+  'pin',
+  'phone',
+  'link',
+  'envelope',
+  'arrow',
+  'upa-green',
+  'initiatives-blue',
+  'tourism-orange',
+  'all-white',
+  'market-pink',
+  'upa-big-green',
+  'left-arrow',
+  'bottom-arrow',
+  'upa-default-avatar',
+  'market-default-avatar',
+  'tourism-default-avatar',
+  'initiative-default-avatar',
+  'market',
+  'bag',
+  'clock',
+  'person',
+  'upa-home',
+  'market-home',
+  'initiatives-home',
+  'tourism-home',
+  'contact'
+];
+
+export const IconsPath = 'assets/svgs/';
+
+export const IconsExt = '.svg';

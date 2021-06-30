@@ -1,0 +1,375 @@
+@import '../../../assets/fonts/fonts.sass'
+@import '../../../assets/sass/_tools.sass'
+
+:host
+  z-index: 1
+
+  .spinner
+    margin-top: 50px
+    margin-bottom: 50px
+    width: 50px
+    height: 50px
+
+  .market.spinner
+    border-top: 0.25rem solid $red
+
+  .tourism.spinner
+    border-top: 0.25rem solid $orange
+  
+  .initiative.spinner
+    border-top: 0.25rem solid $blue
+
+  .categories
+    .cat-color
+      font-size: 42px
+      line-height: 50px
+      font-family: Lato-bold
+
+    &.market-page .cat-color
+      color: $red
+    
+    &.tourism-page .cat-color
+      color: $orange
+    
+    &.initiative-page .cat-color
+      color: $blue
+    
+    &.covid-page .cat-color
+      color: $darkgray
+
+    &.upa-page 
+      .category-desc-bg
+        .category-desc
+          padding-bottom: 0px
+
+      .cat-color
+        color: $green
+
+  
+  .categories-banner
+    height: 240px
+    width: 100%
+    color: $white
+    background-size: cover
+    background-position-y: 0px
+    background-position-x: center
+    background-repeat: no-repeat
+
+    &.market-banner
+      background-image: url('/assets/images/cat-feiras.jpg')
+
+    &.tourism-banner
+      background-image: url('/assets/images/cat-turismo.jpg')
+
+    &.upa-banner
+      background-image: url('/assets/images/cat-agricultura.jpg')
+
+    &.initiative-banner
+      background-image: url('/assets/images/cat-iniciativa.jpg')
+
+    &.covid-banner
+      background-image: url('/assets/images/corona-back.jpg')
+
+    .categories-title
+      line-height: rem(56)
+      font-family: Lato-light
+      font-size: rem(36)
+      padding-top: 104px
+      width: 100%
+      text-align: center
+
+  .category-desc-bg
+    width: 100%
+    background-color: $white
+
+    .category-desc
+      display: flex
+      flex-wrap: wrap
+      width: 90%
+      margin-left: 5%
+      padding: 80px 0px
+
+      .category-info
+        width: 25%
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+        .category-info-text
+          width: 155px
+
+          .category-info-title
+            margin-top: 6px
+            color: $darkgray
+            font-size: 16px
+            font-family: Lato-bold
+            line-height: 19px
+            margin-bottom: 10px
+            padding-bottom: 10px
+
+          .category-info-link
+            color: $green
+            line-height: 24px
+            position: relative
+
+            &.button-link
+              background-color: $green
+              color: $white
+              font-family: Lato-light
+              font-weight: bold
+              padding: 10px 25px
+              border-radius: 20px
+
+        &.market-info .category-icon
+          background-image: url("/assets/svgs/market-default-avatar.svg")
+
+        &.upa-info .category-icon
+          background-image: url("/assets/svgs/upa-default-avatar.svg")
+
+        &.tourism-info .category-icon
+          background-image: url("/assets/svgs/tourism-default-avatar.svg")
+
+        &.initiative-info .category-icon
+          background-image: url("/assets/svgs/iniciativa.svg")
+
+        &.covid-info .category-icon
+          background-image: url("/assets/svgs/corona-category.svg")
+
+        .category-icon
+          width: 78px
+          height: 78px
+          background-size: 78px 78px
+          background-position: center
+          margin-right: 22px
+
+      .category-paragraph
+        width: calc(75% - 30px)
+        padding-left: 0px
+        color: $black
+        font-family: Lato-light
+        font-weight: bold
+        font-size: rem(16)
+        line-height: rem(28)
+
+        .agriculture-title
+          font-size: rem(24)
+          line-height: rem(34)
+          color: $darkgray
+          font-family: Lato-bold
+          margin-bottom: 12px
+
+  .category-counters-bg
+    background-color: $lightgray2
+    width: 100%
+
+    .category-counters
+      display: flex
+      flex-wrap: wrap
+      width: calc(100% - 20px)
+      padding: 60px 10px 0px 10px
+      margin-bottom: -40px
+
+      .category-counter
+        width: calc((100% / 3) - 20px)
+        margin: 10px
+        margin-bottom: 100px
+
+      .category-counter.cat-half
+        margin: 30px 0
+        width: 50%
+
+    .cat-flex
+      justify-content: center
+      padding: 30px 140px
+
+  .category-connection
+    display: flex
+    flex-wrap: wrap
+    min-height: 324px
+    justify-content: center
+
+    .connection-info
+      width: 40%
+      display: flex
+      flex-wrap: wrap
+      height: 200px
+      padding-top: 62px
+      margin-right: 126px
+
+      .connection-icon
+        background-image: url('/assets/svgs/conexoes.svg')
+        background-position: center
+        background-size: cover
+        width: 70px
+        height: 56px
+        margin-top: 15px
+
+      .connection-text
+        margin-left: 26px
+        width: calc(100% - 70px - 26px)
+        .connection-title
+          font-size: rem(24)
+          font-family: Lato-bold
+          color: $darkgray
+          line-height: rem(56)
+
+        .connection-desc
+          color: black
+          line-height: rem(28)
+          margin-bottom: 15px
+          font-weight: bold
+          font-family: Lato-light
+
+        .connection-link
+          color: $green
+          line-height: rem(24)
+          position: relative
+          font-weight: bold
+          font-family: Lato-light
+          width: 90px
+          padding-top: 16px
+          cursor: pointer
+
+          &:hover
+            text-decoration: underline
+
+          &::after 
+            content: ''
+            position: absolute
+            width: 14px
+            height: 15px
+            background-image: url('/assets/svgs/pin-green.svg')
+            background-size: 100%
+            background-position: center
+            top: 19px
+            right: -18px
+
+    .connection-preview
+      width: 348px
+      height: 240px
+      margin-top: calc(162px - 120px)
+
+  .covid-donation-area
+    display: flex
+    background-color: $lightgray2
+    flex-wrap: wrap
+    padding: 60px 20px
+
+    .covid-donation-title
+      color: $darkgray
+      font-size: rem(24)
+      font-family: Lato-bold
+      line-height: rem(30)
+      width: 100%
+      margin-bottom: 47px
+
+    .covid-donation-img
+      width: 427px
+      height: 99px
+      background-image: url('/assets/images/hands.png')
+      background-position: center
+      background-size: cover
+
+    .covid-donation-info
+      width: calc(100% - 427px - 73px)
+      margin-left: 73px
+      .covid-donation-info-text
+        color: $darkgray
+        font-family: Lato-light
+        font-weight: bold
+        line-height: rem(28)
+
+      .covid-donation-info-buttons
+        display: flex
+        flex-wrap: wrap
+
+        .covid-map-button
+          background-color: $green
+          color: $white
+          font-family: Lato-bold
+          font-size: rem(16)
+          padding: 10px 20px
+          border-radius: 20px
+          cursor: pointer
+          margin-top: 25px
+        
+        .covid-know-more
+          color: $green
+          font-family: Lato-regular
+          line-height: rem(24)
+          margin-top: 30px
+          margin-left: 15px
+
+          &:hover
+            text-decoration: underline
+
+@media only screen and (max-width: 1150px)
+  :host
+    .covid-donation-area
+      .covid-donation-title
+        margin-bottom: 37px
+
+      .covid-donation-img
+        width: 100%
+        background-size: 100%
+        background-repeat: no-repeat
+        margin-bottom: 35px
+
+      .covid-donation-info
+        width: 100%
+        margin-left: 0
+
+    .category-connection
+      .connection-info
+        width: 100%
+        padding: 20px
+        margin-right: 0
+        height: unset
+
+      .connection-preview
+        padding-bottom: 50px
+        width: 290px
+
+    .categories
+      .categories-banner
+        background-size: cover
+
+        &.market-banner
+          background-image: url('/assets/images/cat-feiras-mobile.jpg')
+
+        &.tourism-banner
+          background-image: url('/assets/images/cat-turismo-mobile.jpg')
+
+        &.upa-banner
+          background-image: url('/assets/images/cat-upa-mobile.jpg')
+
+        &.initiative-banner
+          background-image: url('/assets/images/cat-iniciativa-mobile.jpg')
+
+      .category-desc-bg
+        .category-desc
+          width: calc(100% - 30px)
+          margin: 0px 15px
+          padding-top: 20px
+          padding-bottom: 60px
+
+          .category-paragraph
+            width: 100%
+            margin-top: 40px
+            padding-left: 3px
+
+          .category-info
+            width: 100%
+
+            .category-info-text
+              width: calc(100% - 100px)
+
+      .category-counters-bg
+        .category-counters
+          padding: 50px 10px 50px 10px
+
+          .category-counter
+            width: 100%
+            margin-bottom: 25px
+
+

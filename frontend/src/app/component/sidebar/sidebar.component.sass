@@ -1,0 +1,87 @@
+@import '../../../assets/sass/_tools.sass'
+
+:host
+  z-index: 1000
+  background-color: $white
+  display: flex
+
+  .side-bar
+    flex-direction: column
+    box-sizing: border-box
+    display: flex
+
+mat-nav-list
+  justify-content: space-around
+  height: 65%
+  width: 100%
+  margin: 0 auto
+  background-color: $white
+
+  mat-list-item
+    text-align: center
+    display: flex
+    justify-content: center
+    width: 100%
+    margin: 0
+    &:hover
+      background: none
+
+    a
+      width: 100%
+
+      .side-bar-icon
+       margin: 0 auto
+       height: 38px
+       width: 38px
+
+       .mat-icon
+         width: 100%
+         height: 100%
+
+      label
+        color: $gray2
+        padding-top: 5px
+        font-family: Lato-black
+        font-size: rem(10)
+        letter-spacing: rem(1)
+        line-height: rem(12)
+        text-align: center
+        text-transform: uppercase
+        margin: 0 auto
+
+a.active
+  label
+    color: $darkgray !important
+
+
+/* MOBILE */
+@media only screen and (max-width: 768px)
+  :host
+    .side-bar
+      flex-direction: row
+      height: calc(132px - 50px)
+      overflow: hidden
+
+  mat-nav-list
+    width: 100%
+    padding-bottom: 16px
+    justify-content: center
+    flex-wrap: wrap
+    mat-list-item
+      margin: 8px 0 16px 0
+      height: 44px !important
+      width: calc((100% / 5))
+      a
+        label
+          font-size: rem(8)
+
+      div
+        a
+          font-size: rem(8) !important
+
+@media only screen and (max-width: 325px)
+  .mat-nav-list
+    .mat-list-item
+      a
+        label
+          font-size: rem(6)

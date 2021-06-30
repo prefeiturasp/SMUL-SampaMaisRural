@@ -1,0 +1,24 @@
+<div class="image-repeater">
+  <div class="label-repeater">{{label}}</div>
+  <div tabindex="0" *ngIf="noPreview" class="button-upload can-click" (click)="inputFile.click()">
+    <span class="button-title">Selecionar imagens</span>
+  </div>
+  <div class="repeater" [ngClass]="noPreview? 'no-preview' : ''">
+    <div class="image" *ngFor="let image of images">
+      <div class="image-preview" *ngIf="!noPreview">
+        <img [src]="image.preview" />
+        <div tabindex="0" class="delete-button can-click" (click)="removeImage(image)"></div>
+      </div>
+      <div class="image-desc" *ngIf="noPreview">
+        <div class="img-name">{{image.file.name}}</div>
+        <div class="img-size">{{image.file.size.toString().slice(0, -3)}}KB</div>
+        <div tabindex="0" class="delete-button can-click" (click)="removeImage(image)"></div>
+      </div>
+    </div>
+  </div>
+  <div tabindex="0" *ngIf="!noPreview" class="button-upload can-click" (click)="inputFile.click()">
+    <span class="button-title">Selecionar imagens</span>
+  </div>
+</div>
+
+<input class="image-input" (change)="selectImage($event)" #inputFile type="file" accept="image/*" multiple/>

@@ -1,0 +1,7 @@
+<% f.input :avatar, as: :file, hint: image_tag(f.object.avatar_url || "") %>
+
+<% if f.object.avatar_url.present? %>
+  <% f.semantic_fields_for :avatar_attributes do |avatar_fields| %>
+    <%- avatar_fields.input :_destroy, as: :boolean, label: 'Remover' %>
+  <% end %>
+<%  end %>

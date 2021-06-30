@@ -1,0 +1,203 @@
+@import '../../../assets/sass/_tools.sass'
+  
+.connection
+  position: relative
+  width: 100%
+  height: 100%
+
+  .main
+    position: absolute
+    width: 70px
+    height: 69px
+    left: calc(50% - 35px)
+    top: 0
+    background-repeat: no-repeat
+    z-index: 2
+    background-size: cover
+    background-position: center
+
+    &::after 
+      display: none
+
+  .upa
+    background-image: url('/assets/svgs/upa-connection.svg')
+
+    &.zero
+      background-image: url('/assets/svgs/upa-connection-zero.svg')
+
+    &::after
+      content: attr(icon-name)
+  
+  .market
+    background-image: url('/assets/svgs/market-connection.svg')
+
+    &.zero
+      background-image: url('/assets/svgs/market-connection-zero.svg')
+
+    &::after
+      content: attr(icon-name)
+  
+  .tourism
+    background-image: url('/assets/svgs/tourism-connection.svg')
+
+    &.zero
+      background-image: url('/assets/svgs/tourism-connection-zero.svg')
+
+    &::after
+      content: attr(icon-name)
+  
+  .iniciative, .initiative
+    background-image: url('/assets/svgs/initiative-connection.svg')
+
+    &.zero
+      background-image: url('/assets/svgs/initiative-connection-zero.svg')
+
+    &::after
+      content: attr(icon-name)
+
+  .icon
+    width: 59px
+    height: 58px
+    position: absolute
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+    &::after 
+      position: absolute
+      width: 80px
+      text-align: center
+      color: $gray4
+      font-size: rem(14)
+      line-height: rem(24)
+      font-family: Lato-bold
+      font-weight: bold
+      bottom: -30px
+      left: -10px
+
+  .left-line
+    width: 4px
+    height: 135px
+    background-color: $gray4
+    position: absolute
+    left: 99px
+    transform: rotate(46deg)
+    top: 29px
+
+  .left
+    left: 0px
+    bottom: 50px
+
+  .right
+    right: 0px
+    bottom: 50px
+
+  .right-line
+    width: 4px
+    height: 135px
+    background-color: $gray4
+    position: absolute
+    right: 99px
+    transform: rotate(-46deg)
+    top: 29px
+
+  .middle
+    left: calc(50% - 29.5px)
+    bottom: 13px
+
+  .middle-line
+    width: 4px
+    height: 110px
+    background-color: $gray4
+    position: absolute
+    right: calc(50% - 2px)
+    top: 67px
+
+
+  .connection-count
+    position: absolute
+    background-color: $darkgray
+    color: $white
+    height: 32px
+    line-height: rem(29)
+    font-size: rem(24)
+    padding: 1px 8px
+    border-radius: 4px
+
+    &.left
+      bottom: 125px
+      left: 60px
+
+      &.medium-size
+        left: 70px
+
+      &.small-size
+        left: 80px
+
+      &.extra-small-size
+        left: 80px
+
+      &.zero
+        display: none
+
+    &.right
+      bottom: 125px
+      right: 60px
+
+      &.medium-size
+        right: 70px
+
+      &.small-size
+        right: 80px
+
+      &.extra-small-size
+        right: 80px
+
+      &.zero
+        display: none
+
+    &.middle
+      bottom: 90px
+
+      &.big-size
+        margin-left: -8px
+
+      &.small-size
+        margin-left: 8px
+
+      &.extra-small-size
+        margin-left: 14px
+
+      &.zero
+        display: none
+  
+  .line
+
+    .top-line
+      height: 60%
+    
+    .bottom-line
+      height: 40%
+
+    .line-upa
+      background-color: $green
+
+    .line-market
+      background-color: $red
+
+    .line-tourism
+      background-color: $orange
+
+    .line-iniciative, .line-initiative
+      background-color: $blue
+
+    &.left-line, &.right-line
+      .top-line
+        height: 50%
+
+      .bottom-line
+        height: 50%
+
+    &.zero
+      .bottom-line, .top-line
+        background-color: $gray2

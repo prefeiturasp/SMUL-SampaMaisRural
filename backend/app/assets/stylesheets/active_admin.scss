@@ -1,0 +1,83 @@
+@import 'activeadmin_addons/all';
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+@import "bootstrap/_mixins";
+@import "bootstrap/_functions";
+@import "bootstrap/_variables";
+@import "bootstrap/_modal";
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+
+#map { height: 360px; width: 100%; }
+.photo { height: 50px; width: 50px; margin: 20px; }
+
+.address-not-found {
+  background: #E892A2;
+  margin: 20px 0;
+  padding: 20px 10px;
+  display: none;
+
+  p {
+    color: #FFF;
+    font-weight: bold;
+  }
+}
+
+// Autocomplete
+.algolia-autocomplete, .algolia-autocomplete .aa-hint {
+  width: 100%;
+}
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #B2D7FF;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.aa-dropdown-menu {
+  float: right !important;
+  width: 80% !important;
+  position: relative !important;
+}
+
+img { height: 300px }
+
+.tag_field { padding: 0 0 15px 20%; }
+
+.warning-label { margin-left: 19.5%; font-style: italic; }
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+.select2 {
+  width: 80% !important;
+}

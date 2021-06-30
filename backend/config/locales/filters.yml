@@ -1,0 +1,161 @@
+pt-BR:
+  filters:
+    groups:
+      farmers_with_contact:
+        name: Agricultores com contato
+        product_list: Produção Agricultores com contato
+        cultivated_area_range: Área produzida Agricultores com contato
+        qualification_list: Qualificações Agricultores com contato
+      farmers_without_contact:
+        name: Agricultores sem contato
+        product_list: Produção Agricultores sem contato
+      guarani:
+        name: Aldeias Guarani
+        product_list: Produção Aldeias Guarani
+        qualification_list: Qualificações Aldeias Guarani
+      urban_gardens:
+        name: Hortas
+
+      gardens_with_public_equipaments:
+        name: Hortas
+
+      rural_experience:
+        name: Vivência Rural
+        product_list: Vivência Rural
+      nature:
+        name: Natureza
+        product_list: Natureza
+      culture:
+        name: Cultura
+        product_list: Cultura
+      food:
+        name: Alimentação
+        product_list: Alimentação
+      accommodation:
+        name: Hospedagem
+        product_list: Hospedagem
+      service:
+        name: Comércio e Serviços
+        product_list: Comércio e serviços
+
+      local_production_partner:
+        name: Parceiro da produção de Sampa
+        product_list: Parceiros da produção local
+      organic_markets:
+        name: Produtos feiras orgânicas, comércio parceiro de orgânicos e grupos de consumo responsável
+      with_organic_partners:
+        name: Produtos feiras orgânicas, comércio parceiro de orgânicos e grupos de consumo responsável
+      sustainable_consumption:
+        name: Produtos feiras orgânicas, comércio parceiro de orgânicos e grupos de consumo responsável
+      restaurants_with_organic_ingredients:
+        name: Restaurantes orgânicos
+      organic_restaurants:
+        name: Restaurantes orgânicos
+        tag_list: Restaurantes orgânicos
+      free_markets:
+        name: Feiras Livres Municipais
+        tag_list: Tipo de feira livre municipal
+
+      agriculture_services:
+        name: Serviços para Agricultura
+        product_list: Serviços para agricultura
+
+      public_policies:
+        name: Políticas Públicas
+        product_list: Políticas Públicas
+      civil_society:
+        name: Iniciativas da Sociedade Civil
+        product_list: Iniciativas da Sociedade Civil
+      associations_cooperatives:
+        name: Associações e Cooperativas
+        product_list: Associações e Cooperativas
+      research:
+        name: Pesquisa e Extensão
+        product_list: Pesquisa e Extensão
+      garden:
+        name: Hortas
+        product_list: Atividades Hortas
+        qualification_list: Qualificações Hortas
+
+      organics:
+        name: Produtos feiras orgânicas e Comércio Parceiro de orgânicos e Grupos de Consumo Responsáve
+        product_list: Produtos feiras orgânicas, comércio parceiro de orgânicos e grupos de consumo responsável
+
+    upa:
+      zone: Zona
+      subcategory_list: Tipo de agricultura
+      product_list: Produção
+      cultivated_area_range: Área cultivada
+      qualification_list: Qualificações
+
+    tourism:
+      zone: Zona
+      subcategory_list: Tipo de Turismo Rural
+      neighborhood_region_list: Polo de ecoturismo
+      qualification_list: Qualificações
+      rural_experience: Vivência Rural
+      culture: Cultura
+      nature: Natureza
+      accommodation: Hospedagem
+      food: Alimentação
+
+    market:
+      zone: Zona
+      subcategory_list: Tipo de Mercados
+      product_list: Culturas comercializadas
+      qualification_list: Qualificações
+
+    initiative:
+      zone: Zona
+      subcategory_list: Tipo de Iniciativas
+      civil_society_list: Iniciativas da Sociedade Civil
+      solidary_city_list: Cidade Solidária
+      urban_garden_list: Hortas Urbanas
+      public_policy_list: Políticas Públicas
+      association_list: Associações e Cooperativas
+      research_list: Pesquisa e Extensão
+      qualification_list: Qualificações
+
+    ordering:
+      upa:
+        - _subcategory_list
+        - _zone
+        - farmers_with_contact_product_list
+        - farmers_with_contact_cultivated_area_range
+        - farmers_with_contact_qualification_list
+        - farmers_without_contact_product_list
+        - guarani_product_list
+        - guarani_qualification_list
+        - garden_product_list
+        - garden_qualification_list
+
+      tourism:
+        - _subcategory_list
+        - _neighborhood_region_list
+        - _qualification_list
+        - rural_experience_product_list
+        - nature_product_list
+        - culture_product_list
+        - food_product_list
+        - accommodation_product_list
+        - services_product_list
+
+      market:
+        - _subcategory_list
+        - _zone
+        - _qualification_list
+        - local_production_partner_product_list
+        - _product_list
+        - organics_product_list
+        - organic_restaurants_tag_list
+        - free_markets_tag_list
+        - agriculture_services_product_list
+
+      initiative:
+        - _zone
+        - _qualification_list
+        - public_policies_product_list
+        - civil_society_product_list
+        - associations_cooperatives_product_list
+        - research_product_list
+

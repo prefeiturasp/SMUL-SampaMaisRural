@@ -1,0 +1,16 @@
+<div id="root">
+  <app-header
+    [ngClass]="pageName"
+    [isGray]="isGray">
+  </app-header>
+  <app-map *ngIf="hasMap"
+    [pageName]="pageName"
+    [ngClass]="pageName"
+    #map fxFlex="100%"
+    [title]="pageName === 'home'? 'Abrir mapa' : ''">
+  </app-map>
+  <router-outlet #outlet="outlet"></router-outlet>
+  <app-terms-popup></app-terms-popup>
+  <app-footer [ngClass]="pageName" *ngIf="hasFooter">
+  </app-footer>
+</div>

@@ -1,0 +1,16 @@
+<div class="checkbox-input-area">
+    <div class="checkbox-input" *ngFor="let checkbox of formatedCheckboxes">
+      <label class="checkbox path filter-options-label">
+        <input tabindex="0" type="checkbox" class="checkbox-filter" (change)="optionValueToggle(checkbox.id)" /> 
+        <svg viewBox="0 0 21 21">
+            <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+        </svg>
+        <span class="checkbox-label" [ngClass]="font">{{checkbox.title}}  <a class="link" *ngIf="name === 'authorize_information'" target="_blank" routerLink="/termos">Acesse os Termos de Uso</a></span>
+      </label>
+    </div>
+
+    <div class="form-field" *ngIf="otherField">
+      <div class="form-label" ><span *ngIf="labelShow">{{labelShow}}</span></div>
+      <input class="form-input" [placeholder]="placeholder" [(ngModel)]="valueInput" (change)="inputChange()" (focusout)="hideLabel()" (focus)="showLabel()" type="text"/>
+    </div>
+</div>

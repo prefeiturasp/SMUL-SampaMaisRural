@@ -1,0 +1,39 @@
+<section class="library">
+  <div class="library-banner">
+    <div class="library-banner-title">Biblioteca</div>
+  </div>
+  <div class="themes">
+    <div class="themes-filter">
+      <div class="themes-filter-title bold-title">Navegue por temas</div>
+      <div class="themes-filter-list" *ngIf="themes">
+        <div tabindex="0" class="themes-filter" (click)="filter(theme.name)" [ngClass]="active === theme.name? 'active': ''" *ngFor="let theme of themes">{{theme.name}}</div>
+      </div>
+    </div>
+    <div
+      [fxHide]="!loading || error"
+      [style.zIndex]="1">
+      <div class="loading"></div>
+    </div>
+    <div class="error" *ngIf="error">
+      Ocorreu um erro durante a consulta de dados.
+    </div>
+    <div class="themes-content" *ngIf="!loading && !error">
+      <div class="themes-repeater">
+        <div class="theme" *ngFor="let theme of themes">
+          <div class="theme-checker" *ngIf="theme.name !== 'Todos'">
+            <div class="theme-area">
+              <div class="theme-title">{{theme.name}}</div>
+              <div class="library-item-area" *ngIf="theme.posts.length">
+                <library-item [data]="item" *ngFor="let item of theme.posts"></library-item>
+              </div>
+              <div class="error" *ngIf="!theme.posts.length">
+                Nenhum post encontrado para esta categoria.
+              </div>
+              <a [routerLink]="'/biblioteca/tema/' + theme.name" class="see-more" *ngIf="theme.posts_count > 4" [title]="'Ver mais ' + theme.name">Ver mais {{theme.name}} ></a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

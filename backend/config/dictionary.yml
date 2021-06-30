@@ -1,0 +1,52 @@
+#cities
+saopaulo: 'São Paulo'
+saoaulo: 'São Paulo'
+saopaulo: 'São Paulo'
+saopauoo: 'São Paulo'
+saopsulo: 'São Paulo'
+sao-paulo: 'São Paulo'
+sao-paulo-sp: 'São Paulo'
+sao-pau: 'São Paulo'
+sp: 'São Paulo'
+saopau: 'São Paulo'
+saopaulo-sp: 'São Paulo'
+sao-aulo: 'São Paulo'
+
+# partners
+upa: Upa
+geosampa: Market
+idec: Market
+tourism: Tourism
+sprural: Initiative
+4-iniciativas: Initiative
+1-agricultura: Upa
+turismoevivenciarural: Tourism
+iniciativas: Initiative
+agricultura: Upa
+mercados: Market
+
+
+tourism: Turismo e Vivência Rural
+initiative: Iniciativas
+upa: Agricultura
+market: Mercados
+
+# subcategories
+feiraorganicaouagroecologica: Feiras Orgânicas
+# spcidadesolidaria: SP Cidade Solidária - Drive-Thrus e Centrais de Triagem
+# entregadeprodutosfrescos: Entrega e retirada de alimentos e produtos frescos
+# comercioparceirodolocal: Comércio parceiro da produção local
+protocolodetransicaoagroecologica: Transição Agroecológica
+spg-abd: Orgânico - Sistema Participativo de Garantia
+auditoria-ibd: Orgânico por Auditoria
+ocs: Organismo de Controle Social (OCS)
+feiraslivres: Feiras Livres Municipais
+comercioparceirodeorganicos: Comércio Parceiro de Orgânicos
+hortasurbanasouagricultor: Hortas urbanas
+t: Tradicional
+r: Tradicional
+n: Noturna
+o: Orgânica
+agricultor-a: Agricultores com contato
+restaurantescomingredientesorganicos: Restaurantes com Orgânicos
+parceiro-da-producao-local: Parceiro da produção de Sampa

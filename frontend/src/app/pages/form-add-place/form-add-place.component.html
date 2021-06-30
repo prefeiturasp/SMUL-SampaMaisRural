@@ -1,0 +1,94 @@
+<section class="add-place-page">
+  <div class="add-place-banner">
+  </div>
+  <div class="add-place-area"> <!-- [formGroup]="addPlaceForm"  -->
+    <form class="add-place-form"  (ngSubmit)="sendDataToService()">
+      <div class="add-place-form-content" *ngIf="!dataBeenSent" [ngClass]="loading? 'hide': 'show'">
+        <div class="stage-zero" *ngIf="!currentStage">
+          <div class="stage-title">Escolha o tipo do seu local</div>
+          <div class="category-buttons">
+            <div tabindex="0" [ngClass]="checkActive(t.farmer) ? 'active': ''" (click)="active(t.farmer)" class="category-button upa"><span>{{t.upa}}</span></div>
+            <div tabindex="0" [ngClass]="checkActive(t.market) ? 'active': ''" (click)="active(t.market)" class="category-button market"><span>{{t.market}}</span></div>
+            <div tabindex="0" [ngClass]="checkActive(t.tourism) ? 'active': ''" (click)="active(t.tourism)" class="category-button tourism"> <span>{{t.tourism_rural_experience}}</span></div>
+            <div tabindex="0" [ngClass]="checkActive(t.initiative) ? 'active': ''" (click)="active(t.initiative)" class="category-button initiatives"><span>{{t.initiatives_policy}}</span></div>
+          </div>
+          <div class="select-subcategory" *ngIf="selectedForm.category">
+            <select-input [label]="'Selecione o tipo de ' + selectedForm.category" [options]="getSubcategories()" (sendValue)="getSubcategory($event)"></select-input>
+          </div>
+          <div tabindex="0" class="next-button stage-zero-button" (click)="checkIfRedirect()">
+            Próximo
+          </div>
+        </div>
+
+        <div class="stage" *ngFor="let stage of currentForm" [ngClass]="checkCurrentStage(stage) ? 'show' : 'hide'">
+          <div class="back-form" (click)="backStage()"></div>
+          <div class="alert-form" #alertFormElement>{{errorMessage}}</div>
+          <div class="stage-title" >Incluir Local</div>
+          <div class="stage-options">
+            <span class="first-info">{{selectedForm.category}}</span>
+            <span>{{selectedForm.subcategory}}</span>
+          </div>
+          <div class="area" *ngFor="let area of stage.areas">
+            <div class="area-title" *ngIf="area.title">{{area.title}}</div>
+            <div class="area-subtitle" *ngIf="area.subTitle">{{area.subTitle}}</div>
+            <div class="inputs" *ngIf="area.fields">
+              <div *ngFor="let field of area.fields" >
+                <input-form
+                  [type]="field.type"
+                  [label]="field.label"
+                  [title]="field.title"
+                  [values]="field.values"
+                  [name]="field.name"
+                  [subtype]="field.subtype"
+                  [mask]="field.mask"
+                  [validation]="checkInvalid(field)"
+                  [textField]="field.textField"
+                  [selectField]="field.selectField"
+                  [rows]="field.rows"
+                  (sendValue)="getValue($event)"
+                  [noPadding]="field.noPadding"
+                  [yesNo]="field.yesNo"
+                  [subtitle]="field.subtitle"
+                  [contactInfo]="contactInfo"
+                  [legend]="field.legend"
+                  [retract]="field.retract"
+                  [hideType]="field.hideType"
+                  [address]="address"
+                  [category]="selectedForm.category"
+                  [otherField]= "field.otherField"
+                  [currentForm]="selectedForm.subcategory">
+                </input-form>
+                <div *ngIf="field.type !== ('phone-repeater' && 'map') && wrongFields && !checkInvalid(field)" class="error-message-field">
+                  Obrigatório
+                </div>
+              </div>
+            </div>
+            <div class="area-warn" *ngIf="area.warn">{{area.warn}}</div>
+          </div>
+        </div>
+        <div *ngIf="currentStage" class="button-area">
+          <div tabindex="0" class="next-button" (click)="nextStage()" *ngIf="(currentStage !== currentForm.length)">
+            Próximo
+          </div>
+          <div tabindex="0" class="next-button" (click)="sendDataToService()" *ngIf="(currentStage === currentForm.length)">
+            Enviar
+          </div>
+        </div>
+        <div *ngIf="alertFields && currentStage" class="fields-required">
+          <div class="alert-fields">Os seguintes campos precisam ser preenchidos corretamente:</div>
+          {{alertFields}}
+        </div>
+      </div>
+      <div class="message-sent" *ngIf="dataBeenSent">
+        <div class="message-sent-icon"></div>
+        <div class="message-sent-title">Sucesso!</div>
+        <div class="message-sent-subtitle">Entraremos em contato em breve para confirmar seu cadastro.</div>
+        <div class="back-to-form" (click)="resetForm()">Voltar</div>
+      </div>
+      <div *ngIf="loading" class="loading-area">
+        <div class="lds-dual-ring"></div>
+        <div class="loading-text">Enviando...</div>
+      </div>
+    </form>
+  </div>
+</section>

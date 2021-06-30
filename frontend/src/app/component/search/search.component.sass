@@ -1,0 +1,121 @@
+@import '../../../assets/sass/_tools.sass'
+  
+.search
+  .input-search
+    padding-top: 16px
+    margin-left: 45px
+    background: none
+    padding-bottom: 6px
+    padding-right: 8px
+    border: none
+    font-size: rem(12)
+    width: 180px
+    padding-left: 24px
+    background-image: url('/assets/svgs/nav.svg')
+    background-repeat: no-repeat
+    background-size: 15px 15px
+    background-position: 0px 16px
+    position: relative
+    font-family: Lato-light
+
+    &:focus
+      padding-bottom: 5px
+      border-bottom: 1px solid $white
+      outline: none
+
+    &.gray
+      color: $gray5
+
+      &::placeholder
+        color: $gray5
+        opacity: 1
+
+      &:-ms-input-placeholder
+        color: $gray5
+
+      &::-ms-input-placeholder
+        color: $gray5
+
+    &.white
+      color: $white
+
+      &::placeholder
+        color: $white
+        opacity: 1
+
+      &:-ms-input-placeholder
+        color: $white
+
+      &::-ms-input-placeholder
+        color: $white
+
+@media only screen and (max-width: 980px)
+
+  .open-mobile
+    display: flex
+
+  .close-mobile
+    display: none
+
+  .mobile-icon
+    background-image: url('/assets/svgs/nav.svg')
+    width: 30px
+    height: 30px
+    background-size: 60%
+    background-repeat: no-repeat
+    position: absolute
+    right: 55px
+    top: 10px
+    background-position: center
+    z-index: 99
+
+    &.gray
+      background-image: url('/assets/svgs/search.svg')
+
+  .search
+    position: absolute
+    background-color: $white
+    flex-wrap: wrap
+    top: 0
+    width: 100vw
+    height: 84px
+    left: 0
+    z-index: 100
+    box-shadow: 1px 1px 17px rgba(0,0,0, 0.2)
+
+    .clear-field
+      width: 20px
+      height: 20px
+      background-image: url('/assets/svgs/clear-field.svg')
+      background-position: center
+      background-repeat: no-repeat
+      margin-top: 30px
+      margin-right: 18px
+
+    .input-search
+      margin-left: 16px
+      font-size: rem(16)
+      margin-top: 2px
+      color: $gray5
+      width: calc(100% - 100px - 30px - 32px)
+      background-position: 0px 32px
+      height: 44px
+      background-image: url('/assets/svgs/search.svg')
+
+      &.white
+        color: $gray5
+
+        &::placeholder
+          color: $gray5
+          opacity: 1
+
+        &:-ms-input-placeholder
+          color: $gray5
+
+        &::-ms-input-placeholder
+          color: $gray5
+
+    .close-pop
+      font-size: rem(16)
+      color: $gray4
+      margin-top: 24px

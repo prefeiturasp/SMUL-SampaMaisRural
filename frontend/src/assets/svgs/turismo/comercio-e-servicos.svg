@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>2. assets/icone/pag-int/turismo/comercio-e-servicos</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="43" cy="43" r="43"></circle>
+        <path d="M37.9989753,0 L38.0000008,24.5853117 C32.2706437,27.4119083 25.8207812,29 19,29 C12.1785353,29 5.72806355,27.41159 -0.00172330638,24.5844619 L-0.00102471165,0 L37.9989753,0 Z" id="path-3"></path>
+    </defs>
+    <g id="2.-assets/icone/pag-int/turismo/comercio-e-servicos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" opacity="0.6">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Oval"></g>
+            <g id="1.-colors/turismo" mask="url(#mask-2)" fill="#FFA129">
+                <rect id="Rectangle-Copy-2" x="0" y="0" width="86" height="86"></rect>
+            </g>
+        </g>
+        <g id="1.-colors/agricultores" opacity="0.8" transform="translate(24.000000, 57.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="1.-colors/turismo" mask="url(#mask-4)" fill="#FFA129">
+                <g transform="translate(-24.000000, -57.000000)" id="Rectangle-Copy-2">
+                    <rect x="0" y="0" width="86" height="86"></rect>
+                </g>
+            </g>
+        </g>
+        <g id="Group-2" transform="translate(24.000000, 19.000000)" fill-rule="nonzero">
+            <path d="M1.60444444,12 C0.980611111,21.378 0,37.146 0,43.7647059 C0,46.5155294 2.49322222,48 4.84077778,48 L33.1592222,48 C35.5067778,48 38,46.5155294 38,43.7647059 C38,37.2285882 37.0172778,21.3917647 36.3934444,12 L1.60444444,12 Z" id="Path" fill="#292F36"></path>
+            <path d="M31,2.11111111 L28.9090909,2.11111111 L28.9090909,9.5 C28.9090909,14.7376667 24.6885909,19 19.5,19 C14.3114091,19 10.0909091,14.7376667 10.0909091,9.5 L10.0909091,2.11111111 L8,2.11111111 L8,0 L12.1818182,0 L12.1818182,9.5 C12.1818182,13.5744444 15.4655909,16.8888889 19.5,16.8888889 C23.5344091,16.8888889 26.8181818,13.5744444 26.8181818,9.5 L26.8181818,0 L31,0 L31,2.11111111 Z" id="Path" fill="#F4F4F4" transform="translate(19.500000, 9.500000) scale(1, -1) translate(-19.500000, -9.500000) "></path>
+        </g>
+    </g>
+</svg>

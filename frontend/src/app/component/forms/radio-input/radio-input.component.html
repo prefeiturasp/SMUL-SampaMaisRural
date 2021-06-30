@@ -1,0 +1,15 @@
+<div class="radio-input-area" [ngClass]="yesNo? 'half-size-option' : ''">
+    <div class="radio-input" *ngFor="let radio of formatedRadio">
+      <label class="radio path filter-options-label">
+        <input tabindex="0" type="radio" class="radio-filter" [name]="title" [value]="radio.title" [(ngModel)]="inputValue" (change)="optionChange()"> 
+        <span class="radio-label">{{radio.title}}</span>
+      </label>
+    </div>
+</div>
+
+<div class="form-field" *ngIf="textField && (textField.activeWhen.indexOf(inputValue) > -1)">
+  <div class="form-label" ><span *ngIf="labelShow">{{labelShow}}</span></div>
+  <input class="form-input" (change)="optionChange()" [placeholder]="placeholder" [(ngModel)]="textvalue" [mask]="textField.mask" (focusout)="hideLabel()" (focus)="showLabel()" type="text"/>
+</div>
+
+<select-input *ngIf="selectField && (selectField.activeWhen.indexOf(inputValue) > -1)" (sendValue)="getSelectValue($event)" [options]="selectField.values" [label]="selectField.label"></select-input>

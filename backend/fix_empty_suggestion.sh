@@ -1,0 +1,1 @@
+rake suggestion:fix_empty_suggestion

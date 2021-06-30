@@ -1,0 +1,167 @@
+@import '../../assets/sass/_tools.sass'
+
+img
+ object-fit: cover
+ height: 100%
+ width: 100%
+
+:host
+ justify-content: space-between
+ height: auto
+ padding: rem(16)
+ background-color: $white
+
+ .place-tags
+   margin-bottom: 0 !important
+
+ .sub-kind
+  font-family: Lato-bold
+  font-size: rem(13)
+  margin-bottom: 8px !important
+
+  &.upa
+    color: $green
+
+  &.market
+    color: $red
+
+  &.tourism
+    color: $orange
+
+  &.initiative
+    color: $blue
+
+ label
+  padding: 4px 8px
+  border-radius: 4px
+  font-size: rem(12)
+
+ h5
+  color: $darkgray
+  font-family: Lato-bold
+
+.place-tags
+  flex-wrap: wrap
+  display: flex
+
+  .tag
+    margin-bottom: 5px
+
+.avatar
+  align-self: center
+  border-radius: 50%
+  height: 72px
+  width: 73px
+
+  img
+    padding: 1px
+    height: 62px
+    width: 62px
+    border-radius: 50%
+    margin-left: 3px
+    margin-top: 3px
+    border: 2px solid $green
+
+    &.market
+      border-color: $red
+
+    &.tourism
+      border-color: $orange
+
+    &.initiative
+      border-color: $blue
+
+  .no-pic
+    border: none
+    width: 64px
+    height: 64px
+
+:host(.list)
+ font-size: rem(13)
+ line-height: rem(15)
+
+ &:hover
+  background-color: $lightgray1
+
+ h5
+  font-size: rem(16)
+  line-height: rem(19)
+  color: $black
+  font-weight: bold
+
+ p
+  color: $black
+  font-family: Lato-light
+  font-weight: 900
+
+  &.products
+    font-weight: bold
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+ span
+  color: $black
+  font-weight: 900
+  font-family: Lato-light
+
+ .avatar
+  height: 72px
+  width: 73px
+  clip-path: circle(rem(35) at center)
+
+:host(.detail)
+  font-size: rem(16)
+  line-height: rem(19)
+
+  .sub-kind
+    font-size: rem(16)
+    margin-bottom: 16px !important
+
+  .tag
+    padding: 0px 12px
+
+  h5
+   font-size: rem(24)
+   line-height: rem(29)
+
+  p
+   color: $darkgray
+   font-family: Lato-bold
+   font-size: rem(16)
+   line-height: rem(19)
+
+  .products, .kind
+    font-family: Lato-light
+    color: $black
+    font-weight: bold
+    line-height: rem(28)
+
+  .avatar
+    height: 80px
+    width: 80px
+    clip-path: none
+
+    img
+      height: 74.9px
+      width: 74.9px
+      border-radius: 50%
+      margin-left: 3px
+      margin-top: 3px
+
+  .hide-details
+    display: none
+
+@media only screen and (max-width: 768px)
+
+  :host(.list)
+    font-size: 16px
+
+    &:hover
+      background-color: $white
+
+    label
+      font-size: 16px
+
+    h5
+      font-size: 20px

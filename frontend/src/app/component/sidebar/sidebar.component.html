@@ -1,0 +1,19 @@
+<mat-nav-list class="side-bar">
+  <mat-list-item
+    disableRipple
+    *ngFor="let item of sidebarItems; index as i" >
+    <a (click)="goToCategory(item.path)" routerLinkActive="active">
+      <div *ngIf="!isMobile" class="side-bar-icon" (mouseover)="hoverIcon[item.label] = true" (mouseleave)="hoverIcon[item.label] = false" >
+        <mat-icon [svgIcon]="item.icon" *ngIf="!hoverIcon[item.label]"></mat-icon>
+        <mat-icon [svgIcon]="item.iconHover" *ngIf="hoverIcon[item.label]" ></mat-icon>
+      </div>
+      <div *ngIf="isMobile" class="side-bar-icon" >
+        <mat-icon [svgIcon]="item.icon"></mat-icon>
+      </div>
+      <label matLine>{{ item.label }}</label>
+    </a>
+    <preload-img [imgs]="item.preloadItems"></preload-img>
+  </mat-list-item>
+</mat-nav-list>
+<mat-divider vertical fxHide.lt-md></mat-divider>
+

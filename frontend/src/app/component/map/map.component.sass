@@ -1,0 +1,91 @@
+@import '../../../assets/sass/_mixins.sass'
+
+:host
+  position: absolute
+  top: 50px
+  height: calc(100vh - 55px)
+  width: 100%
+  z-index: 1
+
+:host(.home)
+  height: calc(100vh - 85px)
+
+  button
+    display: none
+
+  .card
+    display: none
+
+  .sp-button, .geo-button
+     display: none
+
+:host(.explore)
+  height: calc(100vh - 50px)
+
+  .place-card
+    display: none
+
+.content
+  height: 100%
+
+#map
+  height: 100%
+  width: 100%
+
+.sp-button, .geo-button
+  width: 36px
+  height: 36px
+  background-color: $white
+  border-radius: 20px
+  box-shadow: 1px 1px rgba(0,0,0,0.12)
+  position: absolute
+  bottom: 148px
+  right: 6px
+  z-index: 2001
+  background-size: 52%
+  background-repeat: no-repeat
+  background-position: center
+  background-image: url('/assets/svgs/sp-icon.svg')
+
+  &:hover
+    opacity: 0.8
+
+.geo-button
+  bottom: 100px
+  background-image: url('/assets/svgs/gps.svg')
+
+
+.card
+  height: auto
+  position: fixed
+  width: 100%
+  bottom: 0
+  z-index: 1000
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+
+  a
+    width: 100%
+
+@media only screen and (max-width: 900px)
+  :host(.home)
+    position: absolute
+    top: 240px
+    z-index: 1
+
+  :host(.explore)
+    height: calc(100vh - 50px)
+
+    .sp-button, .geo-button
+     position: fixed
+     top: unset
+     left: calc(100vw - 12px - 36px)
+
+  button
+    @include rounded-rectangle-button
+    position: fixed
+    font-size: rem(16)
+    top: unset
+    right: 12px
+    z-index: 3000

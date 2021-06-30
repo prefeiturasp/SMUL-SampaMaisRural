@@ -1,0 +1,119 @@
+<% f.panel "#{ f.object.name || "Novo Paceiro" }" do %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.general_info') do %>
+    <% if f.object.id %>
+      <% f.input :id, input_html: { disabled: true } %>
+    <% end %>
+
+    <% if f.object.api_id %>
+      <% f.input :api_id, input_html: { disabled: true } %>
+    <% end %>
+
+    <% f.input :update_via_integration, as: :boolean %>
+
+    <% f.input :publish_address, as: :boolean %>
+
+    <% f.input :authorize_information, as: :boolean, input_html: { disabled: true } %>
+
+    <% f.input :status, as: :select,
+      collection: Partner.statuses.
+      map { |status, index| [I18n.t("activerecord.attributes.partner.statuses.#{ status }"), status] } %>
+  <% end %>
+
+  <%- if f.object.upa? or f.object.sprural? %>
+    <% f.inputs I18n.t("active_admin.labels.form.upa_info") do %>
+      <% f.input :responsable_name, input_html: { disabled: f.object.update_via_integration?} %>
+      <% f.input :cpf, input_html: { disabled: f.object.update_via_integration? } %>
+      <% f.input :registration_name, input_html: { disabled: f.object.update_via_integration? } %>
+      <% f.input :registration_email, input_html: { disabled: f.object.update_via_integration? } %>
+      <% f.input :registration_phone_0, input_html: { disabled: f.object.update_via_integration?} %>
+      <% f.input :registration_phone_1, input_html: { disabled: f.object.update_via_integration? } %>
+      <% f.input :registration_address, input_html: { disabled: f.object.update_via_integration? } %>
+      <% f.input :registration_neighborhood, input_html: { disabled: f.object.update_via_integration? } %>
+      <% f.input :registration_zip_code, input_html: { disabled: f.object.update_via_integration? } %>
+    <% end %>
+  <%- end %>
+
+  <%- if f.object.api? %>
+    <% f.inputs I18n.t('active_admin.labels.form.registration_info') do %>
+      <% f.input :responsable_name, label: 'Nome de Contato - automapeamento' %>
+      <% f.input :cpf, label: 'CPF - automapemaneto'%>
+      <% f.input :registration_email, label: 'E-mail automapeamento' %>
+      <% f.input :registration_phone_0 %>
+      <% f.input :registration_phone_1 %>
+    <%- end %>
+  <%- end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.basic_info') do %>
+    <% f.input :category_name, input_html: { disabled: true } %>
+    <% f.input :category_id, input_html: { value: f.object.category_id }, as: :hidden %>
+    <% f.input :subcategory_list,
+      as: :check_boxes,
+      disabled: (f.object.update_via_integration? ? f.object.category.subcategory_list : []),
+      collection: f.object.category.subcategory_list %>
+
+    <% f.input :certificate_list,
+      as: :check_boxes,
+      disabled: (f.object.update_via_integration? ? Certificate.pluck(:name) : []),
+      collection: Certificate.pluck(:name) %>
+
+    <% f.input :name  %>
+
+    <%= render partial: 'tags_form', locals: { f: f } %>
+
+    <% f.input :who_sells_details %>
+    <% render partial: 'connections_form', locals: { f: f } %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.address') do %>
+    <% f.input :full_address, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :neighborhood, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :zip_code, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :district, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :city, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :zone, as: :select, collection: f.object.class.pluck(:zone).uniq  %>
+
+    <% f.input :email, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :web_pages  %>
+    <% f.input :contact  %>
+    <% f.input :other_contact  %>
+
+    <% render partial: 'phones_form', locals: { f: f } %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.complementary_info') do %>
+    <% f.input :description  %>
+
+    <% f.input :cultivated_area, input_html: { disabled: f.object.update_via_integration?} %>
+    <% f.input :area, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :family_work, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :associativism, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :dap, as: :boolean, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :birthdate, as: :datepicker, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :gender, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :has_internet_access, as: :boolean, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :source_info, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :source_date, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :source_info2, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :source_update, input_html: { disabled: f.object.update_via_integration? } %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.management_information') do %>
+    <% f.input :registered_by  %>
+    <% f.input :source  %>
+    <% f.input :other_information  %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.pics_and_map') do %>
+    <% render partial: 'attachments_form', locals: { f: f } %>
+    <% render partial: 'avatar_form', locals: { f: f } %>
+
+    <% f.input :_lat, input_html: { value: f.object.lat, disabled: f.object.update_via_integration? } %>
+    <% f.input :_lon, input_html: { value: f.object.lon, disabled: f.object.update_via_integration? } %>
+
+  <% end %>
+
+  <%= render partial: '/shared/map', locals: { draggable: true } %>
+<% end %>
+
+<%= render partial: 'form_actions', locals: { resource: f.object, f: f } %>

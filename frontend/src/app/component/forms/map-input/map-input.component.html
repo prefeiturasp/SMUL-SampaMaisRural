@@ -1,0 +1,10 @@
+<div class="map-area">
+  <div class="options fancy-scroll" *ngIf="list">
+    <div class="option" *ngFor="let location of list" >
+      <div tabindex="0" class="option-value" (click)="moveMapAndCoords(location)">{{location.display_name}}</div>
+    </div>
+  </div>
+  <div id="map"></div> 
+  <div class="legend">Clique no mapa para posicionar o pin na localização exata do seu endereço.</div>
+  <div class="warning" *ngIf="invalid">Não encontramos seu endereço, nos ajude a localizar posicionando o pin no local correto, clicando no mapa.</div>
+</div>

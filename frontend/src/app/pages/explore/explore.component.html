@@ -1,0 +1,25 @@
+<app-filters [listIsOpen]="listIsOpen"></app-filters>
+<app-sidebar
+  fxLayout.lt-md="column">
+</app-sidebar>
+<category-filters
+  [onList]="false"
+  [categories]="categoryFilters"
+  [onMap]="true"
+  [filterQuery]="filterQuery"
+  (onChange)="onSelectedCategory($event)"
+  *ngIf="isMobile"
+  id="category-filters">
+</category-filters>
+<app-places
+  [categoryFilters]="categoryFilters"
+  #places
+  fxLayout="column">
+</app-places>
+<button tabindex="0" *ngIf="!isMobile" [ngClass]="listIsOpen? 'open-list' : 'closed-list'" (click)="toggle()">
+  <mat-icon matLine
+            mat-icon-button
+            svgIcon="left-arrow">
+  </mat-icon>
+</button>
+

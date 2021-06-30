@@ -1,0 +1,12 @@
+<div class="profile-picture">
+  <div class="picture-title">{{label}}</div>
+  <div tabindex="0" class="delete-button can-click" (click)="deleteImage()" *ngIf="previewImage"></div>
+  <div class="picture-area" (click)="!previewImage ? inputFile.click() : ''" [ngClass]="!previewImage ? 'can-click' : 'preview-area'">
+    <div tabindex="0" class="upload-button" *ngIf="!previewImage" >
+      Adicionar
+    </div>
+    <img [src]="previewImage" class="pic-preview" *ngIf="previewImage">
+  </div>
+  <div tabindex="0" class="edit-button can-click" (click)="inputFile.click()" *ngIf="previewImage"></div>
+</div>
+<input class="image-input" (change)="selectImage($event)" #inputFile type="file" accept="image/*" />

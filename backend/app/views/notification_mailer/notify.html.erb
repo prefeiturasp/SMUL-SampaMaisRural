@@ -1,0 +1,8 @@
+<p><%= @resource.name %> enviou uma nova <%= @resource_name %></p>
+<% if @partner %>
+  <p>Acesse o local e confira <%= link_to @partner.name, "#{ENV['APP_HOST']}/admin/#{partner_url(@partner)}/#{@partner.slug}", class: 'button' %>
+<% end %>
+</p>
+
+<%= simple_format @resource.message %>
+

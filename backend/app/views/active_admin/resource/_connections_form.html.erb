@@ -1,0 +1,12 @@
+<% f.has_many :connections, new_record: true, allow_destroy: true do |connection_form| %>
+  <% connection_form.object.root_partner_id = f.object.id %>
+  <% connection_form.input :root_partner_id, as: :hidden %>
+  <% connection_form.input :partner_id,
+    as: :search_select,
+    url: '/admin/search_partners',
+    fields: [:name, :id], display_name: 'name',
+    minimum_input_length: 2,
+    order_by: 'name' %>
+
+  <% connection_form.input :description %>
+<% end %>

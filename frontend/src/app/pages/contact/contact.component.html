@@ -1,0 +1,42 @@
+<section class="contact-page">
+  <div class="contact-banner">
+    <div class="banner-title">Entre em contato</div>
+  </div>
+  <div class="contact-area">
+    <form class="contact-form"  [formGroup]="contactForm" (ngSubmit)="validate()">
+      <div class="error-message">{{error}}</div>
+      <div class="fields" *ngIf="!messageSent && !loading">
+        <div class="form-field" [ngClass]="validInput[0]? 'valid' : 'invalid'">
+          <div class="form-label" ><span *ngIf="label[0]">Nome*</span></div>
+          <input class="form-input" formControlName="name" [placeholder]="placeholder[0]" (focusout)="hideLabel(0, 'name')" (focus)="showLabel(0)" type="text" minlength="3"/>
+          <div class="error-message-field">Obrigatório</div>
+        </div>
+        <div class="form-field" [ngClass]="validInput[1]? 'valid' : 'invalid'">
+          <div class="form-label" ><span *ngIf="label[1]">E-mail*</span></div>
+          <input class="form-input" formControlName="email" [placeholder]="placeholder[1]" (focusout)="hideLabel(1, 'email')" (focus)="showLabel(1)" type="email"/>
+          <div class="error-message-field">Obrigatório</div>
+        </div>
+        <div class="form-field" [ngClass]="validInput[2]? 'valid' : 'invalid'">
+          <div class="form-label" ><span *ngIf="label[2]">Telefone</span></div>
+          <input class="form-input" formControlName="phone" [placeholder]="placeholder[2]" (focusout)="hideLabel(2, 'phone')" (focus)="showLabel(2)" type="text" (keyup)="phoneChange()" mask="(00) 0000-00009" minlength="10"/>
+          <div class="error-message-field">Campo inválido</div>
+        </div>
+        <div class="form-field" [ngClass]="validInput[3]? 'valid' : 'invalid'">
+          <div class="form-label" ><span *ngIf="label[3]">Mensagem*</span></div>
+          <textarea class="form-input" formControlName="message" [placeholder]="placeholder[3]" rows="4" (focusout)="hideLabel(3, 'message')" (focus)="showLabel(3)" type="text"></textarea>
+          <div class="error-message-field">Obrigatório</div>
+        </div>
+        <button tabindex="0" class="contact-send-button" type="submit" title="Enviar Mensagem">Enviar</button>
+      </div>
+      <div class="message-sent" *ngIf="messageSent">
+        <div class="message-sent-icon"></div>
+        <div class="message-sent-title">Obrigado pelo envio!</div>
+        <div class="message-sent-subtitle">Entraremos em contato em breve.</div>
+      </div>
+      <div class="loading-area" *ngIf="loading">
+        <div class="lds-dual-ring"></div>
+        <div class="loading-text">Enviando...</div>
+      </div>
+    </form>
+  </div>
+</section>

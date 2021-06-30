@@ -1,0 +1,43 @@
+<category-filters
+  [onList]="true"
+  [filterQuery]="filterQuery"
+  [categories]="categoryFilters"
+  (onChange)="onSelectedCategory($event)">
+</category-filters>
+<total-results [totalCount]="totalCount" *ngIf="!loading"></total-results>
+<mat-divider class="divider" *ngIf="loading && !!currentCategory && !isMobile"></mat-divider>
+<div (scroll)="onScroll($event)" class="places fancy-scroll">
+  <div (click)="routeToPlace('/lugar/' + place.slug)"
+    class="place"
+    *ngFor="let place of places; let i = index"
+    appHighlight="#F4F4F4">
+    <a tabindex="0">
+      <app-place-card
+        [highlight]="!isMobile"
+        class='list'
+        *ngIf="place.name"
+        [place]="place">
+      </app-place-card>
+    </a>
+    <mat-divider></mat-divider>
+  </div>
+  <div
+    [fxHide]="!loading"
+    fxFlex
+    [style.display]="'flex'"
+    [style.backgroundColor]="'white'"
+    [style.zIndex]="1">
+    <div class="spinner"></div>
+  </div>
+</div>
+<div class="connection-filter" *ngIf="!isMobile">
+  <div class="label">Mostrar pontos conectados ({{totalConnections}})</div>
+  <div class="filter-input">
+    <label class="switch">
+      <input (change)="changeFilter()"
+        [checked]="isConnection"
+        type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<typemap>
+
+  <type
+     format="ttf"
+     name="Lato"
+     fullname="Lato Bold"
+     family="Lato"
+     glyphs="./Lato-Bold.ttf"
+     />
+
+   <type
+     format="ttf"
+     name="Manrope-ExtraBold"
+     fullname="Manrope-ExtraBold"
+     family="Manrope"
+     glyphs="./Manrope-ExtraBold.ttf"
+   />
+
+   <type
+   format="ttf"
+   name="Manrope-Medium"
+   fullname="Manrope-Medium"
+   family="Manrope"
+   glyphs="./Manrope-Medium.ttf"
+ />
+
+</typemap>

@@ -1,0 +1,27 @@
+<section *ngIf="title !== t.all || isSampa" [ngClass]="onList? 'on-list' : (onMap? 'on-map ' + (!showCategories? 'show': 'show') : 'all-filters')">
+  <div class="close-icon" (click)="selectPageAll()" *ngIf="onMap"></div>
+  <div class="category-title" [ngClass]="categoryName" *ngIf="isSampa || title && title !== t.all">{{title}} <a class="data-link" [href]="link" *ngIf="link">Ver painel ></a></div>
+  <div class="category-filters"
+    [ngClass]="!onList ? 'no-padding' : ''">
+   <div class="categories" [ngStyle]="{'width.px' : '100%'}" *ngIf="categories.length">
+      <div class="category-repeater" *ngFor="let category of categories">
+         <div class="categories-list"
+              [ngClass]="category.name">
+            <div class="categories-select">
+              <div class="categories-repeater" *ngFor="let filter of filtersFor(category.filters)">
+                <div class="inline-block" *ngFor="let value of filter.values">
+                  <div tabindex="0"
+                       (click)="onChangeField(category.name, filter.field, value)"
+                       [ngClass]="category.name + (filterQuery.includes(formatFilter(category.name, filter.field, value)) ? ' active' : '')"
+                       class="category-filter">
+                    {{ value }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </div>
+</section>

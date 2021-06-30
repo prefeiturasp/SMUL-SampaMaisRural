@@ -1,0 +1,69 @@
+<div class="accordion-item" *ngIf="report">
+  <div class="header">
+    <div class="imgs-icon" *ngIf="report.icon === 'partner'">
+      <div class="imgs-icon-farmer icon-data"></div>
+      <div class="imgs-icon-market icon-data"></div>
+      <div class="imgs-icon-people icon-data"></div>
+    </div>
+    <div class="img-icon" *ngIf="report.icon !== 'partner'">
+      <div [ngClass]="classIcon" class="icon-data"></div>
+    </div>
+    <div class="title">{{ report.name }}</div>
+    <div class="right-menu">
+      <a class="menu-download hover-change csv-download"
+        target="_blank"
+        [href]="report.csv">
+        <span class="link-text">CSV</span>
+      </a>
+      <a class="menu-download hover-change"
+        [href]="report.json"
+        target="_blank">
+        <span class="link-text">JSON</span>
+      </a>
+      <a class="menu-details hover-change"
+        tabindex="0"
+        (click)="toggleAccordion()">{{details}}
+      </a>
+    </div>
+  </div>
+  <div class="accordion-content"
+    [ngClass]="(isOpen ? 'open' : 'close') + '-accordion'">
+      <div class="accordion-header">
+        <div class="accordion-header-img"><img [src]="report.logo" /></div>
+        <div class="accordion-header-text">{{ report.description }}</div>
+      </div>
+      <div class="download-mobile">
+        <a class="menu-download hover-change csv-download"
+           target="_blank"
+           [href]="report.csv">
+          <span class="link-text">CSV</span>
+        </a>
+        <a class="menu-download hover-change"
+           [href]="report.json"
+           target="_blank">
+          <span class="link-text">JSON</span>
+        </a>
+      </div>
+      <div class="desc-grid">Detalhamento dos campos disponíveis.</div>
+      <div class="accordion-grid">
+        <div class="accordion-table">
+          <div class="table-header">
+            <div class="table-header-title table-title">Nome</div>
+            <div class="table-header-title table-type">Tipo</div>
+            <div class="table-header-title table-desc">Descrição</div>
+          </div>
+          <div class="table-body">
+            <div class="table-body-items"
+              *ngFor="let item of report.attributes">
+              <div class="table-body-item cell-info table-title"
+                   [title]="item.label">
+                {{item.label}}
+              </div>
+              <div class="table-body-item table-type">{{item.kind}}</div>
+              <div class="table-body-item cell-info table-desc" [title]="item.desc">{{item.description}}</div>
+            </div>
+        </div>
+        </div>
+      </div>
+  </div>
+</div>

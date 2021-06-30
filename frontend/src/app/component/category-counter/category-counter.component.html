@@ -1,0 +1,32 @@
+<div class="counter" [ngClass]="page + '-counter'" [title]="data.title">
+  <div class="counter-img" [ngStyle]="{'width.px': imgSizeW, 'height.px': imgSizeH}" ><img [ngStyle]="{'margin-top.px': marginImgTop}" [src]="data.img" /></div>
+  <div class="counter-info-text" [ngStyle]="{'width':'calc(100% - 25px - ' + imgSizeW + 'px)'}">
+    <div>
+      <counter class="counter-count cat-color" [fontStyle]="'bold'" [percentage]="percentage" [counter]="data.count"></counter>
+      <span *ngIf="data.percentage || data.percentage === 0" class="counter-data-percentage">{{data.percentage}}%</span>
+    </div>
+    <div class="counter-info-title">{{data.title}}</div>
+    <div class="data-info-ballom" *ngIf="data.info && !ballonFull">
+      <div class="data-info-item" *ngFor="let info of data.info">
+        <div class="data-info-item-number"><counter class="counter-count" [fontStyle]="'bold'" [counter]="info.data"></counter></div>
+        <div class="data-info-item-title">{{info.title}}</div>
+      </div>
+    </div>
+    <div *ngIf="!textBellow">
+      <div *ngIf="data.desc" class="counter-info-paragraph">{{data.desc}}</div>
+      <a class="counter-info-link" *ngIf="data.link" (click)="sendToMap()" title="Ver no mapa">Ver no mapa</a>
+      <a *ngIf="data.externalLink" [ngClass]="data.link? 'divider' : ''" [href]="data.externalLink" title="Ver link externo" target="_blank" class="external-link"></a>
+    </div>
+  </div>
+  <div *ngIf="textBellow" class="text-bellow">
+    <div *ngIf="data.desc" class="counter-info-paragraph">{{data.desc}}</div>
+    <a class="counter-info-link" *ngIf="data.link" (click)="sendToMap()" title="Ver no mapa">Ver no mapa</a>
+    <a *ngIf="data.externalLink" [ngClass]="data.link? 'divider' : ''" [href]="data.externalLink" title="Ver link externo" target="_blank" class="external-link"></a>
+  </div>
+  <div class="data-info-ballom" *ngIf="ballonFull">
+    <div class="data-info-item" *ngFor="let info of data.info">
+      <div class="data-info-item-number"><counter class="counter-count" [fontStyle]="'bold'" [counter]="info.data"></counter></div>
+      <div class="data-info-item-title">{{info.title}}</div>
+    </div>
+  </div>
+</div>

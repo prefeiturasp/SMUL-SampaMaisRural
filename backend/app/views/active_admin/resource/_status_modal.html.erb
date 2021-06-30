@@ -1,0 +1,53 @@
+<div id="modal-notification"
+  class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div id="modal-notification-content" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mensagem Enviada ao responsável</h5>
+        </div>
+        <div class="modal-body">
+          <p class='approved-desc hide'>
+            Edite a mensagem abaixo para comunicar o autor que as informações estarão públicas na Sampa+Rural.
+          </p>
+          <p class='refused-desc hide'>
+            Edite a mensagem abaixo para avisar o autor sobre as inconsistências nas informações.
+          </p>
+          <br />
+          <br />
+          <%- f.input :status_message, as: :hidden %>
+          <%= hidden_field_tag :notification_kind, resource.class.name.downcase %>
+          <%= hidden_field_tag :notifiable_name, resource.notifiable_name %>
+          <%= text_area_tag :status_message, nil, rows: 10 %>
+        </div>
+        <div class="modal-footer">
+          <%= link_to 'Cancelar', '#', onclick: "hideMessageModal()", class: 'button' %>
+          <%= link_to 'Enviar', '#', onclick: "submit()", class: 'button' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-no-email" class="modal hide fade" role="dialog" aria-hidden="true">
+  <div id="modal-no-email-content" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mensagem Enviada ao responsável</h5>
+        </div>
+        <div class="modal-body">
+          <p>
+            Não há email de recebimento configurado. <br />
+            Nenhuma notificação será disparada. <br />
+            Caso queira notificar o responsável, por favor preencha o campo de email de cadastro.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <%= link_to 'Cancelar', '#', onclick: "hideMessageModal()", class: 'button' %>
+          <%= link_to 'Enviar', '#', onclick: "submit()", class: 'button' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

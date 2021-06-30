@@ -1,0 +1,15 @@
+<fieldset class='actions'>
+  <ol>
+    <li class="action input_action">
+      <%= link_to "Atualizar #{resource.class.model_name.human}", '#', onclick: "beforeSubmit()", class: 'button' %>
+    </li>
+    <li class='cancel'>
+      <% if resource.kind_of?(Partner) %>
+        <%= link_to 'Cancelar', "/admin/#{partner_url(resource)}"%>
+      <% else %>
+        <%= link_to 'Cancelar', '#', onclick: "cancel()" %>
+      <% end %>
+    </li>
+  </ol>
+</fieldset>
+<%= render partial: 'status_modal', locals: { f: f } %>

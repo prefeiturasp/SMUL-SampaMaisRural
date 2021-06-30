@@ -1,0 +1,287 @@
+pt-BR:
+  tags:
+    upa:
+      farmers_with_contact:
+        product_list:
+          - Não comercializa
+          - Legumes e Verduras
+          - Raízes
+          - Frutas
+          - Grãos
+          - PANCs - Plantas alimentícias não convencionais
+          - Cogumelos
+          - Ovos
+          - Produção de Mel
+          - Laticínios
+          - Processados e Beneficiados (geleias, compotas, frutas desidratadas, etc.)
+          - Panificados
+          - Plantas Medicinais
+          - Bambu
+          - Plantas Ornamentais
+          - Mudas
+        where_find_list:
+          - Não comercializa
+          - Na propriedade
+          - CEAGESP
+          - Associação, sindicato ou cooperativa
+          - Feiras Livres
+          - Restaurantes
+          - Quitandas ou mini-mercados
+          - Supermercados ou grandes empresas
+
+      guarani:
+        product_list:
+          - Milho (Avaxi)
+          - Batata-doce (Jety)
+          - Mandioca (Mandi'o)
+          - Banana (Pakova)
+          - Amendoim (Manduvi)
+          - Abóbora (Andai)
+          - Melancia (Xanjau)
+          - Feijão (Kumanda)
+          - Quiabo
+          - Abacaxi
+          - Inhame
+          - Arroz (Aroi)
+          - Porcos
+          - Gansos/patos
+          - Galinhas
+          - Vaca
+          - Abelha
+          - Peixe em açude
+        where_find_list:
+          - Não comercializa
+          - Porta da propriedade
+          - CEAGESP
+          - Associação, sindicato ou cooperativa
+          - Feiras Livres
+          - Restaurantes
+          - Quitandas ou mini-mercados
+          - Supermercados ou grandes empresas
+
+        qualification_list:
+          - Turismo e vivência rural (Recebe Visitantes)
+          - Necessita Agendamento
+          - Não necessita agendamento
+
+      urban_gardens:
+        product_list:
+          - Horta comunitária
+          - Horta institucional
+          - Horta escolar
+          - Horticultura
+          - Pomar
+          - PANCs - Plantas alimentícias não convencionais
+          - Plantas medicinais
+          - Produção de mel
+          - Viveiro de mudas
+          - Jardim
+          - Autoconsumo
+          - Comercializa
+          - Atividades recreativas
+          - Oficinas educativas
+          - Educação ambiental
+          - Compostagem
+          - Agrofloresta
+          - Aquaponia
+          - Permacultura
+          - Proteção de nascentes
+          - Proteção ambiental
+        where_find_list:
+          - Não comercializa
+          - Porta da propriedade
+          - CEAGESP
+          - Associação, sindicato ou cooperativa
+          - Feiras Livres
+          - Restaurantes
+          - Quitandas ou mini-mercados
+          - Supermercados ou grandes empresas
+        qualification_list:
+          - Aberta a visitação
+          - Tem mutirão
+          - Em busca de volúntarios
+          - Acesso livre
+          - Acesso controlado
+          - Comercializa
+
+      gardens_with_public_equipaments:
+        product_list:
+          - Horta comunitária
+          - Horta institucional
+          - Horta escolar
+          - Horticultura
+          - Pomar
+          - PANCs - Plantas alimentícias não convencionais
+          - Plantas medicinais
+          - Produção de mel
+          - Viveiro de mudas
+          - Jardim
+          - Autoconsumo
+          - Comercializa
+          - Atividades recreativas
+          - Oficinas educativas
+          - Educação ambiental
+          - Compostagem
+          - Agrofloresta
+          - Aquaponia
+          - Permacultura
+          - Proteção de nascentes
+          - Proteção ambiental
+        where_find_list:
+          - Não comercializa
+          - Porta da propriedade
+          - CEAGESP
+          - Associação, sindicato ou cooperativa
+          - Feiras Livres
+          - Restaurantes
+          - Quitandas ou mini-mercados
+          - Supermercados ou grandes empresas
+        qualification_list:
+          - Aberta a visitação
+          - Tem mutirão
+          - Em busca de volúntarios
+          - Acesso livre
+          - Acesso controlado
+          - Comercializa
+      farmers_without_contact:
+        product_list:
+          - Não comercializa
+          - Legumes e Verduras
+          - Raízes
+          - Frutas
+          - Grãos
+          - PANCs - Plantas alimentícias não convencionais
+          - Cogumelos
+          - Ovos
+          - Produção de Mel
+          - Laticínios
+          - Processados e Beneficiados (geleias, compotas, frutas desidratadas, etc.)
+          - Panificados
+          - Plantas Medicinais
+          - Bambu
+          - Plantas Ornamentais
+          - Mudas
+        where_find_list:
+          - Não comercializa
+          - Na propriedade
+          - CEAGESP
+          - Associação, sindicato ou cooperativa
+          - Feiras Livres
+          - Restaurantes
+          - Quitandas ou mini-mercados
+          - Supermercados ou grandes empresas
+
+      guarani:
+        product_list:
+          - Milho (Avaxi)
+          - Batata-doce (Jety)
+          - Mandioca (Mandi'o)
+          - Banana (Pakova)
+          - Amendoim (Manduvi)
+          - Abóbora (Andai)
+          - Melancia (Xanjau)
+          - Feijão (Kumanda)
+          - Quiabo
+          - Abacaxi
+          - Inhame
+          - Arroz (Aroi)
+          - Porcos
+          - Gansos/patos
+          - Galinhas
+          - Vaca
+          - Abelha
+          - Peixe em açude
+        where_find_list:
+          - Não comercializa
+          - Porta da propriedade
+          - CEAGESP
+          - Associação, sindicato ou cooperativa
+          - Feiras Livres
+          - Restaurantes
+          - Quitandas ou mini-mercados
+          - Supermercados ou grandes empresas
+
+        qualification_list:
+          - Turismo e vivência rural (Recebe Visitantes)
+          - Necessita Agendamento
+          - Não necessita agendamento
+
+      urban_gardens:
+        product_list:
+          - Horta comunitária
+          - Horta institucional
+          - Horta escolar
+          - Horticultura
+          - Pomar
+          - PANCs - Plantas alimentícias não convencionais
+          - Plantas medicinais
+          - Produção de mel
+          - Viveiro de mudas
+          - Jardim
+          - Autoconsumo
+          - Comercializa
+          - Atividades recreativas
+          - Oficinas educativas
+          - Educação ambiental
+          - Compostagem
+          - Agrofloresta
+          - Aquaponia
+          - Permacultura
+          - Proteção de nascentes
+          - Proteção ambiental
+        where_find_list:
+          - Não comercializa
+          - Porta da propriedade
+          - CEAGESP
+          - Associação, sindicato ou cooperativa
+          - Feiras Livres
+          - Restaurantes
+          - Quitandas ou mini-mercados
+          - Supermercados ou grandes empresas
+        qualification_list:
+          - Aberta a visitação
+          - Tem mutirão
+          - Em busca de volúntarios
+          - Acesso livre
+          - Acesso controlado
+          - Comercializa
+
+      gardens_with_public_equipaments:
+        product_list:
+          - Horta comunitária
+          - Horta institucional
+          - Horta escolar
+          - Horticultura
+          - Pomar
+          - PANCs - Plantas alimentícias não convencionais
+          - Plantas medicinais
+          - Produção de mel
+          - Viveiro de mudas
+          - Jardim
+          - Autoconsumo
+          - Comercializa
+          - Atividades recreativas
+          - Oficinas educativas
+          - Educação ambiental
+          - Compostagem
+          - Agrofloresta
+          - Aquaponia
+          - Permacultura
+          - Proteção de nascentes
+          - Proteção ambiental
+        where_find_list:
+          - Não comercializa
+          - Porta da propriedade
+          - CEAGESP
+          - Associação, sindicato ou cooperativa
+          - Feiras Livres
+          - Restaurantes
+          - Quitandas ou mini-mercados
+          - Supermercados ou grandes empresas
+        qualification_list:
+          - Aberta a visitação
+          - Tem mutirão
+          - Em busca de volúntarios
+          - Acesso livre
+          - Acesso controlado
+          - Comercializa

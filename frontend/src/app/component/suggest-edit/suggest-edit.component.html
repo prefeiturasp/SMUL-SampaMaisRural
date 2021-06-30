@@ -1,0 +1,42 @@
+<div class="suggest-edit-buttons" *ngIf="place.suggestable || place.accepts_photos">
+  <div *ngIf="place.suggestable" class="suggest-button" tabindex="0"  (click)="openForm('suggestion')">Sugerir uma alteração</div>
+  <div class="suggest-divider"></div>
+  <div [ngClass]="!place.suggestable? 'full-size' : ''"
+    *ngIf="place.accepts_photos"
+    class="suggest-button"
+    tabindex="0"
+    (click)="openForm('images')">Enviar fotos do local</div>
+</div>
+
+<div class="form-bg" *ngIf="form">
+  <div class="forms" *ngIf="!messageSent && !loading">
+    <div class="form-suggestion form" *ngIf="form">
+      <div class="close-form" (click)="closeForm()"></div>
+      <div class="form-title">{{checkFormImage()? 'Enviar Fotos' : 'Envie uma sugestão'}}</div>
+      <div class="form-desc" *ngIf="!checkFormImage()">Nos envie uma mensagem se identificou um dado incorreto no perfil (nome, endereço, contatos ou outros) ou se o estebelecimento fechou, não existe ou está duplicado.</div>
+      <div class="form-desc" *ngIf="checkFormImage()">Tem fotos do local? Nos envie suas imagens e  nós incluiremos no perfil do local assim que possível.</div>
+      <input-form [type]="'text'" [setValue]="emptyField" [validation]="fieldValid['name']" [noPadding]="true" [name]="'name'" (sendValue)="getInputValue($event)" [label]="'Seu nome*'"></input-form>
+      <div class="error-message-field" *ngIf="!fieldValid['name']">Obrigatório</div>
+      <input-form [type]="'text'" [setValue]="emptyField" [validation]="fieldValid['email']" [subtype]="'email'" [noPadding]="true" (sendValue)="getInputValue($event)" [name]="'email'" [label]="'E-mail*'"></input-form>
+      <div class="error-message-field" *ngIf="!fieldValid['email']">Obrigatório</div>
+      <input-form [type]="'phone'" [setValue]="emptyField" [validation]="fieldValid['phone']" [noPadding]="true" [name]="'phone'" (sendValue)="getInputValue($event)" [label]="'Telefone'"></input-form>
+      <input-form [type]="'textarea'" [setValue]="emptyField" [validation]="checkFormImage() || fieldValid['message']" [noPadding]="true" [rows]="4" (sendValue)="getInputValue($event)" [name]="'message'" [label]=" checkFormImage()? 'Digite uma mensagem \n(opcional)' : 'Digite sua sugestão*'"></input-form>
+      <div class="error-message-field" *ngIf="!checkFormImage() && !fieldValid['message']">Obrigatório</div>
+      <div class="images" *ngIf="checkFormImage()">
+        <input-form [type]="'image-repeater'" [noPreview]="true" [noPadding]="true" [name]="'attachments_attributes'" (sendValue)="getInputValue($event)"></input-form>
+        <div class="warning" *ngIf="!fieldValid['attachments_attributes']">Selecione pelo menos uma imagem para enviar</div>
+      </div>
+      <div class="send-button" tabindex="0"  (click)="sendSuggestion()">Enviar</div>
+    </div>
+  </div>
+  <div class="message-sent form" *ngIf="messageSent">
+    <div class="message-sent-icon"></div>
+    <div class="message-sent-title">Obrigado pelo envio!</div>
+    <div class="message-sent-subtitle">Vamos analisar a sua sugestão. Avisaremos quando for publicada.</div>
+    <div class="back-profile send-button" (click)='closePopUp()'>Voltar ao perfil</div>
+  </div>
+  <div class="loading-area form" *ngIf="loading">
+    <div class="lds-dual-ring"></div>
+    <div class="loading-text">Enviando...</div>
+  </div>
+</div>

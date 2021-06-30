@@ -1,0 +1,342 @@
+pt-BR:
+  tags:
+    tourism:
+      accommodation:
+        nature_list:
+          - Área de proteção ambiental
+          - Reserva particular do patrimônio natural
+          - Parque
+          - Cachoeira
+          - Rio
+          - Lago
+          - Represa
+          - Trilhas na Mata
+          - Borboletário
+          - Orquidário
+          - Pesque e pague
+        culture_list:
+          - Cemitério
+          - Ferroviário
+          - Centro Ecocultural
+          - Biblioteca
+          - Templo Religioso
+          - Clube social
+          - Evento
+          - Galeria de Artes
+        food_list:
+          - Restaurantes
+          - Bar
+          - Lanchonete
+          - Confeitaria/padaria
+        accommodation_list:
+          - Alojamento coletivo
+          - Hospedagem familiar
+          - Hotel
+          - Pousada
+          - Camping
+          - Hospedagem em quarto
+        service_list:
+          - Sítios/chácaras de lazer
+          - Ponto de apoio ao ciclista
+          - Espaços de Eventos
+          - Informação Turística
+          - Transportadora turística
+          - Operadora de turismo
+          - Antiquário
+          - Artesanatos
+          - Ateliê
+          - Alambique
+        qualification_list:
+          - Necessita Agendamento
+          - Não necessita agendamento
+          - Recebe grupos
+          - Apenas grupos
+          - Sem número mínimo de visitantes
+          - Possui estacionamento
+          - Possui acessibilidade para pessoas com necessidades especiais
+      rural_experience:
+        product_list:
+          - Visitação da área produtiva
+          - Horta orgânica
+          - Agrofloresta
+          - Estufa
+          - Produção de cogumelos
+          - Criação de galinhas
+          - Criação de abelhas
+          - Turismo escolar
+          - Colhe-pague
+          - Saneamento ecológico
+          - Ponto de apoio ao ciclista
+          - Trilhas na Mata
+          - Rio
+          - Lago
+          - Reflorestamento
+          - Serve refeições caseiras
+          - Serve lanche
+          - Camping
+          - Hospedagem em quarto
+          - Hospedagem em chalé
+        nature_list:
+          - Área de proteção ambiental
+          - Reserva particular do patrimônio natural
+          - Parque
+          - Cachoeira
+          - Rio
+          - Lago
+          - Represa
+          - Trilhas na Mata
+          - Borboletário
+          - Orquidário
+          - Pesque e pague
+        culture_list:
+          - Cemitério
+          - Ferroviário
+          - Centro Ecocultural
+          - Biblioteca
+          - Templo Religioso
+          - Clube social
+          - Evento
+          - Galeria de Artes
+        food_list:
+          - Restaurantes
+          - Bar
+          - Lanchonete
+          - Confeitaria/padaria
+        accommodation_list:
+          - Alojamento coletivo
+          - Hospedagem familiar
+          - Hotel
+          - Pousada
+          - Camping
+          - Hospedagem em quarto
+        service_list:
+          - Sítios/chácaras de lazer
+          - Ponto de apoio ao ciclista
+          - Espaços de Eventos
+          - Informação Turística
+          - Transportadora turística
+          - Operadora de turismo
+          - Antiquário
+          - Artesanatos
+          - Ateliê
+          - Alambique
+        qualification_list:
+          - Necessita Agendamento
+          - Não necessita agendamento
+          - Recebe grupos
+          - Apenas grupos
+          - Sem número mínimo de visitantes
+          - Possui estacionamento
+          - Possui acessibilidade para pessoas com necessidades especiais
+      nature:
+        nature_list:
+          - Área de proteção ambiental
+          - Reserva particular do patrimônio natural
+          - Parque
+          - Cachoeira
+          - Rio
+          - Lago
+          - Represa
+          - Trilhas na Mata
+          - Borboletário
+          - Orquidário
+          - Pesque e pague
+        culture_list:
+          - Cemitério
+          - Ferroviário
+          - Centro Ecocultural
+          - Biblioteca
+          - Templo Religioso
+          - Clube social
+          - Evento
+          - Galeria de Artes
+        food_list:
+          - Restaurantes
+          - Bar
+          - Lanchonete
+          - Confeitaria/padaria
+        accommodation_list:
+          - Alojamento coletivo
+          - Hospedagem familiar
+          - Hotel
+          - Pousada
+          - Camping
+          - Hospedagem em quarto
+        service_list:
+          - Sítios/chácaras de lazer
+          - Ponto de apoio ao ciclista
+          - Espaços de Eventos
+          - Informação Turística
+          - Transportadora turística
+          - Operadora de turismo
+          - Antiquário
+          - Artesanatos
+          - Ateliê
+          - Alambique
+        qualification_list:
+          - Necessita Agendamento
+          - Não necessita agendamento
+          - Recebe grupos
+          - Apenas grupos
+          - Sem número mínimo de visitantes
+          - Possui estacionamento
+          - Possui acessibilidade para pessoas com necessidades especiais
+      culture:
+        nature_list:
+          - Área de proteção ambiental
+          - Reserva particular do patrimônio natural
+          - Parque
+          - Cachoeira
+          - Rio
+          - Lago
+          - Represa
+          - Trilhas na Mata
+          - Borboletário
+          - Orquidário
+          - Pesque e pague
+        culture_list:
+          - Cemitério
+          - Ferroviário
+          - Centro Ecocultural
+          - Biblioteca
+          - Templo Religioso
+          - Clube social
+          - Evento
+          - Galeria de Artes
+        food_list:
+          - Restaurantes
+          - Bar
+          - Lanchonete
+          - Confeitaria/padaria
+        accommodation_list:
+          - Alojamento coletivo
+          - Hospedagem familiar
+          - Hotel
+          - Pousada
+          - Camping
+          - Hospedagem em quarto
+        service_list:
+          - Sítios/chácaras de lazer
+          - Ponto de apoio ao ciclista
+          - Espaços de Eventos
+          - Informação Turística
+          - Transportadora turística
+          - Operadora de turismo
+          - Antiquário
+          - Artesanatos
+          - Ateliê
+          - Alambique
+        qualification_list:
+          - Necessita Agendamento
+          - Não necessita agendamento
+          - Recebe grupos
+          - Apenas grupos
+          - Sem número mínimo de visitantes
+          - Possui estacionamento
+          - Possui acessibilidade para pessoas com necessidades especiais
+      food:
+        nature_list:
+          - Área de proteção ambiental
+          - Reserva particular do patrimônio natural
+          - Parque
+          - Cachoeira
+          - Rio
+          - Lago
+          - Represa
+          - Trilhas na Mata
+          - Borboletário
+          - Orquidário
+          - Pesque e pague
+        culture_list:
+          - Cemitério
+          - Ferroviário
+          - Centro Ecocultural
+          - Biblioteca
+          - Templo Religioso
+          - Clube social
+          - Evento
+          - Galeria de Artes
+        food_list:
+          - Restaurantes
+          - Bar
+          - Lanchonete
+          - Confeitaria/padaria
+        accommodation_list:
+          - Alojamento coletivo
+          - Hospedagem familiar
+          - Hotel
+          - Pousada
+          - Camping
+          - Hospedagem em quarto
+        service_list:
+          - Sítios/chácaras de lazer
+          - Ponto de apoio ao ciclista
+          - Espaços de Eventos
+          - Informação Turística
+          - Transportadora turística
+          - Operadora de turismo
+          - Antiquário
+          - Artesanatos
+          - Ateliê
+          - Alambique
+        qualification_list:
+          - Necessita Agendamento
+          - Não necessita agendamento
+          - Recebe grupos
+          - Apenas grupos
+          - Sem número mínimo de visitantes
+          - Possui estacionamento
+          - Possui acessibilidade para pessoas com necessidades especiais
+      service:
+        nature_list:
+          - Área de proteção ambiental
+          - Reserva particular do patrimônio natural
+          - Parque
+          - Cachoeira
+          - Rio
+          - Lago
+          - Represa
+          - Trilhas na Mata
+          - Borboletário
+          - Orquidário
+          - Pesque e pague
+        culture_list:
+          - Cemitério
+          - Ferroviário
+          - Centro Ecocultural
+          - Biblioteca
+          - Templo Religioso
+          - Clube social
+          - Evento
+          - Galeria de Artes
+        food_list:
+          - Restaurantes
+          - Bar
+          - Lanchonete
+          - Confeitaria/padaria
+        accommodation_list:
+          - Alojamento coletivo
+          - Hospedagem familiar
+          - Hotel
+          - Pousada
+          - Camping
+          - Hospedagem em quarto
+        service_list:
+          - Sítios/chácaras de lazer
+          - Ponto de apoio ao ciclista
+          - Espaços de Eventos
+          - Informação Turística
+          - Transportadora turística
+          - Operadora de turismo
+          - Antiquário
+          - Artesanatos
+          - Ateliê
+          - Alambique
+        qualification_list:
+          - Necessita Agendamento
+          - Não necessita agendamento
+          - Recebe grupos
+          - Apenas grupos
+          - Sem número mínimo de visitantes
+          - Possui estacionamento
+          - Possui acessibilidade para pessoas com necessidades especiais

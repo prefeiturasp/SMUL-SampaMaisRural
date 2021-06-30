@@ -1,0 +1,44 @@
+@import '../../../assets/sass/_tools'
+
+.connections
+  padding: 16px
+
+  .title
+    color: $black
+    line-height: rem(24)
+    font-family: Lato-bold
+    margin-bottom: 6px
+
+  .desc
+    font-size: rem(14)
+    line-height: rem(24)
+    margin-bottom: 12px
+
+  .connection-card-list
+
+    .connection-border
+      border-bottom: 1px solid rgba(151, 151, 151, 0.2)
+
+      &:last-child
+        border-bottom: none
+
+  .show-more
+    color: $green
+    cursor: pointer
+
+  .show-all
+    background-color: $green
+    width: 280px
+    color: $white
+    font-family: Lato-regular
+    border-radius: 30px
+    line-height: rem(34)
+    padding: 7px 15px
+    text-align: center
+    cursor: pointer
+    margin-top: 12px
+    margin-bottom: 8px
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2)
+
+    &:hover
+      background-color: $darkgreen

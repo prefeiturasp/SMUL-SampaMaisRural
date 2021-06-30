@@ -1,0 +1,435 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~leaflet/dist/leaflet.css"
+@import '@angular/material/prebuilt-themes/indigo-pink.css'
+@import './assets/sass/_tools.sass'
+@import './assets/fonts/fonts.sass'
+
+html *
+  font-family: Lato-regular
+  margin: 0
+  padding: 0
+  letter-spacing: 0.5px
+
+  &:focus
+    outline: none
+
+body
+  margin: 0
+  overflow-x: hidden
+  overflow-y: auto
+
+#root
+  display: flex
+  flex-direction: column
+
+ul
+  list-style-type: none
+
+a
+  text-decoration: none
+
+a, button
+  cursor: pointer
+
+.fancy-scroll
+  overflow: auto
+  scrollbar-width: thin
+  scrollbar-color: $gray5 
+
+  &::-webkit-scrollbar
+    width: 6px
+    background-color: $lightgray
+
+  &::-webkit-scrollbar-thumb
+    background-color: $gray5
+
+  &::-webkit-scrollbar-track
+    background: $lightgray
+
+
+.mobile
+  display: none
+
+.pull-left
+  float: left
+
+.pull-right
+  float: right
+
+button
+  padding: 0
+  border: none
+  background: transparent
+
+button:focus
+  outline:0
+
+.place-show
+  .tag
+    color: $darkgray5 !important
+    line-height: 25px
+
+.link
+  color: $green
+  cursor: pointer
+  
+  &:hover
+    text-decoration: underline
+
+label
+  text-align: center
+  width: fit-content
+  font-weight: 500
+
+.label-warning
+  background-color: $yellow
+  color: $yellow2
+
+.label-green
+  background-color: $green2
+  color: $green
+
+.label-gray
+  background-color: $gray
+  color: $gray4
+
+.cdk-overlay-pane
+  max-width: none !important
+  width: 100%
+
+.mat-dialog-content
+  overflow: hidden
+
+.app-sidebar
+  margin-bottom: 16px
+
+.leaflet-popup
+  bottom: 25px !important
+
+.leaflet-div-icon
+  background-color: transparent
+  border: none
+
+.leaflet-marker-icon
+  z-index: -1 !important
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip
+  box-shadow: none
+  border-radius: 0
+  z-index: 30000
+
+.leaflet-popup-close-button
+  display: none
+
+.leaflet-popup-content
+  h5
+   font-size: rem(16)
+   line-height: rem(19)
+   font-weight: normal
+   color: $darkgray
+   text-transform: capitalize
+
+  p
+   font-size: rem(12)
+   line-height: rem(15)
+   font-weight: normal
+   color: $gray5
+
+.markers-group
+  height: 48px
+  margin-left: -12px
+  margin-top: -10px
+  width: 48px
+  border-radius: 24px
+  box-shadow: 0 7px 4px 0 rgba(0,0,0,0.07)
+  text-align: center
+  line-height: 48px
+  b
+    color: $white
+    font-size: 14px
+    line-height: 16px
+
+.marker-title
+  font-size: rem(16)
+  font-family: Lato-bold
+  color: $black
+  line-height: rem(19)
+
+  .marker-kind
+    font-size: rem(13)
+    color: $black
+    line-height: rem(16)
+
+  .marker-tags
+    margin-left: -2px
+    margin-top: 10px
+    display: flex
+    flex-wrap: wrap
+
+  .marker-subcategory
+    margin: 0
+    margin-top: 5px
+    font-size: rem(13)
+    font-family: Lato-bold
+    color: $black
+    line-height: rem(16)
+
+    &.upa
+      color: $green
+
+    &.market
+      color: $red
+
+    &.tourism
+      color: $orange
+
+    &.initiative
+      color: $blue
+
+.leaflet-popup-pane
+  z-index: 900
+
+.marker-tag, .tag
+  color: $darkgray5 !important
+  background-color: $gray13
+  border-radius: 20px
+  padding: 4px 12px
+  margin-right: 5px
+  font-family: Lato-bold !important
+  font-size: rem(13)
+  font-weight: normal !important
+  margin-bottom: 5px
+
+.upa-marker
+  background-color: $green
+
+.market-marker
+  background-color: $red
+
+.tourism-marker
+  background-color: $orange
+
+.initiative-marker
+  background-color: $blue
+
+.highlight-marker-upa b
+  color: $green
+
+.highlight-marker-market b
+  color: $red
+
+.highlight-marker-tourism b
+  color: $orange
+
+.leaflet-marker-icon:focus
+  width: 68px !important
+  height: 76px !important
+  margin-left: -34px !important
+  margin-top: -38px !important
+
+.highlight-marker
+  background-color: rgba(255,255,255, 0.6)
+  box-shadow: 4px 4px 9px 4px rgba(0,0,0,0.08)
+  height: 60px !important
+  width: 60px !important
+  border-radius: 30px
+  margin-left: -23px
+  margin-top: -13px
+  display: flex
+  justify-content: center
+  b
+    font-family: Lato-regular
+    font-weight: normal
+    align-self: center
+    color: $gray4 
+
+.cdk-overlay-container
+  z-index: 7000
+
+.lds-dual-ring
+  display: inline-block
+  width: 80px
+  height: 80px
+  margin-left: calc(50% - 40px)
+  margin-top: 140px
+
+.lds-dual-ring:after
+  content: " "
+  display: block
+  width: 64px
+  height: 64px
+  margin: 8px
+  border-radius: 50%
+  border: 6px solid $green
+  border-color: $green transparent $green transparent
+  animation: lds-dual-ring 1.2s linear infinite
+
+@keyframes lds-dual-ring
+  0%
+    transform: rotate(0deg)
+  100% 
+    transform: rotate(360deg)
+
+
+.message-sent
+  width: 236px
+  height: 210px
+  padding-top: 80px
+  margin-left: calc(50% - 118px)
+  text-align: center
+
+  .message-sent-icon
+    width: 84px
+    height: 85px
+    margin-left: calc(50% - 42px)
+    margin-bottom: 47px
+    background-image: url("/assets/svgs/done.svg")
+    background-repeat: no-repeat
+    background-size: 100%
+
+  .message-sent-title
+    font-size: 24px
+    color: $darkgray
+    font-family: Lato-bold
+    line-height: 38px
+    margin-bottom: 5px
+  
+  .message-sent-subtitle
+    font-size: 16px
+    color: $gray2
+    line-height: 38px
+  
+.loading-text
+  font-size: 24px
+  margin-top: 30px
+  text-align: center
+  color: $gray2
+
+.error-message-field
+  bottom: 0
+  color: $lightred
+  font-size: rem(11)
+  margin-top: -10px
+
+.invalid
+  .form-label
+    color: $lightred !important
+
+  .form-input
+    border-bottom: 2px solid $lightred !important
+
+.spinner
+  align-self: center
+  margin: 16px auto
+  border: rem(4) solid rgba(0, 0, 0, 0.1)
+  border-top: rem(4) solid $green
+  border-radius: 50%
+  width: rem(24)
+  height: rem(24)
+  animation: spin 1.2s linear infinite
+
+.input-form
+  margin-top: 20px
+
+.form-field
+  width: 100%
+
+  .form-label
+    width: 100%
+    font-size: 12px
+    color: $gray2
+    height: 20px
+    position: relative
+
+  .form-label span
+    animation: showLabel 0.4s
+
+  .form-input
+    width: 100%
+    border: none
+    border-bottom: 1px solid $gray2
+    padding-bottom: 10px
+    color: $gray4
+    font-size: 16px
+    margin-bottom: 20px
+    resize: none
+
+    &:disabled
+      opacity: 0.6
+      background-color: white
+      cursor: not-allowed
+
+    &:focus
+      outline: none
+      border-bottom: 1px solid $green
+
+@keyframes showLabel
+  0%
+    opacity: 0
+    font-size: 16px
+    position: absolute
+    top: 30px
+  100%
+    opacity: 1
+    font-size: 12px
+    top: 0
+
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.rural-shape
+  z-index: 1 
+
+.native-shape
+  z-index: 100
+
+.leaflet-marker-pane
+  z-index: 800
+
+.pane-name
+  font-size: rem(12)
+  color: $darkgray
+
+.leaflet-tooltip
+  background: transparent
+  font-size: rem(13)
+  border: none
+  box-shadow: none
+  font-weight: bold
+  text-shadow: $black 1px -1px, $black -1px 1px, $black 1px 1px, $black -1px -1px
+  z-index: 1000
+  letter-spacing: 1px
+  text-align: center
+
+  &::before
+    display: none
+
+.leaflet-tooltip-pane
+  z-index: 900
+
+.native-tooltip
+  color: $orange
+
+.rural-tooltip
+  color: $lightgreen
+
+@media only screen and (max-width: 768px)
+
+  .mat-list-item-content
+    padding: 0 5px !important
+    justify-content: center
+    width: 100%
+
+  app-places
+    height: 100%
+
+  .mobile
+    display: block
+  
+  .desktop
+    display: none

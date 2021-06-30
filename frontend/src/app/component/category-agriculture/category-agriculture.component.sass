@@ -1,0 +1,122 @@
+@import '../../../assets/fonts/fonts.sass'
+@import '../../../assets/sass/_variables.sass'
+
+:host
+
+  .spinner
+    margin-top: 80px
+    margin-bottom: 80px
+    width: 50px
+    height: 50px
+
+  .agriculture
+    width: 100%
+    background-color: $white
+
+    .mobile
+      display: none
+
+    .agriculture-map-area
+      display: flex
+      flex-wrap: wrap
+      width: 76%
+      margin-left: 12%
+      padding-top: 40px
+      padding-bottom: 60px
+
+      .agriculture-map
+        width: 30%
+        
+        img
+          width: 278px
+
+      .agriculture-map-info
+        width: calc(70% - 30px)
+        padding-left: 30px
+        padding-top: 5px
+
+        .empty-info-area
+          width: 50%
+
+        .map-info
+          float: left
+          margin-top: 20px
+          width: calc(50% - 15px)
+          margin-right: 15px
+
+    .counters-area
+      display: flex
+      flex-wrap: wrap
+      padding: 60px 18px
+      padding-right: 0
+
+      &.gray-area
+        background-color: $lightgray2
+
+      .counters-area-title
+        width: 100%
+        color: $darkgray
+        font-family: Lato-bold
+        font-size: 28px
+        line-height: 34px
+        margin-bottom: 34px
+
+      .counters-three
+        width: calc(100% / 3)
+
+      .counters-four, .counters-small
+        width: 25%
+
+      .counters-half
+        width: 50%
+
+@media only screen and (max-width: 1300px)
+  :host
+    .agriculture
+      .counters-area
+        .counters-small
+              width: 240px
+
+@media only screen and (max-width: 1150px)
+  :host
+    .agriculture
+      .mobile
+        display: block
+
+      .desktop
+        display: none
+        
+      .agriculture-map-area
+        display: block
+        width: calc(100% - 30px)
+        padding: 15px
+        margin-left: 0
+
+        .agriculture-map
+          width: 78%
+          max-height: 400px
+          margin-left: 11%
+
+          img
+            max-height: 400px
+
+        .agriculture-map-info
+          width: 100%
+          padding: 0
+          margin-top: 70px
+          margin-bottom: 40px
+
+          .map-info
+            float: unset
+            width: 100%
+
+      .counters-area
+        display: block
+        padding-bottom: 20px
+
+        .counters-area-title
+          width: calc(100% - 18px)
+
+        .counters-three, .counters-small, .counters-four, .counters-half
+          width: 100%
+          margin: 30px 0px

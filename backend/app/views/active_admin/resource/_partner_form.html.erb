@@ -1,0 +1,100 @@
+<% f.panel "#{ f.object.name || "Novo Paceiro" }" do %>
+  <% f.inputs I18n.t('active_admin.labels.form.basic_info') do %>
+    <% if f.object.id %>
+      <% f.input :id, input_html: { disabled: true } %>
+    <% end %>
+
+    <% if f.object.api_id %>
+      <% f.input :api_id, input_html: { disabled: true } %>
+    <% end %>
+    <% if f.object.api? and !f.object.publish_only_resume_address? %>
+      <% f.input :publish_address, as: :boolean %>
+    <% end %>
+    <% f.input :authorize_information, as: :boolean, input_html: { disabled: true } %>
+
+    <% f.input :status, as: :select,
+      collection: Partner.regular_statuses.
+      map { |status, index| [I18n.t("activerecord.attributes.partner.statuses.#{ status }"), status] } %>
+    <% f.input :category_name, input_html: { disabled: true } %>
+    <% f.input :category_id, input_html: { value: f.object.category_id }, as: :hidden %>
+
+    <% f.input :subcategory_list,
+      as: :check_boxes,
+      disabled: (f.object.update_via_integration? ? f.object.category.subcategory_list : []),
+      collection: f.object.category.subcategory_list %>
+
+    <% f.input :name %>
+
+    <%= render partial: 'tags_form', locals: { f: f } %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.address') do %>
+    <% f.input :full_address %>
+    <% f.input :neighborhood %>
+    <% f.input :zip_code %>
+    <% f.input :district %>
+    <% f.input :city %>
+    <% f.input :zone, as: :select, collection: f.object.class.pluck(:zone).uniq %>
+
+    <%= render 'phones_form', { f: f } %>
+
+    <% f.input :schedule %>
+    <% f.input :email %>
+    <% f.input :web_pages %>
+    <% f.input :contact %>
+    <% f.input :other_contact %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.complementary_info') do %>
+    <% f.input :description %>
+    <%- if f.object.kind_of?(Upa) %>
+      <% f.input :who_sells_details %>
+    <% end %>
+    <%- if f.object.agriculture? %>
+      <% f.input :cultivated_area %>
+    <% end %>
+    <% render partial: 'connections_form', locals: { f: f } %>
+
+    <% if f.object.is_a?(Upa) %>
+      <% f.input :farms_count %>
+    <%- end %>
+    <% f.input :associativism %>
+    <% f.input :park %>
+    <% f.input :disabled_friendly_amenities, as: :radio %>
+    <% f.input :gender %>
+    <% f.input :begined_at %>
+    <% f.input :source_info, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :source_date, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :source_info2, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :source_update, input_html: { disabled: f.object.update_via_integration? } %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.registration_info') do %>
+    <% f.input :responsable_name, label: 'Nome de Contato - cadastro' %>
+    <% f.input :cpf %>
+    <% f.input :registration_phone_0 %>
+    <% f.input :registration_phone_1 %>
+    <% f.input :registration_email %>
+    <% f.input :cnpj %>
+    <% f.input :cnae %>
+    <% f.input :company_activity %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.management_information') do %>
+    <% f.input :registered_by %>
+    <% f.input :source, input_html: { disabled: f.object.update_via_integration? } %>
+    <% f.input :other_information %>
+  <% end %>
+
+  <% f.inputs I18n.t('active_admin.labels.form.pics_and_map') do %>
+    <% render partial: 'attachments_form', locals: { f: f } %>
+    <% render partial: 'avatar_form', locals: { f: f } %>
+
+    <% f.input :_lat, input_html: { value: f.object.lat } %>
+    <% f.input :_lon, input_html: { value: f.object.lon } %>
+
+  <% end %>
+  <%= render partial: '/shared/map', locals: { draggable: true } %>
+<% end %>
+
+<%= render partial: 'form_actions', locals: { resource: f.object, f: f } %>

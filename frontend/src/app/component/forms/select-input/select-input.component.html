@@ -1,0 +1,9 @@
+<div class="form-field" (focusout)="hideLabel()">
+  <div class="form-label" ><span *ngIf="labelShow">{{labelShow}}</span></div>
+  <input class="form-input" [placeholder]="placeholder" [(ngModel)]="valueInput" (keydown)="false" (focus)="showLabel()" type="text"/>
+  <div class="options fancy-scroll" *ngIf="showOptions">
+    <div class="option" *ngFor="let option of options" >
+      <div tabindex="0" class="option-value" (click)="setValue(option)">{{option}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+<section id="about-page">
+  <div class="video-area" *ngIf="showVideo">
+    <button (click)="closeVideo()" title="Fechar vídeo" class="close-video">X</button>
+    <video class="about-video" controls autoplay>
+      <source src="/assets/videos/video-sobre.mp4" loading="lazy" type="video/mp4">
+      Seu navegador não suporta a tag de video.
+    </video>
+  </div>
+  <div class="banner-about">
+    <div class="banner-title">Sobre a <span class="banner-title-bold">Sampa+Rural</span></div>
+    <button class="banner-play-icon" title="Abrir vídeo" (click)="openVideo()"></button>
+  </div>
+  <div class="info-map-area">
+    <div class="info-text">
+      <div class="info-map-img mobile"><img loading="lazy" src="/assets/images/sp-map.jpg" /></div>
+      <div class="info-text-paragraph">Agregar em um único ambiente informações sobre desenvolvimento rural sustentável, turismo, meio ambiente e alimentação saudável,
+        onde qualquer cidadão possa explorar e descobrir as zonas rurais da cidade. Esse é o objetivo da plataforma Sampa+Rural! A Sampa+Rural busca conectar as áreas rurais à cidade.
+        Pode parecer surpreendente, mas cerca de um terço do território do município de São Paulo apresenta características rurais.
+        Concentradas nas zonas sul, leste e norte da cidade, essas áreas apresentam um potencial enorme de diversidade.
+        De forma simples, é possível encontrar dados sobre onde comprar produtos locais,
+        quem são os agricultores da cidade e quem comercializa esses produtos. A plataforma também traz atrações turísticas ligadas à natureza e turismo rural,
+        mostrando as características ambientais e econômicas dessas regiões.
+        Além disso, é possível encontrar iniciativas da sociedade civil e poder público para tornar a cidade mais conectada às práticas sustentáveis.
+      </div>
+    </div>
+    <div class="info-map-img desktop"><img loading="lazy" title="Mapa das regiões rurais de São Paulo"  src="/assets/images/sp-map.jpg" /></div>
+  </div>
+  <div class="imagens-triple" *ngIf="showThreeImages">
+    <div class="imagem-triple-item first-triple-item"><img loading="lazy" title="Horta" class="img-triple" src="/assets/images/sobre-conjunto-1.jpg"/></div>
+    <div class="imagem-triple-item"><img loading="lazy" class="img-triple" title="Verduras" src="/assets/images/sobre-conjunto-2.jpg"/></div>
+    <div class="imagem-triple-item"><img loading="lazy" class="img-triple" title="Vegetação" src="/assets/images/sobre-conjunto-3.jpg"/></div>
+  </div>
+  <div class="info-text-paragraph center-paragraph">
+    A Sampa+Rural está sendo desenvolvida pelo <a class="link" target="_blank" href="https://ligueospontos.prefeitura.sp.gov.br/">Projeto Ligue os Pontos</a>, que é coordenado pela <a class="link" target="_blank" href="https://www.prefeitura.sp.gov.br/cidade/secretarias/urbanismo/">Secretaria Municipal de Desenvolvimento Urbano</a>,
+    em conjunto com outras secretarias e órgãos municipais. <span class="bold">O Projeto, financiado pela Bloomberg Philanthropies,
+    é resultado de uma proposta apresentada pela Prefeitura de São Paulo para promover o desenvolvimento sustentável do território rural e aprimorar suas relações com o meio urbano.
+    Também contribuem para o fortalecimento dessa rede de conexão diversos parceiros e colaboradores.</span>
+  </div>
+  <div class="partners" *ngIf="showPartners">
+    <div class="partners-title">Parcerias</div>
+    <div class="partners-items">
+      <div class="partners-item  left-item">
+        <div class="partner-img sisrural-logo"></div>
+        <div class="partner-info">
+          <a class="partner-info-link no-link">SisRural</a>
+          <div class="partner-info-desc">O Sistema de Assistência Técnica e Extensão Rural e Ambiental - SisRural é o sistema da prefeitura para a gestão das políticas públicas de desenvolvimento rural. Fornece, via integração, os dados sobre agricultoras e agricultores da cidade de São Paulo.</div>
+        </div>
+      </div>
+      <div class="partners-item">
+        <div class="partner-img geosampa-logo"></div>
+        <div class="partner-info">
+          <a class="partner-info-link" target="_blank" href="http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx">Geosampa</a>
+          <div class="partner-info-desc">Disponibiliza e gerencia as informações sobre as Feiras Livres Municipais via integração. Também são dados oficiais trazidos do Geosampa as zonas rurais e as terras indígenas Guarani da cidade.</div>
+        </div>
+      </div>
+      <div class="partners-item left-item">
+        <div class="partner-img idec-logo"></div>
+        <div class="partner-info double-link">
+          <a class="partner-info-link first-link" target="_blank" href="https://feirasorganicas.org.br/">Mapa de feiras orgânicas <br /></a>
+          <a class="partner-info-link second-link" target="_blank" href="https://idec.org.br/">Instituto Brasileiro de Defesa do<br/> Consumidor - IDEC<img class="mobile link-icon-mobile" src="/assets/svgs/linkicon.svg"/></a>
+          <div class="partner-info-desc">Gerencia o Mapa de Feiras Orgânicas que traz as informações sobre ‘Feiras orgânicas’, ‘Comércio parceiro de orgânicos’ e ‘Grupos de Consumo Responsável’ disponibilizadas via integração na Sampa+Rural.</div>
+        </div>
+      </div>
+      <div class="partners-item">
+        <div class="partner-img tourism-logo"></div>
+        <div class="partner-info">
+          <a class="partner-info-link" target="_blank" href="https://www.prefeitura.sp.gov.br/cidade/secretarias/turismo/">Secretaria do Turismo</a>
+          <div class="partner-info-desc">A Secretaria Municipal de Turismo - SMTUR, em colaboração com a São Paulo Turismo - SPTURIS, fornecem e gerenciam informações sobre Turismo e Vivência Rural.</div>
+        </div>
+      </div>
+      <div class="partners-item  left-item">
+        <div class="partner-img muda-logo"></div>
+        <div class="partner-info">
+          <a class="partner-info-link second-link" target="_blank" href="http://muda.org.br/">Movimento Urbano de <br/>Agroecologia - MUDA <img class="mobile link-icon-mobile" src="/assets/svgs/linkicon.svg"/></a>
+          <div class="partner-info-desc">Compartilhou base de hortas e iniciativas de agricultura urbana, atualizada para a publicação na Sampa+Rural.</div>
+        </div>
+      </div>
+      <div class="partners-item">
+        <div class="partner-img kairos-logo"></div>
+        <div class="partner-info">
+          <a class="partner-info-link" target="_blank" href="https://institutokairos.net/">Instituto Kairos</a>
+          <div class="partner-info-desc">Compartilhou a base de dados sobre restaurantes com ingredientes orgânicos, atualizada para a publicação na Sampa+Rural.</div>
+        </div>
+      </div>
+      <div class="partners-item">
+        <div class="partner-img smped-logo"></div>
+        <div class="partner-info">
+          <a class="partner-info-link second-link" target="_blank" href="https://www.prefeitura.sp.gov.br/cidade/secretarias/pessoa_com_deficiencia/">Secretaria Municipal da Pessoa <br />com Deficiência - SMPED</a>
+          <div class="partner-info-desc">Orientou o desenvolvimento e testou a Sampa+Rural para que ela seja mais acessível a todas as pessoas e esteja pronta para receber o Selo de Acessibilidade Digital.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="next-news">
+    <div class="news-title">Na Sampa+Rural você encontra</div>
+    <div class="news-subtitle">Conheça as páginas e ferramentas disponíveis</div>
+    <div class="time-line">
+      <div class="time-line-item item-done item-line">
+        <div class="icon"></div>
+        <div class="item-text"><a class="link" (click)="goToPage('explorar')">Mapa, Lista e Perfis dos locais e estabelecimentos presentes na Sampa+Rural</a>: use os botões das categorias para ver informações específicas, navegue nos filtros compondo como quiser para ter acesso apenas às informações mais relevantes para você, ou faça buscas específicas para acessar direto o que está procurando.</div>
+      </div>
+      <div class="time-line-item item-done item-line">
+        <div class="icon"></div>
+        <div class="item-text"><a class="link" (click)="goToPage('dados')">Dados Abertos</a>: você pode baixar o conjunto de dados disponíveis na Sampa+Rural ou escolher bases específicas; no formato de planilha editável (csv) ou em um formato leve de troca de informações e dados entre sistemas (json).</div>
+      </div>
+      <div class="time-line-item item-done item-line">
+        <div class="icon"></div>
+        <div class="item-text"><a class="link" (click)="goToPage('incluir-local')">Incluir Local</a>, <a class="link" (click)="goToPage('explorar')">sugerir alteração e incluir fotos</a>: colabore para deixar a Sampa+Rural ainda mais completa, propondo a inclusão de novos pontos e, nas páginas de perfil, sugerindo atualização ou edição e inserindo fotos.</div>
+      </div>
+      <div class="time-line-item item-done item-line">
+        <div class="icon"></div>
+        <div class="item-text"><a class="link" (click)="goToPage('/')">Painéis temáticos:</a> acesse informações e dados sobre os temas que quer conhecer mais clicando em ‘Agricultura’, ‘Mercados’, ‘Turismo e Vivência Rural’, e ‘Iniciativas e Políticas Públicas’ na página inicial.</div>
+      </div>
+      <div class="time-line-item item-done item-line" >
+        <div class="icon"></div>
+        <div class="item-text"> <a class="link" (click)="goToPage('biblioteca')">Biblioteca</a>: quer saber mais? Explore conteúdos sobre os temas ligados a uma sampa mais rural e sustentável.</div>
+      </div>
+      <div class="time-line-item item-soon">
+        <div class="icon"></div>
+        <div class="item-text">Selo Sampa+Rural, cometários nas páginas de perfil e representação das conexões entre os locais mapeados estão entre as próximas novidades da Sampa+Rural.</div>
+      </div>
+    </div>
+  </div>
+</section>

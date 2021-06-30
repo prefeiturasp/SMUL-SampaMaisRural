@@ -1,0 +1,20 @@
+<div fxLayoutGap="5px"
+     fxFlexAlign="center"
+     fxLayout="column"
+     fxFlex="70%">
+  <h5 *ngIf="place.name">{{ capitalizeName(place.name) }}</h5>
+  <div class="sub-kind" *ngIf="place.subcategory_list && place.subcategory_list.length" [ngClass]="place.type">{{place.subcategory_list.join(' • ')}}</div>
+  <label *ngIf="place.organic" class='label-green'>{{ place.organic }}</label>
+  <div class="place-tags" *ngIf="place.tag_list && place.tag_list.length"><span *ngFor="let tag of place.tag_list" class="tag">{{ tag }}</span></div>
+  <div class="place-tags" *ngIf="place.qualification_list && place.qualification_list.length"><span *ngFor="let tag of place.qualification_list" class="tag">{{ tag }}</span></div>
+  <p *ngIf="place.tags_from_subcategories && place.tags_from_subcategories.length" class='kind'>{{ place.tags_from_subcategories.join(' • ') }}</p>
+  <p class='products' *ngIf="place.product_list && place.product_list.length" [title]="place.product_list">{{ place.product_list.join(' • ') }}</p>
+  <div class="schedules hide-details" *ngIf="place.schedule">
+    <p [innerHTML]="place.schedule"></p>
+  </div>
+  <span class="hide-details" *ngIf="!place.neighborhood && place.full_address">{{ place.full_address }}</span>
+  <span class="hide-details" *ngIf="place.neighborhood">{{ place.neighborhood.toLowerCase() }}</span>
+</div>
+<div class='avatar'>
+  <img [ngClass]="place.type + (!place.has_avatar? ' no-pic' : '')" src='{{ place.avatar_url }}' *ngIf="place.avatar_url" />
+</div>

@@ -1,0 +1,65 @@
+<button [ngStyle]="styleButton"
+  class="list-toggle"
+  [ngClass]="listIsOpen? 'map-button': ''"
+  (click)="toggle()"
+  fxHide
+  [fxHide.lt-md]="false">
+  {{listIsOpen? 'Mapa' : 'Lista'}}
+</button>
+
+<button tabindex="0" #toogleButton
+  class="open-button"
+  [disabled]="isOpenFilters"
+  (click)="toggleFilters()"
+  [ngClass]="(selectedCount() > 0 ? 'selected-filters ' : 'button-filters ') + (!listIsOpen? ' filter-button-left' : '')"
+  [ngStyle]="styleButton">
+  <span class="icon-filter"></span>
+  {{ selectedCount() > 0 ? selectedCount() + ' Filtros' : 'Filtrar' }}
+</button>
+
+<button
+ class="connections-button"
+ [disabled]="loading"
+ [ngStyle]="styleButton"
+ (click)="toggleConnectons()"
+ [ngClass]="(isConnectonsActive? 'button-active connections-active' : '')">
+  Conexões
+</button>
+
+<div class="all-filters-area" [ngClass]="!isOpenFilters ? 'hide' : 'show'">
+  <div (click)="closeFilters()" class="close-filters-area"></div>
+  <div class="all-filters-area-title">Filtros</div>
+  <div [fxHide]="!loading">
+    <div class="filter-spinner spinner"></div>
+  </div>
+  <div #filtersElement class="filters fancy-scroll" *ngIf="filters.categories">
+    <div class="all-filters-category-area"
+      *ngFor="let cat of filters.categories">
+      <div class="all-filters-category"
+           [ngClass]="cat.name">
+        <div class="check-circle"
+             (click)="selectCategory(cat.name)"
+             [ngClass]="selectedCategories.includes(cat.name) ? 'active' : ''">
+        </div>
+        <div tabindex="0"
+             class="all-filters-category-title"
+             (click)="toggleFilter(cat.name)"
+             [ngClass]="(openedCategories.includes(cat.name) ? ('open ' + cat.name) : 'closed ')">
+          {{ cat.label }} <span class="results-number">({{ cat.count }})</span>
+        </div>
+        <all-filters
+          [filterQuery]="formQuery"
+          [showMore]="showMore"
+          (onToggleShow)="toggleShow($event)"
+          (onChange)="updateQuery($event);"
+          [category]="cat"
+          [isOpen]="openedCategories.includes(cat.name)">
+        </all-filters>
+      </div>
+    </div>
+  </div>
+  <div class="filter-buttons">
+    <div tabindex="0" class="filter-button" (click)="resetFilters()">Limpar</div>
+    <div tabindex="0" class="filter-button green-text" (click)="getResults()">Ver resultados ({{ getTotal() }})</div>
+  </div>
+</div>

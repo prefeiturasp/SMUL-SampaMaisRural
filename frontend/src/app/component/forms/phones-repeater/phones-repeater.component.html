@@ -1,0 +1,18 @@
+<div class="phone" *ngFor="let phone of phones">
+  <div class="form-field" [ngClass]="phone.validation? 'valid' : 'invalid'" *ngIf="phone.index" >
+    <div *ngIf="!hideType" class="input-title">Tipo de telefone</div>
+    <radio-input *ngIf="!hideType" [radioButtons]="['Produtor/a', 'Representante', 'Outro']" [title]="'phone' + phone.index" (sendValue)="getKind($event, phone.index)"></radio-input>
+    <div class="form-label" ><span *ngIf="labelShow[phone.index]">{{labelShow[phone.index]}}</span></div>
+    <input class="form-input" [disabled]="phone.disabled" [placeholder]="placeholder[phone.index]" (keyup)="validate(phone.index)" (change)="inputChange()" [(ngModel)]="phone.value" (focusout)="hideLabel(phone.index)" (focus)="showLabel(phone.index)" type="text" mask="(00) 0000-00009" minlength="10"/>
+  </div>
+</div>
+<div tabindex="0" (click)="addPhone()" class="button-add  repeater-button">
+  Adicionar Outro Telefone
+</div>
+<div tabindex="0" (click)="removePhone()" *ngIf="phones.length > 2" class="button-remove repeater-button">
+  Remover Telefone
+</div>
+<div class="form-field" [ngClass]="phones[0].validation? 'valid' : 'invalid'">
+    <div class="form-label" ><span *ngIf="labelShow[0]">{{labelShow[0]}}</span></div>
+    <input class="form-input" [disabled]="phones[0].disabled" [placeholder]="placeholder[0]" (keyup)="validate(0)" (change)="inputChange()" [(ngModel)]="phones[0].value" (focusout)="hideLabel(0)" (focus)="showLabel(0)" type="text" mask="(00) 0000-00009" minlength="10"/>
+</div>

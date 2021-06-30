@@ -1,0 +1,134 @@
+- name: Base completa Sampa+Rural
+  description: Base unificada com todos os dados disponibilizados na Sampa+Rural
+  logo: samparural.svg
+  template: sprural
+
+- name: Agricultores com contato - SisRural
+  description: Base de agricultores que optaram por estar visíveis na Sampa+Rural, com informações de contato, de produção e demais informações relevantes para facilitar conexões comerciais e com iniciativas e projetos.
+  logo: sisrural.png
+  publishable: Upa
+  icon: farmer
+  template: farmers
+  query:
+    subcategory_list:
+      - "Agricultores com contato"
+
+- name: Agricultores na cidade de São Paulo - SisRural
+  description: Base de todas as Unidades Produtivas Agropecuárias (UPA) ativas cadastradas pela Prefeitura de São Paulo no Sistema de Assistência Técnica e Extensão Rural e Ambiental - SisRural. A identidade e demais dados pessoais foram suprimidas, assim como foram generalizadas as demais informações, a fim de preservar a privacidade desses produtores.
+  logo: sisrural.png
+  publishable: Upa
+  template: farmers
+  icon: farmer
+  query:
+    subcategory_list:
+      - "Agricultores com contato"
+      - "Agricultores sem contato"
+
+- name: Agricultores receptivos em 'Vivência Rural' - Sampa+Rural
+  description: Base de agricultores que recebem visitantes em sua unidade produtiva.
+  logo: samparural.svg
+  publishable: Tourism
+  template: rural_experiences
+  icon: people
+  query:
+    subcategory_list:
+      - "Vivência Rural"
+
+- name: Hortas Urbanas e Hortas em Equipamentos Públicos - Sampa+Rural
+  description: Base de hortas urbanas e hortas em equipamentos públicos identificadas por parceiros da Sampa+Rural e por outros  levantamentos e atualizações realizadas.
+  logo: samparural.svg
+  template: gardens
+  publishable: Upa
+  icon: farmer
+  query:
+    subcategory_list:
+      - "Hortas urbanas"
+      - "Hortas em equipamentos públicos"
+
+
+- name: Aldeias Indígenas Guarani - Sampa+Rural
+  description: Base com as informações das aldeias indígenas Guarani identificadas por levantamento realizado pelo projeto Ligue os Pontos e para a Sampa+Rural.
+  logo: samparural.svg
+  template: gardens
+  publishable: Upa
+  icon: farmer
+  query:
+    subcategory_list:
+      - "Aldeias Guarani"
+
+
+- name: Parceiros da produção local - Sampa+Rural
+  description: Base de estabelecimentos que compram da produção de agricultores da cidade de São Paulo, conforme indicação das/os agricultoras/es e suas entidades representativas.
+  logo: samparural.svg
+  publishable: Market
+  template: markets
+  query:
+    subcategory_list:
+      - "Parceiro da produção de Sampa"
+
+- name: Mapa de Feiras Orgânicas - IDEC
+  description: Base de feiras e outras iniciativas de venda de alimentos orgânicos organizada pelo Instituto de Defesa do Consumidor - IDEC. Todas as informações são trazidas via integração de sistemas entre o Mapa de Feiras Orgânicas do IDEC e a Sampa+Rural.
+  logo: idec.png
+  publishable: Market
+  template: idec
+  query:
+    source:
+      - "idec"
+
+- name: Feiras Livres Municipais - Geosampa, Secretaria Municipal de Desenvolvimento Urbano
+  description: Base de dados oficial da Prefeitura de São Paulo com os pontos das Feiras Livres Municipais disponibilizada pelo GeoSampa, da Secretaria Municipal de Desenvolvimento Urbano. Essas informações são trazidas via integração de sistemas para a Sampa+Rural.
+  logo: geosampa.jpg
+  template: geosampa
+  publishable: Market
+  query:
+    source:
+      - "geosampa"
+
+- name: Restaurantes orgânicos, Entregas de orgânicos e outras bases de 'Mercados' - Sampa+Rural
+  description: Base de restaurantes com ingredientes orgânicos, de entrega de orgânicos e outras bases que compõem a categoria "Mercados" na Sampa+Rural, levantados a partir de informações de parceiros, pelo projeto Ligue os Pontos e que incorporam as atualizações realizadas para a Sampa+Rural
+  publishable: Market
+  template: markets
+  logo: samparural.svg
+  query:
+    _not:
+      source:
+        - "idec"
+        - "geosampa"
+      subcategory_list:
+        - "Parceiro da produção de Sampa"
+        - "Serviços para Agricultura"
+
+- name: Serviços para Agricultura - Sampa+Rural
+  description: Base com algumas informações sobre serviços para a agricultura levantadas para a Sampa+Rural.
+  logo: samparural.svg
+  icon: market
+  template: agriculture_services
+  query:
+    subcategory_list:
+      - "Serviços para Agricultura"
+
+- name: Atrativos turísticos dos Polos de Ecoturismo - Secretaria Municipal de Turismo
+  description: Base de dados com os atrativos turísticos dos Polos de Ecoturismo e outros pontos de interesse ligados às zonas rurais da cidade de São Paulo, organizados, geridos e disponibilizados pela Secretaria Municipal de Turismo - SMTUR, em colaboração com a São Paulo Turismo - SPTuris
+  logo: smtur.png
+  publishable: Tourism
+  template: sprural
+  icon: people
+
+- name: Iniciativas e Políticas Públicas - Sampa+Rural
+  description: Base de iniciativas da sociedade civil e de políticas públicas ligadas às temáticas da Sampa+Rural, constituida por levantamento realizado para a Sampa+Rural, a partir de informações compartilhadas por parceiros.
+  logo: samparural.svg
+  publishable: Initiative
+  template: sprural
+  query:
+    _not:
+      subcategory_list:
+        - "SP Cidade Solidária"
+
+- name: Pontos de doação - SP Cidade Solidária
+  description: Base de pontos de doação da ação 'Cidade Solidária', iniciativa da prefeitura de São Paulo e de diversas entidades da sociedade civil organizada, para ajudar as pessoas em situação de extrema vulnerabilidade.
+  logo: solidary_city.png
+  icon: initiative
+  template: sprural
+  query:
+    subcategory_list:
+      - "SP Cidade Solidária"

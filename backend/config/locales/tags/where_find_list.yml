@@ -1,0 +1,22 @@
+pt-BR:
+  upa:
+    farmer:
+      where_find_list:
+        - Não comercializa
+        - Na propriedade
+        - CEAGESP
+        - Associação, sindicato ou cooperativa
+        - Feiras Livres
+        - Restaurantes
+        - Quitandas ou mini-mercados
+        - Supermercados ou grandes empresas
+
+      certificate_list:
+        - Turismo e vivência rural (recebe visitantes)
+        - Produção com Sistema Agroflorestal
+        - Orgânico por Auditoria
+        - IBD
+        - Orgânico Participativo
+        - SPG/ABD
+        - Orgânico OCS - Organização de Controle Social
+        - Protocolo de Transição Agroecológica

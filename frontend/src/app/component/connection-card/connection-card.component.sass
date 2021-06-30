@@ -1,0 +1,70 @@
+@import '../../../assets/sass/_tools'
+
+.connection-card
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  padding: 12px 0
+  cursor: pointer
+
+  &:hover
+    transform: scale(1.03) translateX(10px)
+
+  .avatar
+    width: 51px
+    height: 51px
+    border-radius: 50%
+    border: 1.5px solid $green
+    overflow: hidden
+    padding: 1.5px
+
+    img
+      width: 100%
+      height: 100%
+      border-radius: 50%
+
+    &.tourism
+      border-color: $orange
+
+    &.market
+      border-color: $red
+
+    &.initiative
+      border-color: $blue
+
+    &.default-avatar
+      padding: 0
+      background-position: center
+      background-size: cover
+
+      &.Upa
+        border: none
+        background-image: url('/assets/svgs/upa-default-avatar.svg')
+
+      &.Tourism
+        border: none
+        background-image: url('/assets/svgs/tourism-default-avatar.svg')
+
+      &.Market
+        border: none
+        background-image: url('/assets/svgs/market-default-avatar.svg')
+
+      &.Initiative
+        border: none
+        background-image: url('/assets/svgs/initiative-default-avatar.svg')
+
+  .connection-info
+    width: calc(100% - 55px - 12px - 20px)
+    margin-left: 12px
+
+    .name
+      font-family: Lato-light
+      font-weight: bold
+      line-height: rem(24)
+
+    .desc
+      color: $gray14
+      font-family: Lato-light
+      font-weight: bold
+      font-size: rem(14)
+      line-height: rem(24)

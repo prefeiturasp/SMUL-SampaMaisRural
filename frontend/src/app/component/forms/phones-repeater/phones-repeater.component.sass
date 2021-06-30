@@ -1,0 +1,42 @@
+@import '../../../../assets/sass/_tools.sass'
+  
+.repeater-button
+  background-color: $green
+  width: 210px
+  padding: 0px 20px
+  border-radius: 24px
+  margin-left: calc(50% - 105px - 40px)
+  line-height: rem(34)
+  font-size: rem(16)
+  color: $white
+  text-align: center
+  box-shadow: 0px 9px 12px $gray8
+  cursor: pointer
+  margin-bottom: 30px
+
+  &:hover
+    opacity: 0.8
+  
+  &.button-remove
+    background-color: $red
+    margin-bottom: 60px
+
+.form-input
+  margin-bottom: 60px
+
+.input-title
+  font-size: rem(16)
+  color: $darkgray
+  font-family: Lato-bold
+  margin-bottom: 24px
+
+.invalid
+  .input-title
+    color: $red
+
+  .form-input
+    border-bottom: 1px solid $red
+
+@media only screen and (max-width: 768px)
+  .repeater-button
+    margin-left: calc(50% - 125px)

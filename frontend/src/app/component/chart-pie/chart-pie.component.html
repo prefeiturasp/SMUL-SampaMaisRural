@@ -1,0 +1,36 @@
+<div class="chart-pie" >
+  <div class="pie-area" [ngClass]="size > 300? 'big' : 'small'">
+    <div class="pie-area-canvas"  [ngStyle]="{'width.px': size}">
+      <canvas *ngIf="data" class="chart-canvas"  baseChart
+        [data]="pieChartData"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [colors]="pieChartColors"
+        [labels]="pieChartLabels"
+        [legend]="pieChartLegend">
+      </canvas>
+    </div>
+  </div>
+  <div [title]="data.title" class="chart-info" [ngClass]="size > 300? 'big' : 'small'" [ngStyle]="{'width':'calc(100% - ' + size + 'px)'}">
+    <div class="chart-title">{{data.title}}</div>
+    <div class="chart-desc">{{data.desc}}</div>
+    <div class="chart-legend" [ngClass]="isFour? 'four-divide' : ''">
+      <div class="chart-legend-item" >
+        <div class="chart-legend-item-percentage item-green">{{data.chartData[0].percentage}}%</div>
+        <div class="chart-legend-title">{{data.chartData[0].title}}</div>
+      </div>
+      <div class="chart-legend-item">
+        <div class="chart-legend-item-percentage item-yellow">{{data.chartData[1].percentage}}%</div>
+        <div class="chart-legend-title">{{data.chartData[1].title}}</div>
+      </div>
+      <div class="chart-legend-item">
+        <div class="chart-legend-item-percentage item-black">{{data.chartData[2].percentage}}%</div>
+        <div class="chart-legend-title">{{data.chartData[2].title}}</div>
+      </div>
+      <div class="chart-legend-item" *ngIf="data.chartData[3]">
+        <div class="chart-legend-item-percentage item-gray">{{data.chartData[3].percentage}}%</div>
+        <div class="chart-legend-title">{{data.chartData[3].title}}</div>
+      </div>
+    </div>
+  </div>
+</div>

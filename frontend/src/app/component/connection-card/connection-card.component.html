@@ -1,0 +1,12 @@
+<div class="connection-card" (click)="open(connection)">
+  <div class="avatar" [ngClass]="(!connection.avatar_url? 'default-avatar ': '') + connection.type"><img *ngIf="connection.avatar_url" [src]="connection.avatar_url"></div>
+  <div class="connection-info">
+    <div class="name">{{connection.name}}</div>
+    <div class="desc">{{connection.subcategory_list.join(', ')}}
+      <span *ngIf="connection.connection_type">
+        <span *ngIf="connection.subcategory_list && connection.subcategory_list.length">•</span>
+        {{connection.connection_type}}
+      </span>
+    </div>
+  </div>
+</div>

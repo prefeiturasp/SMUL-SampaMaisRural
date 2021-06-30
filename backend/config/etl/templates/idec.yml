@@ -1,0 +1,8 @@
+wpcflatlng: wpcflatlng
+workers: feirantes
+name: post_title
+subcategory_list: tipo
+schedule: wpcfhorario
+state: uf
+city: cidade
+full_address: wpcfaddress

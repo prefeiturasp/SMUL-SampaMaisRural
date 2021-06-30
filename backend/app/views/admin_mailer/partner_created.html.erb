@@ -1,0 +1,11 @@
+<p>
+  Olá, moderador/a da Sampa+Rural <br />
+  Um novo ponto foi adicionado ao Sampa+Rural!
+</p>
+
+
+<h2><%= @partner.name %></h2>
+
+<p>
+Você pode acessá-lo <%= link_to "neste link", "#{ENV['APP_HOST']}/admin/#{partner_url(@partner)}/#{@partner.slug}"%>
+</p>

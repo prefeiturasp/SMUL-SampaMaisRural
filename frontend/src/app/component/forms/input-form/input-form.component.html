@@ -1,0 +1,31 @@
+<div class="input-form" [ngClass]="retract && !showRetracted? 'input-margin': ''">
+  <div class="input" [ngClass]="noPadding ? '' : 'input-padding'">
+    <div class="input-title" [ngClass]="(retract? 'can-open ': '') + (!validation? 'invalid': 'valid')" *ngIf="title" (click)="toggleRetracted()">{{title}} {{retract? showRetracted? '-' :'+' : ''}}</div>
+    <div class="input-subtitle" *ngIf="subtitle">{{subtitle}}</div>
+    <radio-input *ngIf="type === 'radio'" [yesNo]="yesNo" [textField]="textField" [selectField]="selectField" (sendValue)="getValue($event)" [title]="title" [radioButtons]="values"></radio-input>
+    <checkbox-input *ngIf="type === 'checkbox'" [ngClass]="retract && !showRetracted? 'hide-input': ''" [name]="name" [fontLight]="title? false : true" [otherField]="otherField" [title]="label" (sendValue)="getValue($event)" [checkboxes]="values" ></checkbox-input>
+    <div class="form-field" [ngClass]="validation? '' : 'invalid'" *ngIf="type === 'text'">
+      <div class="form-label" ><span *ngIf="labelShow">{{labelShow}}</span></div>
+      <input class="form-input" [disabled]="disabled" (keyup)="sendAddress()" [placeholder]="placeholder" [(ngModel)]="valueInput" (change)="inputChange()" [mask]="mask" (focusout)="hideLabel()" (focus)="showLabel()" [type]="subtype? subtype : 'text'"/>
+    </div>
+    <div class="form-field" [ngClass]="validation? '' : 'invalid'" *ngIf="type === 'phone'">
+      <div class="form-label" ><span *ngIf="labelShow">{{labelShow}}</span></div>
+      <input class="form-input" [disabled]="disabled" [placeholder]="placeholder" (change)="inputChange()" [(ngModel)]="valueInput" (focusout)="hideLabel()" (focus)="showLabel()" type="text" mask="(00) 0000-00009" minlength="10"/>
+    </div>
+    <div class="form-field" [ngClass]="validation? '' : 'invalid'" *ngIf="type === 'textarea'">
+      <div class="form-label" ><span *ngIf="labelShow">{{labelShow}}</span></div>
+      <textarea class="form-input text-area" [placeholder]="placeholder" [(ngModel)]="valueInput" [rows]="rows" (change)="inputChange()" (focusout)="hideLabel()" (focus)="showLabel()" type="text"></textarea>
+    </div>
+
+    <select-input *ngIf="type === 'select'" (sendValue)="getValue($event)" [options]="values" [label]="label"></select-input>
+
+    <phones-repeater *ngIf="type === 'phone-repeater'" [label]="label" [validation]="validation" [hideType]="hideType" (sendValue)="getValue($event)"></phones-repeater>
+
+    <profile-picture (sendProfilePicture)="getValue($event)" [label]="label" *ngIf="type === 'profile-picture'"></profile-picture>
+
+    <image-repeater *ngIf="type === 'image-repeater'" [noPreview]="noPreview" (sendImages)="getValue($event)" [label]="label" ></image-repeater>
+
+    <map-input *ngIf="type === 'map'" [category]="category" [address]="address" (sendValue)="getValue($event)"></map-input>
+  </div>
+  <div class="input-legend" *ngIf="legend">{{legend}}</div>
+</div>
